@@ -1,0 +1,37 @@
+﻿@import "variables.less";
+
+.jumbo-widget(@bg-img; @bg-position: center; @color: white) {
+    background-image: url(@bg-img);
+    background-position: @bg-position;
+    color: @color !important;
+    font-family: @headings-font-family !important;
+    padding: 2em 0;
+
+    h1, h2 {
+        color: @color !important;
+    }
+
+    a {
+        color: @color;
+        text-decoration: underline;
+    }
+}
+
+.section-title(@border-width: 5px) {
+    margin-bottom: @gutter / 2;
+    border-bottom: solid @border-width @gray-dark;
+}
+
+.with-offset(@header-offset) {
+    .offset:before {
+        display: block;
+        content: " ";
+        height: @header-offset;
+        margin-top: -@header-offset;
+        visibility: hidden;
+    }
+
+    #layout-body-wrapper {
+        margin-top: @header-offset;
+    }
+}

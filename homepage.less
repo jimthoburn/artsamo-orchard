@@ -1,0 +1,197 @@
+﻿@import "variables.less";
+
+.detail-home-page {
+    .home-page {
+        //border: solid 1px black;
+    }
+
+    h1 {
+        font-weight: 700;
+    }
+
+    .hero {
+        img {
+            display: none;
+        }
+
+        .welcome {
+            padding: 30px 40px 40px 40px;
+            background-color: lightgray;
+
+            h1 {
+                font-size: 45px;
+            }
+        }
+    }
+
+    .vision {
+        img {
+            display: none;
+        }
+    }
+
+    .artist {
+        color: @white;
+        min-height: 200px;
+        margin-bottom: 0;
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: 800;
+        }
+
+        p {
+            font-style: italic;
+        }
+
+        a {
+            font-weight: 900;
+            font-size: 30px;
+        }
+    }
+
+    .featuredartist {
+        color: @white;
+
+        div {
+            min-height: 200px;
+
+            p {
+                width: 50%;
+                margin: auto;
+
+                a {
+                    font-weight: 900;
+                    color: red;
+                }
+            }
+        }
+
+        .description {
+            display: flex;
+            background-color: @brand-primary;
+        }
+
+        .art {
+            padding: 0;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+
+    .previewvenue {
+        .row {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+
+    .previewvenue {
+        p {
+            font-size: 25px;
+            width: 300px;
+            margin-bottom: @gutter;
+        }
+    }
+    //LAPTOP VIEWS
+    @media screen and (min-width: @screen-md-min) {
+        .hero {
+            img {
+                display: flex;
+            }
+
+            padding: 0 35px;
+            position: relative;
+
+            .welcome {
+                background-color: @brand-primary;
+                color: @white;
+                position: absolute;
+                top: 55%;
+                right: 0;
+                width: 65%;
+                min-height: 275px;
+            }
+        }
+
+        .vision {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 80px;
+
+            a {
+                width: 30%;
+            }
+
+            img {
+                display: block;
+            }
+        }
+
+        .artist {
+            min-height: 444px;
+
+            h1 {
+                font-size: 84px;
+                letter-spacing: 3px;
+            }
+
+            a {
+                font-size: 50px;
+            }
+        }
+
+        .featuredartist {
+            div {
+                height: 474px;
+            }
+
+            .row {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+    //LARGE SCREEN VIEW
+    @media screen and (min-width: @screen-lg-min) {
+        .hero {
+            .welcome {
+                top: 55%;
+                line-height: 35px;
+                padding-left: 100px;
+                min-height: 385px;
+
+                h1 {
+                    font-size: 50px;
+                }
+
+                p {
+                    width: 65%;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .artist {
+            //max-width: 70%;
+            a {
+                font-size: 56px;
+            }
+        }
+
+        .previewvenue {
+            .summary {
+                .col-md-6 {
+                    width: unset;
+                    padding-left: 92px;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}

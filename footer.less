@@ -1,0 +1,126 @@
+﻿@import "variables.less";
+
+.widget-mailchimp, .widget-social, .widget-contact {
+    color: @white;
+    text-transform: uppercase;
+}
+
+.widget-mailchimp {
+    background-color: #ff414a;
+    padding: 15px;
+
+        .email {
+            background-image: none;
+            }
+
+
+    h1 {
+        font-size: 35px;
+        font-weight: 900;
+    }
+
+    p {
+        text-transform: none;
+    }
+
+    .firstname, .lastname, .email {
+        border-radius: 30px;
+        margin-bottom: 20px;
+        padding: 0px 50px;
+        height: 60px;
+    }
+
+    .btn {
+        text-transform: uppercase;
+        border-radius: 30px;
+        padding: 15px 50px;
+    }
+}
+
+.zone-footer {
+    overflow: hidden;
+    background-color: @brand-primary;
+}
+
+.widget-contact {
+    text-transform: none;
+    padding: 15px 0 0 20px;
+}
+
+#layout-footer a {
+    color: @white;
+}
+
+.widget-social {
+    padding: 25px 0 0 20px
+}
+
+.widget-artsamo {
+    h1 {
+        font-size: 0;
+    }
+
+    img {
+        display: none;
+    }
+}
+
+@media screen and (min-width: @screen-md-min) {
+    .widget-mailchimp {
+        font-size: 20px;
+
+        h1 {
+            font-size: 65px;
+        }
+
+        .firstname, .lastname, .email {
+            margin-bottom: 0;
+        }
+
+        p {
+            padding-bottom: 10px;
+        }
+
+        .form-control {
+            width: -moz-available;
+            margin-bottom: 10px;
+        }
+    }
+
+    .widget-mailchimp, .widget-social, .widget-contact {
+        padding: 100px;
+    }
+
+    .widget-contact {
+        float: left !important;
+    }
+
+    .widget-social {
+        float: right !important;
+    }
+
+    .widget-artsamo {
+        padding-bottom: 100px;
+        clear: both;
+        text-align: center;
+
+        img {
+            display: initial;
+        }
+    }
+}
+
+@media screen and (min-width: @screen-lg-min) {
+    .widget-mailchimp {
+        h1 {
+            font-size: 75px;
+            letter-spacing: 3px;
+        }
+
+
+        .form-control {
+            width:auto;
+            margin-bottom: 0;
+        }
+    }
+}

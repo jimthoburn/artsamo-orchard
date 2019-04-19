@@ -1,0 +1,28 @@
+﻿@import "variables.less";
+
+.upcoming-details {
+    display: flex;
+    flex-flow:column;
+    justify-content: space-between;
+}
+
+.artsamo-menu div, .previewvenue, .upcoming-details{
+    a {
+        color: black;
+    }
+}
+
+@media screen and (min-width: @screen-md-min) {
+    .artsamo-menu h1, .previewvenue h1, .upcoming-details h1 {
+        margin-bottom: @gutter;
+        margin-top: 50px;
+    }
+
+    .artsamo-menu div, .previewvenue, .upcoming-details {
+        margin-bottom: 30px;
+    }
+
+    .upcoming-details {
+        width: 50%;
+    }
+}

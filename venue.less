@@ -1,0 +1,159 @@
+﻿@import "variables.less";
+@import "homepage.less";
+@import "menu.less";
+
+.detail-venue {
+    .venue {
+    }
+
+    .hero {
+        img {
+            display: none;
+        }
+    }
+
+    .about {
+        padding-left: 0;
+
+        h1 {
+            position: relative;
+            top: -3px;
+            left: 5px;
+        }
+
+        img {
+            padding-left: 0;
+            float: left;
+            width: 100px;
+            height: 95px;
+        }
+
+        p {
+            padding-left: 15px;
+        }
+    }
+
+    .featured-event {
+        div {
+            div {
+                padding-left: unset;
+                width: unset;
+                margin-left: 0;
+            }
+        }
+
+        .description {
+            background-color: @obscura;
+            display: flex;
+            color: white;
+            height: 250px;
+
+            p {
+                width: 50%;
+                margin: auto;
+                font-size: 20px;
+            }
+
+            a {
+                font-weight: 900;
+                color: white;
+            }
+        }
+    }
+
+    .evanced {
+        h1{
+            font-size: 45px;
+        }
+
+        h2 {
+            color: @obscura;
+            font-size: 45px;
+            font-weight: bold;
+        }
+    }
+
+    @media screen and (min-width: @screen-md-min) {
+
+        .hero {
+            margin-bottom: 65px;
+
+            img {
+                display: flex;
+            }
+
+            padding: 0 35px;
+            position: relative;
+        }
+
+        .about {
+            h1 {
+                font-size: 45px;
+                left: 25px;
+                width: 602px;
+            }
+
+            img {
+                max-width: 100%;
+                width: unset;
+                height: unset;
+            }
+
+            p {
+                margin-top: @gutter;
+            }
+        }
+
+        .contact {
+            margin-top: 45px;
+            line-height: 1.2;
+
+            p {
+                margin-left: 50px;
+            }
+        }
+
+        .featured-event {
+            div {
+                div {
+                    margin-left: 55px;
+                }
+            }
+
+            .description {
+                width: 424px;
+            }
+        }
+    }
+
+    @media screen and (min-width: @screen-lg-min) {
+        .about {
+            h1 {
+                font-size: 55px;
+                top: -25px;
+                left: 25px;
+                width: 690px;
+            }
+
+            img {
+                max-width: 100%;
+                width: unset;
+                height: unset;
+            }
+        }
+
+        .contact {
+            p {
+                margin-left: 100px;
+            }
+        }
+
+        .featured-event {
+            div {
+                div {
+                    margin-left: 258px;
+                }
+            }
+        }
+    }
+}
