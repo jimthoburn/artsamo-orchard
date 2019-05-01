@@ -1,0 +1,105 @@
+
+
+/* =Color
+----------------------------------------------- */
+:root {
+  --aqua:        hsl(175, 54%, 47%);
+  --aqua-dark:   hsl(175, 44%, 37%);
+  --aqua-bright: hsla(175, 54%, 47%, 0.2);
+  --apple:       hsl(357, 100%, 63%);
+  --apple-dark:  hsl(357, 90%, 53%);
+  --orange:      hsl(16, 86%, 53%);
+  --orange-dark: hsl(15, 8%, 5%);
+  --olive:       hsl(146, 17%, 56%);
+  --mango:       hsl(37, 94%, 60%);
+  --midnight:    hsl(0, 0%, 10%);
+  --snow:        hsl(0, 0%, 99%);
+  --sky:         hsl(195, 89%, 55%);
+  --ocean:       hsl(195, 63%, 38%);
+
+  /*
+  --aqua-complimentary: hsl(355, 54%, 47%);
+  --blueberry:      hsl(193, 100%, 50%);
+  --blueberry-dark: hsl(193, 90%, 40%);
+  --apple:          hsl(1, 81%, 57%);
+  --lime:           hsl(84, 63%, 39%);
+  --plum:           hsl(281, 72%, 78%);
+  */
+
+  --primary-color:        var(--aqua);
+  --primary-color-dark:   var(--aqua-dark);
+  --secondary-color:      var(--orange);
+  --secondary-color-dark: var(--orange-dark);
+
+
+  /*
+  --aqua:      hsl(164, 71%, 55%);
+  --aqua-dark: hsl(164, 61%, 45%);
+  --apple:     hsl(344, 71%, 55%);
+  --sky:       hsl(194, 71%, 55%);
+  */
+}
+
+body {
+  background-color: var(--snow);
+  color: var(--midnight);
+}
+
+body.venues-page {
+  --primary-color:        var(--sky);
+  --secondary-color:      var(--sky);
+}
+
+a {
+  color: var(--secondary-color, gray);
+}
+a,
+button {
+  transition: color 0.2s, background-color 0.2s, opacity 0.2s;
+}
+a:hover,
+a:active,
+a:focus {
+  color: var(--secondary-color-dark);
+}
+button,
+.action a {
+  background-color: var(--primary-color, gray);
+  color: var(--snow, white);
+  /*! text-transform: uppercase; */
+  padding: calc(var(--vertical-rhythm) * 1/2) calc(var(--vertical-rhythm) * 1);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  font-size: 1.125em;
+  text-align: center;
+}
+.action a {
+  display: block;
+}
+button:hover,
+button:focus,
+.action a:hover,
+.action a:active,
+.action a:focus {
+  background-color: var(--primary-color-dark, black);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color, gray);
+}
+
+/*
+.welcome {
+  background-color: var(--primary-color, black);
+  color: white;
+  padding: calc(var(--vertical-rhythm) * 1) calc(var(--vertical-rhythm));
+}
+.welcome > *:first-child {
+  margin-top: 0;
+}
+.welcome > *:last-child {
+  margin-bottom: 0;
+}
+*/

@@ -1,0 +1,118 @@
+
+@media (min-width: 40em) {
+  main > nav {
+    grid-column: 1/-1;
+    margin: calc(var(--vertical-rhythm) * 1) calc(var(--vertical-rhythm) * 1) calc(var(--vertical-rhythm) * 3);
+  }
+}
+main > nav ul {
+  margin: 0;
+}
+
+
+main > h2 {
+  font-weight: var(--bold);
+  /*! text-transform: uppercase; */
+  /*! letter-spacing: 0.1em; */
+}
+
+@supports (display: grid) {
+  main {
+    display: grid;
+  }
+  @media (min-width: 40em) {
+    main {
+      grid-template-columns: calc(var(--vertical-rhythm) * 2) 1fr calc(var(--vertical-rhythm) * 2);
+    }
+    main > * {
+      grid-column: 2 / 3;
+    }
+    main > h1,
+    main > figure,
+    main > .map {
+      grid-column: 1 / -1;
+    }
+  }
+  @media (min-width: 70em) { /* @wide-enough-for-header-grid */
+    main {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: calc(var(--vertical-rhythm) * 2);
+      grid-row-gap: calc(var(--vertical-rhythm) * 1);
+      align-items: start;
+      padding-left: var(--vertical-rhythm);
+      padding-right: var(--vertical-rhythm);
+    }
+
+    /* Reduce the amount of margin around figures and sections, to account for the grid gap */
+    main > figure {
+      margin-top: 4.5em; /* usual margin - grid row gap = 6em - 1.5em = 4.5em */
+      margin-bottom: 4.5em;
+      /*! max-width: none; */
+      grid-column: 2/3;
+    }
+    main > figure img {
+      /*! width: 100%; */
+      /*! height: auto; */
+    }
+
+    main > h1:first-child {
+      /*! margin-bottom: 1.5rem; */
+    }
+    main > h2,
+    main > h3 {
+      margin: 0;
+      grid-column: 1 / 2;
+      justify-self: end;
+      text-align: right;
+      padding-left: calc(var(--unitless-vertical-rhythm) * 2rem);
+      max-width: 17.5em;
+      grid-row: span 2;
+    }
+    main > h2 + h4,
+    main > h3 + h4 {
+      margin-top: 0;
+    }
+    main > figure + h2,
+    main > figure + h2 + p,
+    main > figure + h2 + ol,
+    main > figure + h2 + ul,
+    main > figure + h1 + h2,
+    main > figure + h1 + h2 + p,
+    main > figure + h1 + h2 + ol,
+    main > figure + h1 + h2 + ul,
+    main > figure + h1 + p,
+    main > figure + h1 + ol,
+    main > figure + h1 + ul {
+      margin-top: calc(var(--unitless-vertical-rhythm) * 2rem);
+      /*! margin-bottom: calc(var(--unitless-vertical-rhythm) * 2rem); */
+    }
+    main > figure,
+    main > blockquote,
+    main > p,
+    main > dl,
+    main > table,
+    main > ol,
+    main > ul {
+      margin: 0;
+      grid-column: 2 / -1;
+    }
+    main > nav {
+      grid-column: 1/-1;
+    }
+  }
+}
+
+main > figure {
+  margin-left: 0;
+  margin-right: 0;
+  grid-column: 1/-1;
+  max-width: none;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+main > figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
