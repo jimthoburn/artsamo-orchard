@@ -1,0 +1,55 @@
+
+/* Go See Art
+----------------------------------------------- */
+
+/* Arrange the list of venues in a grid */
+.venues,
+.venues li {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.venues li {
+  margin-bottom: 3em;
+}
+.venues a {
+  display: block;
+  text-decoration: none;
+}
+.venues a span {
+  display: block;
+  margin-top: 0.75em;
+
+  /* Make space for the image */
+  padding-left: 2em;
+  position: relative;
+}
+.venues a:hover,
+.venues a:active,
+.venues a:focus {
+  text-decoration: underline;
+}
+@supports (object-fit: cover) {
+  @media (min-width: 30em) {
+    .venues a > img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+  }
+}
+.venues a > span > img {
+  margin-right: 0.5em;
+  width: 1.5em;
+  height: auto;
+  position: absolute;
+  left: 0;
+}
+@media screen and (min-width: 30em) {
+  .venues {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.5em;
+    grid-row-gap: 3em;
+  }
+}

@@ -1,0 +1,20 @@
+
+/*
+
+SHIM: Override the collapse classname to get mobile nav to show.
+
+(The JS doesn’t seem to be working at the moment.)
+
+Feel free to delete this style sheet, if it isn’t needed.
+
+ -Jim
+
+*/
+.collapse {
+  display: block;
+}
+
+/* Hide the toggle button for the mobile nav (since it isn’t doing anything at the moment) */
+#layout-navigation .navbar .navbar-header .navbar-toggle {
+  display: none;
+}

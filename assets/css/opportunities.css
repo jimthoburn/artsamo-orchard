@@ -1,0 +1,40 @@
+
+/* =Opportunities
+----------------------------------------------- */
+
+/* Arrange the list of opportunities in a grid */
+.opportunities,
+.opportunities li {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.opportunities li {
+  margin-bottom: 3em;
+}
+.opportunities a {
+  display: block;
+  text-decoration: none;
+}
+.opportunities a span {
+  display: block;
+  margin-top: 0.75em;
+}
+.opportunities a:hover,
+.opportunities a:active,
+.opportunities a:focus {
+  text-decoration: underline;
+}
+.opportunities img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+@media screen and (min-width: 58.75em) {
+  .opportunities {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.5em;
+    grid-row-gap: 3em;
+  }
+}

@@ -2,7 +2,7 @@
 /* =Artists
 ----------------------------------------------- */
 
-.artists ul,
+.artists,
 .artists li {
   list-style: none;
   margin-left: 0;
@@ -17,41 +17,27 @@
   margin-bottom: 11px;
   margin-top: 0;
 }
-.artists li figure {
+.artists li .image {
   max-width: none;
-  margin: 0;
 }
-.artists li img {
-  height: 15em;
-  width: 15em;
+.artists li .image img {
+  height: 200px;
+  width: 200px;
   object-fit: cover;
   float: none;
   margin-right: unset;
-  border-radius: 50%;
 }
 
 /* SHIM: Avoid cropping the Art Division logo on the Beach House venue page */
-.artists li img[src*="art-division.png"] {
+.artists li .image img[src*="art-division.png"] {
   object-fit: contain;
 }
 
-.artists {
-  grid-column: 1/-1;
-}
-.artists ul {
-  max-width: none;
-  /*! display: grid; */
-  /*! grid-template-columns: 1fr 1fr 1fr; */
-}
-
-@media (min-width: 60em) {
+@media (min-width: 40em) {
   .artists li {
     display: grid;
-    /*! grid-template-columns: 1fr max-content 1fr; */
-    /*! grid-column-gap: 1.5em; */
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 3em;
-    grid-row-gap: 0;
+    grid-template-columns: max-content 1fr;
+    grid-column-gap: 1.5em;
   }
   /* Position most content in the second column */
   .artists li > * {
@@ -60,12 +46,9 @@
   .artists li h3 {
     justify-self: start;
   }
-  .artists li figure {
+  .artists li .image {
     grid-column: 1/2;
-    grid-row: 1/span 99;
+    grid-row: 1/span 4;
     justify-self: end;
-  }
-  .artists p {
-    margin-top: 0;
   }
 }

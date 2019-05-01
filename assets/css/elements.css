@@ -1,0 +1,37 @@
+
+/* =Type
+----------------------------------------------- */
+
+/* Use Proxima Nova by default */
+body {
+  font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Resize images to fit within their parent element */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+  Add a little margin above description titles,
+  since we’re removing left margin on the descriptions
+*/
+dt {
+  margin-top: 0.75em;
+}
+
+/*
+
+TBD: Are these in use?
+
+h2.image img {
+  display: block;
+  margin-bottom: 0.375em;
+}
+h2.image {
+  font-size: 2.25em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+*/

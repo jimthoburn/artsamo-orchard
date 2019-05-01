@@ -1,196 +1,105 @@
 
-
 /* =Footer
 ----------------------------------------------- */
 
-
-footer h3 {
-  --font-size: inherit;
-  font-family: canada-type-gibson, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  line-height: 1.125;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  /*! font-size: 0.5em; */
-  /*! display: block; */
-  font-weight: var(--semibold);
-  /*! margin-bottom: calc(var(--vertical-rhythm) * 1); */
-  border-bottom: 2px solid hsla(0, 0%, 100%, 0.2);
-  margin-bottom: calc(var(--vertical-rhythm) * 2/4);
-  padding-bottom: calc(var(--vertical-rhythm) * 2/4);
-}
-
-footer {
-  padding: var(--vertical-rhythm);
-}
-
-@media (min-width: 40em) {
-  footer {
-    padding: calc(var(--vertical-rhythm) * 2) calc(var(--vertical-rhythm) * 5);
-  }
-}
-
-
-footer {
-  background-color: var(--primary-color, gray);
-  color: var(--snow);
-  /*! margin: var(--vertical-rhythm); */
-}
-
-
-@media (min-width: 50em) {
-  footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-columns: repeat( auto-fit, minmax(15em, 1fr) );
-    grid-gap: calc(var(--vertical-rhythm) * 2);
-  }
-}
-
-/* @media (min-width: 80em) {
-  footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: calc(var(--vertical-rhythm) * 2);
-  }
-} */
-
-footer h3,
-footer a {
-  color: inherit;
-}
-
-footer h3 a {
-  text-decoration: none;
-}
-footer ul,
-footer li {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-footer li {
-  margin-top: calc(var(--vertical-rhythm) * 1/4);
-}
-
-footer img[src*="city"] {
-  /*! display: block; */
-  /*! margin-left: auto; */
-  /*! margin-right: auto; */
-  margin-top: calc(var(--vertical-rhythm) * 4);
-  /*! width: calc(9.375em / 1.5); */
-  height: auto;
-}
-
-
-@supports (clip-path: url(#svgPath)) {
-  /* footer .artsamo-image-fallback {
-    display: none;
-  } */
-  
-  footer .artsamo-image {
-    display: block;
-    width: 15.3125em;
-    height: 9.375em;
-    font-size: calc(0.75em + 2vw);
-    overflow: hidden;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 0.375em;
-  }
-  @media (min-width: 30em) {
-    footer .artsamo-image {
-      font-size: calc(0.5em + 1vw);
-    }
-  }
-  footer .artsamo-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--primary-color);
-    clip-path: url(#svgPathEmpty);
-  }
-  footer .artsamo-image .artsamo-image-for-clipping {
-    width: 15.3125em;
-    height: 15.3125em;
-    /* -webkit-clip-path: url(#svgPath); */
-    clip-path: url(#svgPath);
-    object-fit: cover;
-  }
-}
-
-
-/* footer a:hover,
-footer a:active,
-footer a:focus {
-  color: inherit;
-} */
-
-footer h3 {
-  /*! font-weight: var(--semibold); */
-  max-width: none;
-  margin-top: calc(var(--vertical-rhythm) * 4);
-}
-
-/* Line the footer social links up in a row */
-footer dt,
-footer dd {
-  margin-left: 0;
-  padding-left: 0;
-}
-footer dt {
-  /*! margin-top: calc(var(--vertical-rhythm) * 1/2); */
-  font-weight: inherit;
-  /*! line-height: calc(var(--vertical-rhythm) * 3/4); */
-}
-
-footer .social dt {
-  margin-bottom: calc(var(--vertical-rhythm) * 1/4);
-}
-
-footer dd {
-  display: inline-block;
-  margin-right: calc(var(--vertical-rhythm) * 1/4);
-  /*! margin-bottom: calc(var(--vertical-rhythm) * 1/4); */
-}
-footer dd a {
-  background-color: white;
-  border-radius: 50%;
-  color: var(--primary-color, gray);
-  display: inline-block;
-  padding: calc(var(--vertical-rhythm) * 1/5);
-}
-footer svg {
-  display: block;
-  font-size: 1.25em;
-  width: calc(var(--vertical-rhythm) * 1/2);
-  height: calc(var(--vertical-rhythm) * 1/2);
+/* Make links easier to see in footer */
+#layout-footer a {
+  text-decoration: underline;
 }
 
 /* Make venue icons look a little nicer */
-footer .locations {
+#layout-footer .widget-contact dl {
   margin-left: 2em;
 }
-footer .locations img {
+#layout-footer dt img {
   position: absolute;
   transform: translateX(-100%);
   margin-left: -0.5em;
 }
-footer .locations img + br {
-  display: none;
+
+
+.widget-social,
+.widget-contact {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-footer .artsamo {
-  margin-top: calc(var(--vertical-rhythm) * 4);
-  grid-column: 1/-1;
-  justify-self: center;
-  text-align: center;
+/* Position the footer items in a grid */
+.widget-contact,
+.widget-social {
+  float: none !important;
 }
-footer .artsamo p {
-  max-width: none;
+@media screen and (min-width: 70em) {
+  .zone-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 3em;
+  }
+  .zone-footer > * {
+    grid-column: 1/-1;
+  }
+  .widget-social,
+  .widget-contact {
+    grid-column: auto;
+  }
+  .widget-social {
+    padding-right: 0;
+    padding-left: 100px;
+  }
+  .widget-contact {
+    padding-left: 0;
+  }
+  .widget-social + .widget-contact {
+    padding-right: 0;
+  }
 }
+
+.widget-footer h2 {
+  margin-top: 3em;
+  margin-bottom: 1.5em;
+  text-transform: uppercase;
+}
+
+/* SHIM */
+.widget-social {
+  text-transform: inherit;
+}
+
+/* Line the footer social links up in a row */
+.widget-social dt,
+.widget-social dd {
+  margin-left: 0;
+  padding-left: 0;
+}
+.widget-social dt {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+.widget-social dd {
+  display: inline-block;
+  margin-right: 0.75em;
+  margin-bottom: 0.75em;
+}
+.widget-social dd a {
+  background-color: white;
+  border-radius: 50%;
+  color: #38bab0 !important;
+  display: inline-block;
+  padding: 0.375em;
+}
+.widget-social svg {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+/* Prevent the footer image from appearing too large */
+.widget-artsamo img {
+  width: 433px; /* Half of the image’s actual pixel size */
+  /* height: 284px; */
+
+  /* For small screens */
+  max-width: 100%;
+  height: auto;
+}
+

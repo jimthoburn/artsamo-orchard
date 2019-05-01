@@ -1,0 +1,36 @@
+
+/* =Venue
+----------------------------------------------- */
+
+.detail-venue .about h1 {
+  left: auto;
+  width: auto;
+}
+
+@media (min-width: 33em) {
+  .detail-venue .about > h2 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 68.75em) {
+  .detail-venue .about img {
+    margin-right: 1.5em;
+  }
+}
+  
+/* Reset the paragraph styles in the introduction */
+.detail-venue .about p {
+  margin-top: 0;
+  padding-left: 0;
+}
+
+/* Hide the info that we can’t edit in the CMS at the moment */
+.venue .container:nth-last-child(3),
+.venue .row:nth-last-child(2),
+.venue .upcoming-details:nth-last-child(1) {
+  display: none;
+}
+.venue .container:nth-last-child(4) {
+  margin-bottom: 60px;
+}

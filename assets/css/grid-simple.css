@@ -1,0 +1,109 @@
+
+/* =Grid
+----------------------------------------------- */
+
+/* Center the content and limit its length to about 33 characters, for readability */
+@media (min-width: 58.75em) {
+
+  /* Emphasize the main headline */
+  /* .page.content-item > header:first-child h1 {		
+   margin-top: 4.5rem;		
+   font-size: 2.5em;
+   font-weight: bold;
+   background-color: #38bab0;
+   color: #fff;
+   display: inline-block;
+   margin-left: 35px;
+   padding-left: 1.5rem;
+   padding-right: 1.5rem;
+   padding-top: 0.375rem;
+   padding-bottom: 0.375rem;
+   font-weight: inherit;
+ } */
+
+  /* Target the content that’s declared as a 12 column bootstrap grid
+     and create a two column grid inside it. */
+  .page.content-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 1.5em;
+    margin-bottom: 6em;
+  }
+
+  /* Position most content in the second column */
+  .page.content-item > * {
+    grid-column: 2/3;
+    max-width: 33em;
+  }
+
+  .page.content-item > header:first-child,
+  .page.content-item > div:last-child {
+    grid-column: 1/-1;
+    max-width: none;
+  }
+
+  /* Position headlines in the first column */
+  .page.content-item > h2,
+  .page.content-item > h3 {
+    grid-column: 1/2;
+    justify-self: end;
+    text-align: right;
+    margin-bottom: 0;
+  }
+  .page.content-item > h2 {
+    font-size: 2em;
+  }
+  .page.content-item > h2,
+  .page.content-item > h3,
+  .page.content-item > h2 + *,
+  .page.content-item > h3 + * {
+    margin-top: 1.5rem;
+  }
+  .page.content-item > h2,
+  .page.content-item > h2 + *:not(h3) {
+    margin-top: 12rem;
+  }
+  /* SHIM: Just in case a page has a first level headline mixed in with the content. */
+  .page.content-item > h1 {
+    grid-column: 1/-1;
+  }
+
+  /*
+    Emphasize the primary image by making it the full width of the grid
+    and overlap it with the main headline
+  */
+  .page.content-item .image {
+    margin-bottom: 4.5em;
+    grid-column: 1/-1;
+    max-width: none;
+  }
+  .page.content-item .image img {
+    width: 100%;
+    height: auto;
+  }
+  /* If the image is the first element in the page content */
+  .page.content-item > .image:first-child,
+  .page.content-item > div:first-child .image:first-child {
+    margin-top: -4.5em;
+  }
+  .page.content-item > .image:first-child + header,
+  .page.content-item > div:first-child .image + header {
+    max-width: none;
+  }
+  .page.content-item > .image:first-child + header h1,
+  .page.content-item > div:first-child .image + header h1 {
+    font-size: 55px;
+    margin-top: 0;
+  }
+  
+  /* Make maps take up the full width of the grid */
+  .page.content-item .map {
+    margin-top: 4.5em;
+    grid-column: 1/-1;
+    max-width: none;
+  }
+  .page.content-item .map + p {
+    margin-bottom: 4.5em;
+  }
+
+}

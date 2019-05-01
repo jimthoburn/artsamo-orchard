@@ -1,0 +1,39 @@
+
+/* =Navigation
+----------------------------------------------- */
+.navigation ul,
+.navigation li {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3em;
+  max-width: none !important;
+}
+.navigation li {
+  display: inline-block;
+  margin-right: 0.25em;
+  margin-bottom: 0.25em;
+  flex-grow: 1;
+}
+.navigation a {
+  display: block;
+  text-align: center;
+  padding: 0.725em 1.45em;
+  background-color: rgb(56, 186, 176); /* @green */
+  color: white;
+  text-decoration: none;
+  border-radius: 0.25em;
+  transition: background-color 0.2s, color 0.2s;
+  font-weight: bold;
+}
+.navigation a[href]:hover,
+.navigation a[href]:active,
+.navigation a[href]:focus {
+  background-color: rgb(36, 119, 113); /* @dark-green */
+  color: white;
+  text-decoration: none;
+}

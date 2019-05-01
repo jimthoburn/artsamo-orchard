@@ -1,5 +1,5 @@
 
-/* =Events
+/* =Calendar
 ----------------------------------------------- */
 
 /*
@@ -30,375 +30,23 @@
 .events li {
   margin-bottom: 1.5em;
 }
-@media (min-width: 30em) {
-  .events .summary {
-    display: grid;
-    grid-template-columns: calc(var(--vertical-rhythm) * 7) 1fr;
-    grid-column-gap: calc(var(--vertical-rhythm) * 1);
-  }
+.events .summary {
+  display: grid;
+  grid-template-columns: 7.5em 1fr;
+  grid-column-gap: 0.75em;
 }
 .events .summary > h3 {
   grid-column: 1/2;
   grid-row: span 3; 
-  align-self: start;
+  align-self: stretch;
   justify-self: stretch;
-  background-color: var(--mango);
+  background-color: #3f3f3f;
   color: #fff;
   text-align: center;
   text-transform: uppercase;
-  font-weight: var(--light);
-  padding: calc(var(--vertical-rhythm) * 0.75) calc(var(--vertical-rhythm) * 0.25);
+  font-weight: bold;
+  padding: 1.5em 0.75em;
   margin: 0;
-  line-height: 1.25;
-  position: relative;
-  letter-spacing: 0.2em;
-}
-
-.events .summary > h3::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.6;
-}
-.events .palisades .summary > h3::before {
-  background-image: url('/uploads/camera-obscura-2048x1365.jpg');
-}
-.events .miles .summary > h3::before {
-  background-image: url('/uploads/playhouse-500-heigh.jpg');
-}
-.events .beach .summary > h3::before {
-  background-image: url('/uploads/beach-culture.jpg');
-}
-
-.events .beach:nth-child(1) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2018_6_10_18_BeachDances_ACBH_SarahElgart_dancerAlexandraDeFato_photoJasonAbraham_39.jpg');
-}
-.events .beach:nth-child(2) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2018_6_10_18_BeachDances_ACBH_JayCarlon_drummerKevinYokota_photoJasonAbraham.jpg');
-}
-.events .beach:nth-child(3) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2018_6_10_18_BeachDances_ACBH_SarahElgart_DancerAlexandraDeFato_photoJasonAbraham_15.jpg');
-}
-.events .beach:nth-child(4) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2016_PSA_RedHen_PoetryByHarryetteMullenPaintingByLisaSlavin_ACBH_StaffPhotog.jpg');
-}
-.events .beach:nth-child(5) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2017_2_7_17_Kimberly_Truhler_Fashion_in_Film_1960s_ACBH_StaffPhotographer (1).jpg');
-}
-.events .beach:nth-child(6) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2017-7_OotB_KielJohnson-TheOneida_ACBH_StaffPhotog.jpg');
-}
-.events .beach:nth-child(7) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2014_CAiRAnaMariaAlvarezContratiempo_StaffPhotog (9).jpg');
-}
-.events .beach:nth-child(8) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2015_7_28_Dance_Hall_Jessica_Fichot_Shanghai_Jazz_ACBH_StaffPhotographer (10).jpg');
-}
-.events .beach:nth-child(9) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2016_9_27_16_Rinde_Eckert_ACBH_StaffPhotographer (3).jpg');
-}
-.events .beach:nth-child(10) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2012_1_22_12_PST_Channa_Horwitz_Rehearsal_ACBH_StaffPhotog (3).jpg');
-}
-.events .beach:nth-child(11) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2012_1_22_12_PST_Channa_Horwitz_Rehearsal_ACBH_StaffPhotog (8).jpg');
-}
-.events .beach:nth-child(12) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2010_CAiRHollyRothschild_ThisIsNotHere.jpg');
-}
-.events .beach:nth-child(13) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2010_CAiRHollyRothschild_ThisIsNotHere_StaffPhotog.jpg.jpg');
-}
-
-
-.events .beach:nth-child(1n+13) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2018_6_10_18_BeachDances_ACBH_SarahElgart_dancerAlexandraDeFato_photoJasonAbraham_39.jpg');
-}
-.events .beach:nth-child(2n+13) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2018_6_10_18_BeachDances_ACBH_JayCarlon_drummerKevinYokota_photoJasonAbraham.jpg');
-}
-.events .beach:nth-child(3n+13) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2018_6_10_18_BeachDances_ACBH_SarahElgart_DancerAlexandraDeFato_photoJasonAbraham_15.jpg');
-}
-.events .beach:nth-child(4n+13) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2016_PSA_RedHen_PoetryByHarryetteMullenPaintingByLisaSlavin_ACBH_StaffPhotog.jpg');
-}
-.events .beach:nth-child(5n+13) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2017_2_7_17_Kimberly_Truhler_Fashion_in_Film_1960s_ACBH_StaffPhotographer (1).jpg');
-}
-.events .beach:nth-child(6n+13) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2017-7_OotB_KielJohnson-TheOneida_ACBH_StaffPhotog.jpg');
-}
-.events .beach:nth-child(7n+13) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2014_CAiRAnaMariaAlvarezContratiempo_StaffPhotog (9).jpg');
-}
-.events .beach:nth-child(8n+13) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2015_7_28_Dance_Hall_Jessica_Fichot_Shanghai_Jazz_ACBH_StaffPhotographer (10).jpg');
-}
-.events .beach:nth-child(9n+13) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2016_9_27_16_Rinde_Eckert_ACBH_StaffPhotographer (3).jpg');
-}
-.events .beach:nth-child(10n+13) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2012_1_22_12_PST_Channa_Horwitz_Rehearsal_ACBH_StaffPhotog (3).jpg');
-}
-.events .beach:nth-child(11n+13) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2012_1_22_12_PST_Channa_Horwitz_Rehearsal_ACBH_StaffPhotog (8).jpg');
-}
-.events .beach:nth-child(12n+13) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2010_CAiRHollyRothschild_ThisIsNotHere.jpg');
-}
-.events .beach:nth-child(13n+13) .summary > h3::before {
-  background-image: url('/uploads-optimized/Beach=Culture/768-wide/2010_CAiRHollyRothschild_ThisIsNotHere_StaffPhotog.jpg.jpg');
-}
-
-
-.events .palisades:nth-child(1) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2017_ShannonFreshwater_Weaving_COAL_StaffPhotog (8).jpg');
-}
-.events .palisades:nth-child(2) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2017_ShannonFreshwater_Foil_Embossing_COAL_StaffPhotog (3).jpg');
-}
-.events .palisades:nth-child(3) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2017_7_29_17_Tracy_Bromwich_Final_Show_CameraObscura_MaddyPaull (31).jpg');
-}
-.events .palisades:nth-child(4) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2017_CCS_Library_Teambuilding_CameraObscura_StaffPhotographer (2).jpg');
-}
-.events .palisades:nth-child(5) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2017_Coast_CameraObscuraLightsOn_photoby_Jason_Abraham.jpg');
-}
-.events .palisades:nth-child(6) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2017_Juanita DavisGenesis Hernandez_DinahBerland_Poetry_CameraObscura_StaffPhotog.jpg');
-}
-.events .palisades:nth-child(7) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2017_ShannonFreshwater_FinalShow_COAL_StaffPhotog (15).jpg');
-}
-.events .palisades:nth-child(8) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2017_ShannonFreshwater_FinalShow_COAL_StaffPhotog (18).jpg');
-}
-.events .palisades:nth-child(9) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2017_3_11_17_Dumplings_Grace_Hwang_Residency_CameraObscura_StaffPhotographer (1).jpg');
-}
-.events .palisades:nth-child(10) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2017_7_15_17_Indigo_Dye_Tote_with_Tracy_Bromwich_CameraObscura_StaffPhotographer (13).jpg');
-}
-.events .palisades:nth-child(11) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2017_7_29_17_Tracy_Bromwich_Final_Show_CameraObscura_MaddyPaull (16).jpg');
-}
-.events .palisades:nth-child(12) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2016_1_PatriciaMitchell_ChineColle_CameraObscura_StaffPhotog (29).jpg');
-}
-.events .palisades:nth-child(13) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2016_3_Patricia itchell_Screenprinting_CameraObscura_StaffPhotog (3).jpg');
-}
-.events .palisades:nth-child(14) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2016_3_PatriciaMitchell_Leather_Masks_CameraObscura_StaffPhotog (11).jpg');
-}
-.events .palisades:nth-child(15) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2016_FrankValdez_Final_Show_CameraObscura_StaffPhotog (35).jpg');
-}
-.events .palisades:nth-child(16) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2016_FrankValdez_LongPose_CameraObscura_StaffPhotog (17).jpg');
-}
-.events .palisades:nth-child(17) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2016_Zeal_Harris_Residency_CameraObscura_StaffPhotographer (23).jpg');
-}
-.events .palisades:nth-child(18) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2015_ZeinaBaltagiMilesLewis_FinalShow_Staffphotog.jpg');
-}
-.events .palisades:nth-child(19) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2015_7_1_15_Zeina_Baltagi_Xerox_Lithography_CameraObscura_StaffPhotographer (16).jpg');
-}
-.events .palisades:nth-child(20) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2015_Alexis_Macnab_Studio_Progress_CameraObscura_StaffPhotographer (3).jpg');
-}
-.events .palisades:nth-child(21) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2015_Zeina_Baltagi_Miles_Lewis_Printmaking_Residency_CameraObscura_StaffPhotographer.jpg');
-}
-.events .palisades:nth-child(22) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2015_3_21_Miles_Lewis_Egg_Tempera (8).jpg');
-}
-.events .palisades:nth-child(23) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2015_3_10_15_AlexisMacnab_ShadowPuppetry_CameraObscura_StaffPhotog (5).jpg');
-}
-.events .palisades:nth-child(24) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2015_2_14_15_Copperplate_with_Miles_Lewis_CameraObscura_StaffPhotographer (35).jpg');
-}
-.events .palisades:nth-child(25) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2015_1_30_15_Linocut_with_Zeina_CameraObscura_StaffPhotographer (1).jpg');
-}
-.events .palisades:nth-child(26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2015_1_21_15_Multimedia_Graphics_CameraObscura_StaffPhotographer (2).jpg');
-}
-
-
-.events .palisades:nth-child(1n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2017_ShannonFreshwater_Weaving_COAL_StaffPhotog (8).jpg');
-}
-.events .palisades:nth-child(2n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2017_ShannonFreshwater_Foil_Embossing_COAL_StaffPhotog (3).jpg');
-}
-.events .palisades:nth-child(3n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2017_7_29_17_Tracy_Bromwich_Final_Show_CameraObscura_MaddyPaull (31).jpg');
-}
-.events .palisades:nth-child(4n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2017_CCS_Library_Teambuilding_CameraObscura_StaffPhotographer (2).jpg');
-}
-.events .palisades:nth-child(5n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2017_Coast_CameraObscuraLightsOn_photoby_Jason_Abraham.jpg');
-}
-.events .palisades:nth-child(6n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2017_Juanita DavisGenesis Hernandez_DinahBerland_Poetry_CameraObscura_StaffPhotog.jpg');
-}
-.events .palisades:nth-child(7n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2017_ShannonFreshwater_FinalShow_COAL_StaffPhotog (15).jpg');
-}
-.events .palisades:nth-child(8n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2017_ShannonFreshwater_FinalShow_COAL_StaffPhotog (18).jpg');
-}
-.events .palisades:nth-child(9n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2017_3_11_17_Dumplings_Grace_Hwang_Residency_CameraObscura_StaffPhotographer (1).jpg');
-}
-.events .palisades:nth-child(10n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2017_7_15_17_Indigo_Dye_Tote_with_Tracy_Bromwich_CameraObscura_StaffPhotographer (13).jpg');
-}
-.events .palisades:nth-child(11n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2017_7_29_17_Tracy_Bromwich_Final_Show_CameraObscura_MaddyPaull (16).jpg');
-}
-.events .palisades:nth-child(12n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2016_1_PatriciaMitchell_ChineColle_CameraObscura_StaffPhotog (29).jpg');
-}
-.events .palisades:nth-child(13n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2016_3_Patricia itchell_Screenprinting_CameraObscura_StaffPhotog (3).jpg');
-}
-.events .palisades:nth-child(14n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2016_3_PatriciaMitchell_Leather_Masks_CameraObscura_StaffPhotog (11).jpg');
-}
-.events .palisades:nth-child(15n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2016_FrankValdez_Final_Show_CameraObscura_StaffPhotog (35).jpg');
-}
-.events .palisades:nth-child(16n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2016_FrankValdez_LongPose_CameraObscura_StaffPhotog (17).jpg');
-}
-.events .palisades:nth-child(17n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2016_Zeal_Harris_Residency_CameraObscura_StaffPhotographer (23).jpg');
-}
-.events .palisades:nth-child(18n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2015_ZeinaBaltagiMilesLewis_FinalShow_Staffphotog.jpg');
-}
-.events .palisades:nth-child(19n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2015_7_1_15_Zeina_Baltagi_Xerox_Lithography_CameraObscura_StaffPhotographer (16).jpg');
-}
-.events .palisades:nth-child(20n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2015_Alexis_Macnab_Studio_Progress_CameraObscura_StaffPhotographer (3).jpg');
-}
-.events .palisades:nth-child(21n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2015_Zeina_Baltagi_Miles_Lewis_Printmaking_Residency_CameraObscura_StaffPhotographer.jpg');
-}
-.events .palisades:nth-child(22n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2015_3_21_Miles_Lewis_Egg_Tempera (8).jpg');
-}
-.events .palisades:nth-child(23n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2015_3_10_15_AlexisMacnab_ShadowPuppetry_CameraObscura_StaffPhotog (5).jpg');
-}
-.events .palisades:nth-child(24n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2015_2_14_15_Copperplate_with_Miles_Lewis_CameraObscura_StaffPhotographer (35).jpg');
-}
-.events .palisades:nth-child(25n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2015_1_30_15_Linocut_with_Zeina_CameraObscura_StaffPhotographer (1).jpg');
-}
-.events .palisades:nth-child(26n+26) .summary > h3::before {
-  background-image: url('/uploads-optimized/camera-obscura-art-lab/768-wide/2015_1_21_15_Multimedia_Graphics_CameraObscura_StaffPhotographer (2).jpg');
-}
-
-
-.events .miles:nth-child(1) .summary > h3::before {
-  background-image: url('/uploads-optimized/miles-memorial-playhouse/768-wide/String Theory at Miles.jpg');
-}
-.events .miles:nth-child(2) .summary > h3::before {
-  background-image: url('/uploads-optimized/miles-memorial-playhouse/768-wide/Nick Mancini 4Tet at Fireside.jpg');
-}
-.events .miles:nth-child(3) .summary > h3::before {
-  background-image: url('/uploads-optimized/miles-memorial-playhouse/768-wide/On Ensemble Fireside.jpg');
-}
-.events .miles:nth-child(4) .summary > h3::before {
-  background-image: url('/uploads-optimized/miles-memorial-playhouse/768-wide/MixMatch Dance FESTIVAL.jpg');
-}
-.events .miles:nth-child(5) .summary > h3::before {
-  background-image: url('/uploads-optimized/miles-memorial-playhouse/768-wide/MM2.jpg');
-}
-.events .miles:nth-child(6) .summary > h3::before {
-  background-image: url('/uploads-optimized/miles-memorial-playhouse/768-wide/74_07_15_17_StringTheory_ReedPark_highrez_©KristinaSado.jpg');
-}
-.events .miles:nth-child(7) .summary > h3::before {
-  background-image: url('/uploads-optimized/miles-memorial-playhouse/768-wide/Hart Pulse Fireside.jpg');
-}
-.events .miles:nth-child(8) .summary > h3::before {
-  background-image: url('/uploads-optimized/miles-memorial-playhouse/768-wide/63_07_15_17_StringTheory_ReedPark_highrez_©KristinaSado.jpg');
-}
-.events .miles:nth-child(9) .summary > h3::before {
-  background-image: url('/uploads-optimized/miles-memorial-playhouse/768-wide/53_07_15_17_StringTheory_ReedPark_highrez_©KristinaSado.jpg');
-}
-
-
-.events .miles:nth-child(2n+9) .summary > h3::before {
-  background-image: url('/uploads-optimized/miles-memorial-playhouse/768-wide/String Theory at Miles.jpg');
-}
-/* .events .miles:nth-child(3n) .summary > h3::before {
-  background-image: url('/uploads-optimized/miles-memorial-playhouse/768-wide/Nick Mancini 4Tet at Fireside.jpg');
-}
-.events .miles:nth-child(5n) .summary > h3::before {
-  background-image: url('/uploads-optimized/miles-memorial-playhouse/768-wide/On Ensemble Fireside.jpg');
-}
-.events .miles:nth-child(7n) .summary > h3::before {
-  background-image: url('/uploads-optimized/miles-memorial-playhouse/768-wide/MixMatch Dance FESTIVAL.jpg');
-}
-.events .miles:nth-child(2n+1) .summary > h3::before {
-  background-image: url('/uploads-optimized/miles-memorial-playhouse/768-wide/MM2.jpg');
-}
-.events .miles:nth-child(3n+1) .summary > h3::before {
-  background-image: url('/uploads-optimized/miles-memorial-playhouse/768-wide/74_07_15_17_StringTheory_ReedPark_highrez_©KristinaSado.jpg');
-}
-.events .miles:nth-child(5n+1) .summary > h3::before {
-  background-image: url('/uploads-optimized/miles-memorial-playhouse/768-wide/Hart Pulse Fireside.jpg');
-}
-.events .miles:nth-child(7n+1) .summary > h3::before {
-  background-image: url('/uploads-optimized/miles-memorial-playhouse/768-wide/63_07_15_17_StringTheory_ReedPark_highrez_©KristinaSado.jpg');
-}
-.events .miles:nth-child(3n+2) .summary > h3::before {
-  background-image: url('/uploads-optimized/miles-memorial-playhouse/768-wide/53_07_15_17_StringTheory_ReedPark_highrez_©KristinaSado.jpg');
-} */
-
-
-.events .palisades .summary > h3 {
-  background-color: var(--olive);
-}
-.events .miles .summary > h3 {
-  background-color: var(--orange);
-}
-.events .beach .summary > h3 {
-  background-color: var(--ocean);
-}
-.events .palisades .summary > h3::before {
-  content: none;
-}
-.events .miles .summary > h3::before {
-  content: none;
-}
-.events .beach .summary > h3::before {
-  content: none;
-}
-
-
-
-.events .summary > h3 > * {
-  position: relative;
-  z-index: 1;
 }
 
 .events summary {
@@ -426,6 +74,18 @@
   display: none;
 }
 
-.events details[open] {
-  padding-bottom: calc(var(--vertical-rhythm) * 2)
+
+/* SHIM: For the venue details page (make calendar fill the viewport width) */
+.detail-venue .events-headline {
+  margin-top: 6rem;
 }
+@media (min-width: 58.75em) {
+  .detail-venue .events {
+    margin-right: calc(-50vw + 200px);
+    margin-left: 0;
+    margin-top: 3em;
+  }
+}
+
+
+
