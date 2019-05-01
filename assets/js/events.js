@@ -185,6 +185,7 @@ Example HTML
               success = createItem(data[index], list, template)
             } catch(e) {
               console.error(`Something went wrong while rendering an event using this data: `)
+              console.error(e)
               console.dir({ data: data[index] })
             }
             if (success) {
@@ -256,7 +257,12 @@ Example HTML
     let description = itemData.description
     let categories  = itemData.event_types
     let ages        = itemData.age_groups
-    let url         = itemData.detail_url
+    let url
+    if (typeof(itemData.detail_url) == "object") {
+      url = itemData.detail_url.url
+    } else {
+      url = itemData.detail_url
+    }
     let urlDomain   = url.split("/")[2]
     let dataCategories = itemData.event_types ? itemData.event_types.toLowerCase() : null
     let dataDescription = itemData.description ? itemData.description.toLowerCase() : null
