@@ -20,3 +20,10 @@
 @import url(go-see-art.css);
 @import url(opportunities.css);
 @import url(venue-details.css);
+
+/*
+TEMPORARY: Override the “.collapse” class name and hide the mobile nav button…
+just to get it working temporarily (feel free to remove this style sheet,
+if it isn’t needed any longer or is causing problems). 
+*/
+@import url(collapse-override.css);
