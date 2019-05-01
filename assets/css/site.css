@@ -2,7 +2,7 @@
 /* Load proxima-nova from Jim’s typekit account */
 @import url(https://use.typekit.net/bwp8iid.css);
 
-@import url(_base.css);
+@import url(base.css);
 
 @import url(logotype.css);
 @import url(elements.css);
