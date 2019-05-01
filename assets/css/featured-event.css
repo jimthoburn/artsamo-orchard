@@ -48,10 +48,15 @@
   position: relative;
   z-index: 1;
   justify-self: center;
-  color: white;
   align-self: center;
   justify-self: center;
-  background: black;
+  background-color: black;
+  color: white;
+}
+@supports (display: grid) {
+  .featured-event__text {
+    background-color: transparent;
+  }
 }
 .featured-event__title {
   text-transform: uppercase;
