@@ -123,6 +123,15 @@
 
 
   const featuredEventsHTML = `
+<a href="/arts/beach-dances" class="featured-event">
+  <img src="https://www.santamonica.gov/Media/arts/CA/beach-dances-jayCarlon_FourTriangles_staffphotoSm.jpg" 
+       class="featured-event__image"
+       alt="" />
+  <div class="featured-event__text">
+    <h2 class="featured-event__title">Beach Dances</h2>
+    <p class="featured-event__description">June 18 – 23, 2019, Free admission</p>
+  </div>
+</a>
 <a href="/arts/meet-me-at-reed" class="featured-event">
   <img src="/Media/arts/CA/2018_5_19_2018_Meet_Me_At_Reed_Taiko_Festival_Javier_Guillen (195 of 281).jpg" 
        class="featured-event__image"
