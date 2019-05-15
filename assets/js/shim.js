@@ -123,15 +123,6 @@
 
 
   const featuredEventsHTML = `
-<a href="/arts/indigenous-now" class="featured-event">
-  <img src="/Media/arts/CA/2018_Tongva_Park_Jason_Abraham-(4-of-52).jpg" 
-       class="featured-event__image"
-       alt="" />
-  <div class="featured-event__text">
-    <h2 class="featured-event__title">Indigenous Now</h2>
-    <p class="featured-event__description">Saturday, May 11 from 12 – 4 p.m., Free admission</p>
-  </div>
-</a>
 <a href="/arts/meet-me-at-reed" class="featured-event">
   <img src="/Media/arts/CA/2018_5_19_2018_Meet_Me_At_Reed_Taiko_Festival_Javier_Guillen (195 of 281).jpg" 
        class="featured-event__image"
@@ -152,6 +143,15 @@
 </a>
 `
 /*
+<a href="/arts/indigenous-now" class="featured-event">
+  <img src="/Media/arts/CA/2018_Tongva_Park_Jason_Abraham-(4-of-52).jpg" 
+       class="featured-event__image"
+       alt="" />
+  <div class="featured-event__text">
+    <h2 class="featured-event__title">Indigenous Now</h2>
+    <p class="featured-event__description">Saturday, May 11 from 12 – 4 p.m., Free admission</p>
+  </div>
+</a>
 <a class="featured-event-image-only" href="/arts/airport-artwalk">
   <img src="/Media/arts/CA/art-walk.jpg"
        alt="Santa Monica Airpot Artwalk 2019. Saturday, March 23 from 12-5pm. Rain or shine! Free admission" />
