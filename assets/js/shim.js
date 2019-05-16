@@ -124,7 +124,7 @@
 
   const featuredEventsHTML = `
 <a href="/arts/beach-dances" class="featured-event">
-  <img src="https://www.santamonica.gov/Media/arts/CA/beach-dances-jayCarlon_FourTriangles_staffphotoSm.jpg" 
+  <img src="https://www.santamonica.gov/Media/arts/CA/beach-dances-2.jpg" 
        class="featured-event__image"
        alt="" />
   <div class="featured-event__text">
