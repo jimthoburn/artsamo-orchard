@@ -124,7 +124,7 @@
 
   const featuredEventsHTML = `
 <a href="/arts/beach-dances" class="featured-event">
-  <img src="https://www.santamonica.gov/Media/arts/CA/beach-dances-2.jpg" 
+  <img src="https://www.santamonica.gov/Media/arts/CA/2018_6_7_18_SarahElgart_BeachDances_BH_Sam%20McReynolds_Genna%20Moroni_%20Jonathan%20Stanley_%20Alexandria%20Diaz%20de%20Fato_photobyJasonAbraham2.jpg" 
        class="featured-event__image"
        alt="" />
   <div class="featured-event__text">
