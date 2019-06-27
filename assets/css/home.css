@@ -150,7 +150,7 @@
     padding-left: unset;
   }
   .detail-home-page .previewvenue a > img {
-    width: unset;
+    width: 100%;
   }
   .detail-home-page .previewvenue p {
     width: unset;
