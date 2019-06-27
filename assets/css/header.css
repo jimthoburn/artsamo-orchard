@@ -10,6 +10,11 @@
   }
 }
 
+/* Caption */
+.page.content-item .image:first-child {
+  text-align: right;
+}
+
 @media screen and (min-width: 58.75em) {
   
   /* Avoid covering up the main headline */

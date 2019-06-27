@@ -13,6 +13,13 @@
   }
 }
 
+/* SHIM: Override style intended for the venue icon */
+.detail-venue .about img {
+  max-width: 100%;
+  width: unset;
+  height: unset;
+}
+
 @media screen and (min-width: 68.75em) {
   .detail-venue .about img {
     margin-right: 1.5em;
