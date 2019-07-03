@@ -18,6 +18,7 @@
   max-width: 100%;
   width: unset;
   height: unset;
+  float: unset;
 }
 
 @media screen and (min-width: 68.75em) {
