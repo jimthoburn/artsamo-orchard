@@ -123,15 +123,6 @@
 
 
   const featuredEventsHTML = `
-<a href="/arts/beach-dances" class="featured-event">
-  <img src="https://www.santamonica.gov/Media/arts/CA/2018_6_7_18_SarahElgart_BeachDances_BH_Sam%20McReynolds_Genna%20Moroni_%20Jonathan%20Stanley_%20Alexandria%20Diaz%20de%20Fato_photobyJasonAbraham2.jpg" 
-       class="featured-event__image"
-       alt="" />
-  <div class="featured-event__text">
-    <h2 class="featured-event__title">Beach Dances</h2>
-    <p class="featured-event__description">June 18 – 23, 2019, Free admission</p>
-  </div>
-</a>
 <a href="/arts/meet-me-at-reed" class="featured-event">
   <img src="/Media/arts/CA/2018_5_19_2018_Meet_Me_At_Reed_Taiko_Festival_Javier_Guillen (195 of 281).jpg" 
        class="featured-event__image"
@@ -152,6 +143,15 @@
 </a>
 `
 /*
+<a href="/arts/beach-dances" class="featured-event">
+<img src="https://www.santamonica.gov/Media/arts/CA/2018_6_7_18_SarahElgart_BeachDances_BH_Sam%20McReynolds_Genna%20Moroni_%20Jonathan%20Stanley_%20Alexandria%20Diaz%20de%20Fato_photobyJasonAbraham2.jpg" 
+     class="featured-event__image"
+     alt="" />
+<div class="featured-event__text">
+  <h2 class="featured-event__title">Beach Dances</h2>
+  <p class="featured-event__description">June 18 – 23, 2019, Free admission</p>
+</div>
+</a>
 <a href="/arts/indigenous-now" class="featured-event">
   <img src="/Media/arts/CA/2018_Tongva_Park_Jason_Abraham-(4-of-52).jpg" 
        class="featured-event__image"
