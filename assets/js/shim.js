@@ -132,6 +132,17 @@
     <p class="featured-event__description">Saturdays: June 15 to July 27, 2019, Free admission</p>
   </div>
 </a>
+<a href="/arts/jazz-2019" class="featured-event">
+  <img src="/Media/arts/CA/JOTL-Banner.jpg" 
+       class="featured-event__image"
+       alt="" />
+  <div class="featured-event__text">
+    <h2 class="featured-event__title">Jazz on the Lawn</h2>
+    <p class="featured-event__description">Sundays in August, Free admission</p>
+  </div>
+</a>
+`
+/*
 <a href="/arts/art-in-the-parks" class="featured-event">
   <img src="/Media/arts/CA/The%20Wonder%20Room%202015%20-%202%20William%20Short.jpg" 
        class="featured-event__image"
@@ -141,8 +152,6 @@
     <p class="featured-event__description">Free Outdoor Performances to Look Forward to This Summer</p>
   </div>
 </a>
-`
-/*
 <a href="/arts/beach-dances" class="featured-event">
 <img src="https://www.santamonica.gov/Media/arts/CA/2018_6_7_18_SarahElgart_BeachDances_BH_Sam%20McReynolds_Genna%20Moroni_%20Jonathan%20Stanley_%20Alexandria%20Diaz%20de%20Fato_photobyJasonAbraham2.jpg" 
      class="featured-event__image"
