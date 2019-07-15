@@ -1,0 +1,160 @@
+.coast-2019 #layout-navigation-wrapper,
+.coast-2019 .page.content-item > header {
+  display: none;
+}
+
+.coast-2019 .page.content-item {
+  font-size: calc(0.75em + 0.5vw);
+}
+.coast-2019 .page.content-item h1,
+.coast-2019 .page.content-item h2,
+.coast-2019 .page.content-item h3,
+.coast-2019 .page.content-item h4,
+.coast-2019 .page.content-item h5,
+.coast-2019 .page.content-item h6 {
+  color: hsla(175, 54%, 47%, 1);
+}
+.coast-2019 .page.content-item h1,
+.coast-2019 .page.content-item h2 {
+  font-weight: bold;
+}
+.coast-2019 .page.content-item h3 {
+  margin-top: 1.5em;
+  font-size: 1.6em;
+  grid-column: 2/-1;
+  grid-row-span: 1;
+  justify-self: start;
+  text-align: left;
+}
+
+@media (min-width: 58.75em) {
+  .coast-2019 .page.content-item h2 + h3,
+  .coast-2019 .page.content-item h2 + p {
+    margin-top: 12.5rem;
+  }
+  .coast-2019 .page.content-item h2 + p {
+    margin-top: 13.25rem;
+  }
+}
+
+.coast-2019 .page.content-item > .navigation {
+  grid-column: 1/-1;
+  width: 100%;
+  line-height: 1.5;
+  margin-top: 1.5em;
+  margin-botom: 4.5em;
+}
+.coast-2019 .page.content-item > .navigation ul {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: none;
+  width: 100%;
+}
+.coast-2019 .page.content-item > .navigation li {
+  margin: 0.375em;
+  flex-grow: 1;
+}
+
+.coast-2019 .page.content-item > .navigation li a {
+  background-color: hsla(175, 54%, 47%, 1);
+  background-color: hsla(199, 84%, 70%, 1);
+  background-color: hsla(207, 73%, 43%, 1);
+  background-color: hsla(38, 97%, 59%, 1);
+  color: white;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  font-size: 1.125em;
+}
+.coast-2019 .page.content-item .page.content-item > .navigation {
+  padding-top: 1.5em;
+}
+.coast-2019 .page.content-item .page.content-item > .navigation li a {
+  background-color: white !important;
+  color: hsla(199, 84%, 70%, 1) !important;
+}
+
+@supports (object-fit: contain) {
+  .coast-2019 .page.content-item > figure.image {
+    background-color: hsl(199, 84%, 70%);
+    margin-top: 0 !important;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  @media (min-width: 58.75em) {
+    .coast-2019 .page.content-item > figure.image {
+      margin-left: -35px;
+      margin-right: -35px;
+    }
+  }
+  @media (min-aspect-ratio: 1/1) {
+    .coast-2019 .page.content-item > figure.image img {
+      display: block;
+      width: 100vw !important;
+      height: 66vw !important;
+      object-fit: contain !important;
+    }
+  }
+}
+
+.coast-2019 .page.content-item > .introduction {
+  font-size: 1.25em;
+  /* font-weight: 300; */
+  margin-top: 1.5em;
+  grid-column: 1/-1;
+  max-width: 40em;
+  justify-self: center;
+}
+
+.coast-2019 .page.content-item .page.content-item {
+  background-color: hsla(199, 84%, 70%, 1);
+  color: white;
+  grid-column: 1/-1;
+  max-width: none;
+  width: 100vw;
+  margin-left: -15px;
+  margin-right: -15px;  
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 4.5em;
+  padding-top: 1px;
+}
+@media (min-width: 58.75em) {
+  .coast-2019 .page.content-item .page.content-item {
+    margin-left: -35px;
+    margin-right: -35px;  
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  .coast-2019 .page.content-item figure {
+    margin-bottom: 0 !important;
+  }
+  .coast-2019 .page.content-item figure + .page.content-item,
+  .coast-2019 .page.content-item figure + header + .page.content-item {
+    margin-top: 0;
+  }
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item {
+  background-color: hsl(175, 53%, 48%);
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item {
+  background-color: hsl(29, 93%, 58%);
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+  background-color: hsl(43, 87%, 58%);
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+  background-color: hsl(14, 88%, 55%);
+}
+.coast-2019 .page.content-item .page.content-item h2,
+.coast-2019 .page.content-item .page.content-item h3,
+.coast-2019 .page.content-item .page.content-item a {
+  color: inherit !important;
+}
+.coast-2019 .page.content-item .page.content-item > *:not(nav) a {
+  text-decoration: underline;
+}
