@@ -61,7 +61,7 @@
   }
   .page.content-item > h2,
   .page.content-item > h2 + *:not(h3) {
-    margin-top: 12rem;
+    margin-top: 9rem;
   }
   /* SHIM: Just in case a page has a first level headline mixed in with the content. */
   .page.content-item > h1 {
