@@ -72,26 +72,28 @@
     Emphasize the primary image by making it the full width of the grid
     and overlap it with the main headline
   */
-  .page.content-item .image {
+  .page.content-item > .image,
+  .page.content-item .col-md-12 > .image {
     margin-bottom: 4.5em;
     grid-column: 1/-1;
     max-width: none;
   }
-  .page.content-item .image img {
+  .page.content-item > .image img,
+  .page.content-item .col-md-12 > .image img {
     width: 100%;
     height: auto;
   }
   /* If the image is the first element in the page content */
   .page.content-item > .image:first-child,
-  .page.content-item > div:first-child .image:first-child {
+  .page.content-item .col-md-12 > .image:first-child {
     margin-top: -4.5em;
   }
   .page.content-item > .image:first-child + header,
-  .page.content-item > div:first-child .image + header {
+  .page.content-item .col-md-12 > .image:first-child + header {
     max-width: none;
   }
   .page.content-item > .image:first-child + header h1,
-  .page.content-item > div:first-child .image + header h1 {
+  .page.content-item .col-md-12 > .image:first-child + header h1 {
     font-size: 55px;
     margin-top: 0;
   }
@@ -106,4 +108,14 @@
     margin-bottom: 4.5em;
   }
 
+  /* Align artists sub-grid with the main grid */
+  .page.content-item > .artists,
+  .page.content-item .col-md-12 > .artists {
+    grid-column: 1/-1;
+    max-width: none;
+  }
+  .page.content-item > .artists li,
+  .page.content-item .col-md-12 > .artists li {
+    grid-template-columns: 1fr 2fr;
+  }
 }
