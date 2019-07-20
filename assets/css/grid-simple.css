@@ -113,6 +113,7 @@
   .page.content-item .col-md-12 > .artists {
     grid-column: 1/-1;
     max-width: none;
+    margin-top: 0;
   }
   .page.content-item > .artists li,
   .page.content-item .col-md-12 > .artists li {
