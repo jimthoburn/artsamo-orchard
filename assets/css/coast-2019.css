@@ -30,10 +30,10 @@
 @media (min-width: 58.75em) {
   .coast-2019 .page.content-item h2 + h3,
   .coast-2019 .page.content-item h2 + p {
-    margin-top: 12.5rem;
+    margin-top: 9.5rem;
   }
   .coast-2019 .page.content-item h2 + p {
-    margin-top: 13.25rem;
+    margin-top: 10.25rem;
   }
 }
 
@@ -77,20 +77,20 @@
 }
 
 @supports (object-fit: contain) {
-  .coast-2019 .page.content-item > figure.image {
+  .coast-2019 .page.content-item > figure.image:first-child {
     background-color: hsl(199, 84%, 70%);
     margin-top: 0 !important;
     margin-left: -15px;
     margin-right: -15px;
   }
   @media (min-width: 58.75em) {
-    .coast-2019 .page.content-item > figure.image {
+    .coast-2019 .page.content-item > figure.image:first-child {
       margin-left: -35px;
       margin-right: -35px;
     }
   }
   @media (min-aspect-ratio: 1/1) {
-    .coast-2019 .page.content-item > figure.image img {
+    .coast-2019 .page.content-item > figure.image:first-child img {
       display: block;
       width: 100vw !important;
       height: 66vw !important;
@@ -130,11 +130,11 @@
     padding-left: 35px;
     padding-right: 35px;
   }
-  .coast-2019 .page.content-item figure {
+  .coast-2019 .page.content-item > figure.image:first-child {
     margin-bottom: 0 !important;
   }
-  .coast-2019 .page.content-item figure + .page.content-item,
-  .coast-2019 .page.content-item figure + header + .page.content-item {
+  .coast-2019 .page.content-item > figure.image:first-child + .page.content-item,
+  .coast-2019 .page.content-item > figure.image:first-child + header + .page.content-item {
     margin-top: 0;
   }
 }
@@ -157,4 +157,9 @@
 }
 .coast-2019 .page.content-item .page.content-item > *:not(nav) a {
   text-decoration: underline;
+}
+
+
+.coast-2019 .artists figure {
+  margin-bottom: 0.75em;
 }
