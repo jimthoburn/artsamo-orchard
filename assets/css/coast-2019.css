@@ -198,16 +198,12 @@
 }
 .coast-2019 .figure-group figure::after {
   content: "";
-  background-image: linear-gradient(to top, hsla(10, 10%, 0%, 0.5), hsla(10, 10%, 0%, 0));
+  background-image: linear-gradient(to top, hsla(10, 10%, 0%, 0.5), hsla(10, 10%, 0%, 0) 25%, hsla(10, 10%, 0%, 0));
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
-.coast-2019 .figure-group figure {
-  margin-top: 1.5em;
-  border: 0.375em solid hsla(0, 0%, 100%, 0.5);
 }
 .coast-2019 .figure-group figure img {
   position: absolute;
@@ -221,7 +217,7 @@
   position: absolute;
   z-index: 1;
   margin: 0 !important;
-  font-size: inherit !important;
+  font-size: 1.5em !important;
   font-weight: bold;
   padding: 1.5em;
   bottom: 0;
@@ -231,7 +227,6 @@
   .coast-2019 .figure-group {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; /* repeat( auto-fit, minmax(250px, 1fr) ); */
-    grid-gap: 1.5em;
   }
   .coast-2019 .figure-group figure {
     margin: 0;
