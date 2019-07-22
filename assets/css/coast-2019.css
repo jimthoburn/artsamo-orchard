@@ -150,6 +150,12 @@
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
   background-color: hsl(14, 88%, 55%);
 }
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+  background-color: hsl(199, 84%, 70%);
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+  background-color: hsl(175, 53%, 48%);
+}
 .coast-2019 .page.content-item .page.content-item h2,
 .coast-2019 .page.content-item .page.content-item h3,
 .coast-2019 .page.content-item .page.content-item a {
@@ -162,4 +168,7 @@
 
 .coast-2019 .artists figure {
   margin-bottom: 0.75em;
+}
+.coast-2019 .artists figure {
+  
 }
