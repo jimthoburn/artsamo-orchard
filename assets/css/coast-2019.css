@@ -147,22 +147,25 @@
   }
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item {
-  background-color: hsl(175, 53%, 48%);
+  background-color: hsl(175, 53%, 48%); /* aqua */
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item {
-  background-color: hsl(29, 93%, 58%);
+  background-color: hsl(29, 93%, 58%); /* orange */
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
-  background-color: hsl(43, 87%, 58%);
+  background-color: hsl(43, 87%, 58%); /* yellow */
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
-  background-color: hsl(14, 88%, 55%);
+  background-color: hsl(14, 88%, 55%); /* tangerine */
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
-  background-color: hsl(175, 53%, 48%);
+  background-color: hsl(175, 53%, 48%); /* aqua */
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
-  background-color: hsl(207, 73%, 43%);
+  background-color: hsl(207, 73%, 43%); /* dark blue */
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+  background-color: hsl(175, 53%, 48%); /* aqua */
 }
 .coast-2019 .page.content-item .page.content-item h2,
 .coast-2019 .page.content-item .page.content-item h3,
@@ -190,47 +193,74 @@
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item > svg:first-child path {
   fill: currentColor;
 }
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item > svg:last-child {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  grid-column: 1/-1 !important;
+  width: 100vw;
+  max-width: none;
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item > svg:last-child path {
+  fill: currentColor;
+}
 
 
 .coast-2019 .page.content-item .page.content-item {
   padding-bottom: 6em;
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item > svg:first-child {
-  color: hsl(175, 53%, 48%);
+  color: hsl(175, 53%, 48%); /* aqua */
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
-  color: hsl(29, 93%, 58%);
+  color: hsl(29, 93%, 58%); /* orange */
   transform: scale(-1, 1) translateY(-100%);
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
-  color: hsl(43, 87%, 58%);
+  color: hsl(43, 87%, 58%); /* yellow */
   transform: scale(1, 1) translateY(-100%);
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
   padding-top: 6em;
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
-  color: hsl(43, 87%, 58%);
+  color: hsl(43, 87%, 58%); /* yellow */
   transform: scale(-1, -1);
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
   padding-top: 3em;
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
-  color: hsl(175, 53%, 48%);
+  color: hsl(175, 53%, 48%); /* aqua */
   transform: scale(1, 1) translateY(-100%);
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
   padding-top: 6em;
+  padding-bottom: 9em;
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
-  color: hsl(175, 53%, 48%);
+  color: hsl(175, 53%, 48%); /* aqua */
   transform: scale(-1, -1);
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:last-child {
+  color: white;
+  transform: scale(-1, 1);
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+  padding-top: 0;
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
+  color: hsl(175, 53%, 48%); /* aqua */
+  transform: scale(-1, 1) translateY(-100%);
 }
 
 
 @media (min-width: 58.75em) {
-  .page.content-item > svg:first-child {
+  .page.content-item > svg:first-child,
+  .page.content-item > svg:last-child {
     margin-left: -35px;
     margin-right: -35px;
   }
