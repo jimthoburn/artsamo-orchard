@@ -153,19 +153,16 @@
   background-color: hsl(192, 100%, 44%); /* medium blue */
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
-  background-color: hsl(43, 87%, 58%); /* yellow */
+  background-color: hsl(14, 88%, 55%); /* tangerine */
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
-  background-color: hsl(14, 88%, 55%); /* tangerine */
+  background-color: hsl(207, 73%, 43%); /* dark blue */
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
   background-color: hsl(175, 53%, 48%); /* aqua */
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
-  background-color: hsl(207, 73%, 43%); /* dark blue */
-}
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
-  background-color: hsl(175, 53%, 48%); /* aqua */
+  background-color: hsl(29, 93%, 58%); /* orange */
 }
 .coast-2019 .page.content-item .page.content-item h2,
 .coast-2019 .page.content-item .page.content-item h3,
@@ -228,14 +225,14 @@
   padding-bottom: 6em;
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
-  color: hsl(43, 87%, 58%); /* yellow */
+  color: hsl(14, 88%, 55%); /* tangerine */
   transform: scale(1, 1) translateY(-100%);
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
   padding-top: calc(18.6vw + 3em);
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
-  color: hsl(43, 87%, 58%); /* yellow */
+  color: hsl(14, 88%, 55%); /* tangerine */
   transform: scale(-1, -1);
   top: -1px;
 }
