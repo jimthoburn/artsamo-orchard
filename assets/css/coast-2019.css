@@ -184,7 +184,7 @@
   position: absolute;
   z-index: 1;
   left: 0;
-  top: 0;
+  top: 1px;
   transform: translateY(-100%);
   grid-column: 1/-1 !important;
   width: 100vw;
@@ -199,7 +199,7 @@
   position: absolute;
   z-index: 1;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   transform: translateY(100%);
   grid-column: 1/-1 !important;
   width: 100vw;
@@ -237,6 +237,7 @@
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
   color: hsl(43, 87%, 58%); /* yellow */
   transform: scale(-1, -1);
+  top: -1px;
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
   padding-bottom: calc(18.6vw + 6em);
@@ -248,6 +249,7 @@
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
   color: hsl(175, 53%, 48%); /* aqua */
   transform: scale(1, 1) translateY(-100%);
+  top: 1px;
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
   padding-top: calc(18.6vw + 3em);
@@ -256,6 +258,7 @@
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
   color: hsl(175, 53%, 48%); /* aqua */
   transform: scale(-1, -1);
+  top: -1px;
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:last-child {
   color: white;
