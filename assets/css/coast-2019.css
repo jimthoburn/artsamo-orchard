@@ -6,7 +6,7 @@
 .coast-2019 .page.content-item {
   font-size: 1.75rem;
 }
-@media (min-width: 60em) {
+@media (min-width: 58.75em) {
   .coast-2019 .page.content-item {
     font-size: calc(0.75em + 0.5vw);
   }
@@ -171,6 +171,69 @@
 }
 .coast-2019 .page.content-item .page.content-item > *:not(nav) a {
   text-decoration: underline;
+}
+
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item {
+  position: relative;
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item > svg:first-child {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  transform: translateY(-100%);
+  grid-column: 1/-1 !important;
+  width: 100vw;
+  max-width: none;
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item > svg:first-child path {
+  fill: currentColor;
+}
+
+
+.coast-2019 .page.content-item .page.content-item {
+  padding-bottom: 6em;
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item > svg:first-child {
+  color: hsl(175, 53%, 48%);
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
+  color: hsl(29, 93%, 58%);
+  transform: scale(-1, 1) translateY(-100%);
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
+  color: hsl(43, 87%, 58%);
+  transform: scale(1, 1) translateY(-100%);
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+  padding-top: 6em;
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
+  color: hsl(43, 87%, 58%);
+  transform: scale(-1, -1);
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+  padding-top: 3em;
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
+  color: hsl(175, 53%, 48%);
+  transform: scale(1, 1) translateY(-100%);
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+  padding-top: 6em;
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
+  color: hsl(175, 53%, 48%);
+  transform: scale(-1, -1);
+}
+
+
+@media (min-width: 58.75em) {
+  .page.content-item > svg:first-child {
+    margin-left: -35px;
+    margin-right: -35px;
+  }
 }
 
 
