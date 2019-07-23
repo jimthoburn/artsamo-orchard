@@ -188,6 +188,7 @@
   transform: translateY(-100%);
   grid-column: 1/-1 !important;
   width: 100vw;
+  height: 18.6vw;
   max-width: none;
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item > svg:first-child path {
@@ -202,6 +203,7 @@
   transform: translateY(100%);
   grid-column: 1/-1 !important;
   width: 100vw;
+  height: 18.6vw;
   max-width: none;
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item > svg:last-child path {
@@ -210,39 +212,46 @@
 
 
 .coast-2019 .page.content-item .page.content-item {
-  padding-bottom: 6em;
+  padding-bottom: calc(18.6vw + 3em);
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item > svg:first-child {
   color: hsl(29, 93%, 58%); /* orange */
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item {
-  padding-bottom: 9em;
+  padding-bottom: calc(18.6vw + 6em);
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
   color: hsl(192, 100%, 44%); /* medium blue */
   transform: scale(-1, 1) translateY(-100%);
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+  padding-bottom: 6em;
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
   color: hsl(43, 87%, 58%); /* yellow */
   transform: scale(1, 1) translateY(-100%);
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
-  padding-top: 6em;
+  padding-top: calc(18.6vw + 3em);
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
   color: hsl(43, 87%, 58%); /* yellow */
   transform: scale(-1, -1);
 }
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+  padding-bottom: calc(18.6vw + 6em);
+}
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
   padding-top: 3em;
+  padding-bottom: 3em;
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
   color: hsl(175, 53%, 48%); /* aqua */
   transform: scale(1, 1) translateY(-100%);
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
-  padding-top: 6em;
-  padding-bottom: 9em;
+  padding-top: calc(18.6vw + 3em);
+  padding-bottom: calc(18.6vw + 6em);
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
   color: hsl(175, 53%, 48%); /* aqua */
