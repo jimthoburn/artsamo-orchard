@@ -147,10 +147,10 @@
   }
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item {
-  background-color: hsl(175, 53%, 48%); /* aqua */
+  background-color: hsl(29, 93%, 58%); /* orange */
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item {
-  background-color: hsl(29, 93%, 58%); /* orange */
+  background-color: hsl(192, 100%, 44%); /* medium blue */
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
   background-color: hsl(43, 87%, 58%); /* yellow */
@@ -213,10 +213,13 @@
   padding-bottom: 6em;
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item > svg:first-child {
-  color: hsl(175, 53%, 48%); /* aqua */
+  color: hsl(29, 93%, 58%); /* orange */
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item {
+  padding-bottom: 9em;
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
-  color: hsl(29, 93%, 58%); /* orange */
+  color: hsl(192, 100%, 44%); /* medium blue */
   transform: scale(-1, 1) translateY(-100%);
 }
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
