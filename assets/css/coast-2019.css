@@ -423,10 +423,17 @@
     justify-self: end;
     text-align: right;
   }
-  .coast-2019 .experience-group li figure {
+  .coast-2019 .experience-group h3 {
+    grid-row: 1/2;
+    align-self: end;
+  }
+  .coast-2019 .experience-group h3 + p {
+    grid-row: 2/3;
+    align-self: start;
+  }
+  .coast-2019 .experience-group figure {
     justify-self: start;
-    grid-row: span 2;
-    /* grid-row: 1/3; */
+    grid-row: 1/3;
   }
   /* .coast-2019 .experience-group li h3 {
     align-self: end;
