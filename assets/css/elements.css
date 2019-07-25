@@ -21,6 +21,10 @@ dt {
   margin-top: 0.75em;
 }
 
+.avoid-break {
+  display: inline-block;
+}
+
 /*
 
 TBD: Are these in use?
