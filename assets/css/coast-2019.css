@@ -25,23 +25,37 @@
 }
 .coast-2019 .page.content-item h2 {
   font-size: 2em;
+  
+  grid-column: 1 / -1;
+  justify-self: center;
+  font-family: canada-type-gibson, sans-serif;
+  font-style: normal;
+  line-height: 1.125;
+  text-transform: uppercase;
+  transform: skewY(-8deg);
+  text-align: center;
+  display: block;
+  font-size: calc(0.375em + 3vw);
+  font-weight: 300;
+  letter-spacing: 0.4em;
+  margin-bottom: 2.25em;
 }
 .coast-2019 .page.content-item h3 {
-  margin-top: 1.5em;
   font-size: 1.6em;
-  grid-column: 2/-1;
-  grid-row-span: 1;
-  justify-self: start;
-  text-align: left;
+  font-size: calc(1.618 * 1em);
+  line-height: 1.25;
+  font-weight: 400;
 }
 
 @media (min-width: 58.75em) {
-  .coast-2019 .page.content-item h2 + h3,
   .coast-2019 .page.content-item h2 + p {
     margin-top: 9.5rem;
   }
   .coast-2019 .page.content-item h2 + p {
     margin-top: 10.25rem;
+  }
+  .coast-2019 .page.content-item h2 + p {
+    margin-top: 0;
   }
 }
 
@@ -378,6 +392,7 @@
 .coast-2019 .experience-group h3 {
   font-weight: bold;
   margin-top: 0 !important;
+  grid-column: 2/-1;
 }
 .coast-2019 .experience-group figure {
   margin-bottom: 0.75em;
@@ -399,11 +414,19 @@
   }
   .coast-2019 .experience-group li {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1.5em auto;
     grid-gap: 1.5em;
   }
-  .coast-2019 .experience-group li figure {
+  .coast-2019 .experience-group h3,
+  .coast-2019 .experience-group p {
+    grid-column: 1/2;
     justify-self: end;
+    text-align: right;
+  }
+  .coast-2019 .experience-group li figure {
+    justify-self: start;
+    grid-row: span 2;
     /* grid-row: 1/3; */
   }
   /* .coast-2019 .experience-group li h3 {
