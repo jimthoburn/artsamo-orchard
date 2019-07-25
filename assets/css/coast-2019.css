@@ -40,6 +40,13 @@
   letter-spacing: 0.4em;
   margin-bottom: 2.25em;
 }
+@media (max-width: 50em) {
+  .coast-2019 .page.content-item h2 {
+    font-size: 1.875em;
+    font-weight: normal;
+    letter-spacing: 0.2em;
+  }
+}
 .coast-2019 .page.content-item h3 {
   font-size: 1.6em;
   font-size: calc(1.618 * 1em);
