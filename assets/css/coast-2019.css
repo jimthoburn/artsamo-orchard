@@ -47,15 +47,19 @@
   font-weight: 400;
 }
 
+
+
 @media (min-width: 58.75em) {
   .coast-2019 .page.content-item h2 + p {
-    margin-top: 9.5rem;
-  }
-  .coast-2019 .page.content-item h2 + p {
-    margin-top: 10.25rem;
-  }
-  .coast-2019 .page.content-item h2 + p {
     margin-top: 0;
+  }
+  .page.content-item > h3,
+  .page.content-item > h3 + * {
+    margin-top: 1.5em;
+  }
+  .page.content-item > h3 + p,
+  .page.content-item > h3 + ul {
+    margin-top: 2.925em;
   }
 }
 
@@ -410,18 +414,19 @@
 
 @media (min-width: 40em) {
   .coast-2019 .experience-group {
-    margin: 4.5em 3em 0;
+    margin: 4.5em auto 0;
+    max-width: 50em;
   }
   .coast-2019 .experience-group li {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 1.5em;
+    grid-template-columns: 1.5fr 1.5fr;
+    grid-gap: 0 1.5em;
   }
   .coast-2019 .experience-group h3,
   .coast-2019 .experience-group p {
-    grid-column: 1/2;
-    justify-self: end;
-    text-align: right;
+    grid-column: 2/3;
+    justify-self: start;
+    text-align: left;
   }
   .coast-2019 .experience-group h3 {
     grid-row: 1/2;
@@ -432,8 +437,10 @@
     align-self: start;
   }
   .coast-2019 .experience-group figure {
-    justify-self: start;
+    grid-column: 1/2;
     grid-row: 1/3;
+    justify-self: end;
+    text-align: right;
   }
   /* .coast-2019 .experience-group li h3 {
     align-self: end;
@@ -445,4 +452,6 @@
     margin: 0 !important;
   } */
 }
+
+
 
