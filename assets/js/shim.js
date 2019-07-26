@@ -131,7 +131,6 @@
         return response.text();
       })
       .then(function(responseText) {
-        console.log(responseText);
         let start   = responseText.indexOf('<ol id="featured-events" class="featured-event-list">');
         let end     = responseText.indexOf('</ol>');
         if (start >= 0 && end >= 0) {
