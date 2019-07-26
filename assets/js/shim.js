@@ -194,6 +194,15 @@
     }
   }
 
+  let featuredEvents = document.querySelectorAll("#featured-events li")
+  featuredEvents.forEach(item => {
+    let link = item.querySelector("a")
+    let text = item.querySelector(".featured-event__text")
+    if (link && text) {
+      text.parentNode.removeChild(text)
+      link.appendChild(text)
+    }
+  })
 
   // Open external links and PDFs in a new window
   document.querySelectorAll("a").forEach(link => {

@@ -4,6 +4,17 @@
 /* =Featured Event
 ----------------------------------------------- */
 
+.featured-event-list {
+  grid-column: 1/-1;
+  max-width: none;
+}
+.featured-event-list,
+.featured-event-list > li {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
 /* Image only */
 .featured-event-image-only {
   grid-column: 1/-1;
@@ -54,7 +65,7 @@
   color: white;
 }
 @supports (display: grid) {
-  .featured-event__text {
+  .featured-event .featured-event__text {
     background-color: transparent;
   }
 }
