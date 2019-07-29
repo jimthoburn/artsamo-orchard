@@ -428,6 +428,10 @@
 .coast-2019 .experience-group li p {
   max-width: 33em;
 }
+.coast-2019 .experience-group summary h4 {
+  text-decoration: underline;
+  display: inline-block;
+}
 
 @media (min-width: 40em) {
   .coast-2019 .experience-group {
@@ -440,7 +444,9 @@
     grid-gap: 0 1.5em;
   }
   .coast-2019 .experience-group h3,
-  .coast-2019 .experience-group p {
+  .coast-2019 .experience-group p,
+  .coast-2019 .experience-group dl,
+  .coast-2019 .experience-group details {
     grid-column: 2/3;
     justify-self: start;
     text-align: left;
@@ -455,7 +461,7 @@
   }
   .coast-2019 .experience-group figure {
     grid-column: 1/2;
-    grid-row: 1/3;
+    grid-row: 1/4;
     justify-self: end;
     text-align: right;
   }
