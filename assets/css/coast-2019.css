@@ -53,6 +53,15 @@
   line-height: 1.25;
   font-weight: 400;
 }
+.coast-2019 .page.content-item h4,
+.coast-2019 .page.content-item h5,
+.coast-2019 .page.content-item h6 {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: normal;
+  color: inherit;
+  line-height: 1.25;
+}
 
 
 
@@ -64,6 +73,7 @@
   .page.content-item > h3 + * {
     margin-top: 1.5em;
   }
+  .page.content-item > h3 + h4,
   .page.content-item > h3 + p,
   .page.content-item > h3 + ul {
     margin-top: 2.925em;
