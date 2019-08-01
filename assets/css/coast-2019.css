@@ -485,3 +485,62 @@
 
 
 
+
+
+/* =Subscribe
+----------------------------------------------- */
+
+.coast-2019 .subscribe label span {
+  font-size: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+}
+.coast-2019 .subscribe label br {
+  display: none;
+}
+.coast-2019 .subscribe input[type="email"] {
+  margin-right: 0.5em;
+  margin-bottom: 1em;
+  width: 100%;
+  max-width: 20em;
+  box-sizing: border-box;
+}
+
+.coast-2019 .subscribe button,
+.coast-2019 .subscribe input[type="email"],
+.coast-2019 .subscribe input[type="text"] {
+  border-width: 0;
+  padding: 0.75em 1.5em;
+  font-family: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  border-radius: 1.5em;
+  font-weight: normal;
+}
+.coast-2019 .subscribe input[type="email"],
+.coast-2019 .subscribe input[type="text"],
+.coast-2019 .subscribe button {
+  background-color: white;
+  color: black;
+}
+
+.coast-2019 .subscribe button {
+  background-color: white;
+  color: hsl(199, 84%, 70%);
+  cursor: pointer;
+  padding: 0.75em 1.5em;
+  text-align: center;
+  
+  background-color: hsl(38, 97%, 59%);
+  color: white;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+.coast-2019 .subscribe button:hover,
+.coast-2019 .subscribe button:focus {
+  background-color: hsl(199, 84%, 70%);
+}
