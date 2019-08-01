@@ -131,11 +131,18 @@
     margin-right: -35px;
   }
 }
-@supports (object-fit: contain) {
+
+/* Override styles intended for the primary image on other pages */
+.coast-2019 .page.content-item > .image:first-child img {
+  height: auto;
+  width: 100%;
+}
+
+/* @supports (object-fit: contain) {
   @media (min-aspect-ratio: 1/1) {
     .coast-2019 .page.content-item > figure.image:first-child {
       background-image:
-        linear-gradient(to bottom, hsla(29, 93%, 58%, 1), hsla(43, 87%, 58%, 1) 48.375vw, hsla(43, 87%, 58%, 0) 48.375vw, hsla(43, 87%, 58%, 0)); /* orange */
+        linear-gradient(to bottom, hsla(29, 93%, 58%, 1), hsla(43, 87%, 58%, 1) 48.375vw, hsla(43, 87%, 58%, 0) 48.375vw, hsla(43, 87%, 58%, 0));
     }
     .coast-2019 .page.content-item > figure.image:first-child img {
       display: block;
@@ -144,7 +151,7 @@
       object-fit: contain !important;
     }
   }
-}
+} */
 
 .coast-2019 .page.content-item > .introduction {
   font-size: 1.25em;
