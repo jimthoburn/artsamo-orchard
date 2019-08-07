@@ -2,29 +2,29 @@
 /* Load proxima-nova from Jim’s typekit account */
 @import url(https://use.typekit.net/bwp8iid.css);
 
-@import url(base.css?v=93);
+@import url(base.css?v=94);
 
-@import url(logotype.css?v=93);
-@import url(elements.css?v=93);
-@import url(navigation.css?v=93);
-@import url(layout.css?v=93);
-@import url(grid.css?v=93);
-@import url(grid-simple.css?v=93);
-@import url(artists.css?v=93);
-@import url(events.css?v=93);
-@import url(featured-event.css?v=93);
-@import url(quote-image.css?v=93);
-@import url(header.css?v=93);
-@import url(footer.css?v=93);
-@import url(home.css?v=93);
-@import url(go-see-art.css?v=93);
-@import url(opportunities.css?v=93);
-@import url(venue-details.css?v=93);
-@import url(coast-2019.css?v=93);
+@import url(logotype.css?v=94);
+@import url(elements.css?v=94);
+@import url(navigation.css?v=94);
+@import url(layout.css?v=94);
+@import url(grid.css?v=94);
+@import url(grid-simple.css?v=94);
+@import url(artists.css?v=94);
+@import url(events.css?v=94);
+@import url(featured-event.css?v=94);
+@import url(quote-image.css?v=94);
+@import url(header.css?v=94);
+@import url(footer.css?v=94);
+@import url(home.css?v=94);
+@import url(go-see-art.css?v=94);
+@import url(opportunities.css?v=94);
+@import url(venue-details.css?v=94);
+@import url(coast-2019.css?v=94);
 
 /*
 TEMPORARY: Override the “.collapse” class name and hide the mobile nav button…
 just to get it working temporarily (feel free to remove this style sheet,
 if it isn’t needed any longer or is causing problems). 
 */
-@import url(collapse-override.css?v=93);
+@import url(collapse-override.css?v=94);
