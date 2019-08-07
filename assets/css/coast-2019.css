@@ -8,7 +8,7 @@
 }
 @media (min-width: 58.75em) {
   .coast-2019 .page.content-item {
-    font-size: calc(0.75em + 0.5vw);
+    font-size: calc(0.75em + 0.4375vw);
   }
 }
 .coast-2019 .page.content-item h1,
