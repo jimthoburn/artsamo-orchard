@@ -213,6 +213,22 @@
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
   background-color: hsl(29, 93%, 58%); /* orange */
 }
+
+
+
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+  background-color: hsl(192, 100%, 44%); /* medium blue */
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+  background-color: hsl(279, 29%, 60%); /* purple */
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+  background-color: hsl(14, 88%, 55%); /* tangerine */
+}
+
+
+
+
 .coast-2019 .page.content-item .page.content-item h2,
 .coast-2019 .page.content-item .page.content-item h3,
 .coast-2019 .page.content-item .page.content-item a {
@@ -323,6 +339,19 @@
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
   color: hsl(175, 53%, 48%); /* aqua */
   transform: scale(-1, 1) translateY(-100%);
+}
+
+
+
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
+  color: hsl(192, 100%, 44%); /* medium blue */
+  top: 1px;
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
+  color: hsl(279, 29%, 60%); /* purple */
+}
+.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
+  color: hsl(14, 88%, 55%); /* tangerine */
 }
 
 
