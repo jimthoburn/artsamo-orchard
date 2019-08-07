@@ -1,3 +1,8 @@
+
+.coast-2019 .page.content-item a {
+  transition: all 0.2s;
+}
+
 .coast-2019 #layout-navigation-wrapper,
 .coast-2019 .page.content-item > header {
   display: none;
@@ -119,6 +124,12 @@
 .coast-2019 .page.content-item .page.content-item > .navigation li a {
   background-color: white !important;
   color: hsla(199, 84%, 70%, 1) !important;
+}
+.coast-2019 .page.content-item .page.content-item > .navigation li a:hover,
+.coast-2019 .page.content-item .page.content-item > .navigation li a:active,
+.coast-2019 .page.content-item .page.content-item > .navigation li a:focus {
+  background-color: hsl(207, 73%, 43%) !important; /* dark blue */
+  color: white !important; /* orange */
 }
 
 .coast-2019 .page.content-item > figure.image:first-child {
@@ -623,6 +634,12 @@
   font-size: 1.125em;
   background-color: white !important;
   color: hsl(29, 93%, 58%) !important; /* orange */
+}
+.coast-2019 .navigation-link a:hover,
+.coast-2019 .navigation-link a:active,
+.coast-2019 .navigation-link a:focus {
+  background-color: hsl(207, 73%, 43%) !important; /* dark blue */
+  color: white !important; /* orange */
 }
 .coast-2019 .navigation-link svg {
   width: 1.5em;
