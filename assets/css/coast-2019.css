@@ -480,6 +480,7 @@
   .coast-2019 .experience-group li {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr;
+    grid-template-rows: auto max-content auto;
     grid-gap: 0 1.5em;
   }
   .coast-2019 .experience-group h3,
