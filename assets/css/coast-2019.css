@@ -610,20 +610,24 @@
   z-index: 2;
 }
 .coast-2019 .navigation-link a {
-  background-color: hsl(199, 84%, 70%); /* light blue */
-  color: white;
   display: block;
-  background-color: hsla(38, 97%, 59%, 1);
-  color: white;
-  padding: 0.75em 1.5em;
+  padding: 1.25em 1.25em;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 0.1em;
   font-size: 1.125em;
   background-color: white !important;
-  color: hsla(199, 84%, 70%, 1) !important;
-  border-bottom-left-radius: 0.25em;
+  color: hsl(29, 93%, 58%) !important; /* orange */
+}
+.coast-2019 .navigation-link svg {
+  width: 1.5em;
+  height: 1.5em;
+  display: block;
+}
+.coast-2019 .navigation-link svg path,
+.coast-2019 .navigation-link svg polygon {
+  fill: currentColor;
 }
 .coast-2019 .page.content-item:first-child > figure.image:first-child,
 .coast-2019 .first-content-item {
