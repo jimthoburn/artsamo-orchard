@@ -77,6 +77,9 @@
   .page.content-item > h3 + ul {
     margin-top: 2.925em;
   }
+  .page.content-item > h3 + dl {
+    margin-top: 2.175em;
+  }
 }
 
 .coast-2019 .page.content-item > .navigation {
