@@ -134,6 +134,9 @@
   background-color: white !important;
   color: hsla(199, 84%, 70%, 1) !important;
 }
+.coast-2019 .page.content-item .page.content-item .action a {
+  color: hsl(29, 93%, 58%) !important; /* orange */
+}
 .coast-2019 .page.content-item .page.content-item .action a:hover,
 .coast-2019 .page.content-item .page.content-item .action a:active,
 .coast-2019 .page.content-item .page.content-item .action a:focus,
@@ -141,7 +144,7 @@
 .coast-2019 .page.content-item .page.content-item > .navigation li a:active,
 .coast-2019 .page.content-item .page.content-item > .navigation li a:focus {
   background-color: hsl(207, 73%, 43%) !important; /* dark blue */
-  color: white !important; /* orange */
+  color: white !important;
 }
 
 .coast-2019 .page.content-item > figure.image:first-child {
