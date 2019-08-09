@@ -571,6 +571,7 @@
   box-sizing: border-box;
 }
 
+.coast-2019 .page.content-item .page.content-item .action a,
 .coast-2019 .subscribe button,
 .coast-2019 .subscribe input[type="email"],
 .coast-2019 .subscribe input[type="text"] {
@@ -589,6 +590,7 @@
   color: black;
 }
 
+.coast-2019 .page.content-item .page.content-item .action a,
 .coast-2019 .subscribe button {
   background-color: white;
   color: hsl(199, 84%, 70%);
@@ -596,15 +598,20 @@
   padding: 0.75em 1.5em;
   text-align: center;
   
-  background-color: hsl(38, 97%, 59%);
-  color: white;
+  background-color: hsl(38, 97%, 59%) !important;
+  color: white !important;
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 0.1em;
+  transition: all 0.2s;
 }
+
+.coast-2019 .page.content-item .page.content-item .action a:hover,
+.coast-2019 .page.content-item .page.content-item .action a:active,
+.coast-2019 .page.content-item .page.content-item .action a:focus,
 .coast-2019 .subscribe button:hover,
 .coast-2019 .subscribe button:focus {
-  background-color: hsl(199, 84%, 70%);
+  background-color: hsl(199, 84%, 70%) !important;
 }
 
 
