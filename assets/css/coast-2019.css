@@ -105,6 +105,7 @@
   flex-grow: 1;
 }
 
+.coast-2019 .page.content-item .action a,
 .coast-2019 .page.content-item > .navigation li a {
   background-color: hsla(175, 54%, 47%, 1);
   background-color: hsla(199, 84%, 70%, 1);
@@ -118,13 +119,24 @@
   letter-spacing: 0.1em;
   font-size: 1.125em;
 }
+.coast-2019 .page.content-item .page.content-item .action {
+  margin-top: 1.5em;
+}
+.coast-2019 .page.content-item .page.content-item .action a {
+  display: inline-block;
+  border-radius: 0.25em;
+}
 .coast-2019 .page.content-item .page.content-item > .navigation {
   padding-top: 1.5em;
 }
+.coast-2019 .page.content-item .page.content-item .action a,
 .coast-2019 .page.content-item .page.content-item > .navigation li a {
   background-color: white !important;
   color: hsla(199, 84%, 70%, 1) !important;
 }
+.coast-2019 .page.content-item .page.content-item .action a:hover,
+.coast-2019 .page.content-item .page.content-item .action a:active,
+.coast-2019 .page.content-item .page.content-item .action a:focus,
 .coast-2019 .page.content-item .page.content-item > .navigation li a:hover,
 .coast-2019 .page.content-item .page.content-item > .navigation li a:active,
 .coast-2019 .page.content-item .page.content-item > .navigation li a:focus {
@@ -248,7 +260,7 @@
 .coast-2019 .page.content-item .page.content-item a {
   color: inherit !important;
 }
-.coast-2019 .page.content-item .page.content-item > *:not(nav) a {
+.coast-2019 .page.content-item .page.content-item > *:not(nav):not(.action) a {
   text-decoration: underline;
 }
 
