@@ -655,3 +655,12 @@
   position: relative;
   z-index: 3;
 }
+
+
+/* Map */
+.coast-2019 #be-part-of-coast figure {
+  max-width: 1250px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
