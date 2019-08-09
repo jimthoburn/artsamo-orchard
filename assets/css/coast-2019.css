@@ -603,16 +603,32 @@
 .coast-2019 .contest-images {
   margin-top: 3em;
   grid-column: 1/-1 !important;
-  max-width: none !important;
+  width: 100%;
+  max-width: 57.25em !important;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
   grid-gap: 0.75em;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 40em) {
+  .coast-2019 .contest-images {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @supports (object-fit: cover) {
+  .coast-2019 .contest-images li {
+    position: relative;
+    padding-bottom: 75%;
+  }
   .coast-2019 .contest-images img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
   }
 }
@@ -659,7 +675,7 @@
 
 /* Map */
 .coast-2019 #be-part-of-coast figure {
-  max-width: 1250px !important;
+  max-width: 57.25em !important;
   margin-left: auto;
   margin-right: auto;
 }
