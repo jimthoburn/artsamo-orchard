@@ -765,3 +765,9 @@
   margin-right: auto;
 }
 
+
+.coast-2019 #top.invisible {
+  position: absolute;
+  visibility: visible;
+  opacity: 0;
+}
