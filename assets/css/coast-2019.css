@@ -87,26 +87,27 @@
   }
 }
 
-.coast-2019 .page.content-item > .navigation {
+.coast-2019 .page.content-item .navigation {
   grid-column: 1/-1;
   width: 100%;
   line-height: 1.5;
   margin-top: 1.5em;
   margin-botom: 4.5em;
 }
-.coast-2019 .page.content-item > .navigation ul {
+.coast-2019 .page.content-item .navigation ul {
   display: flex;
   flex-wrap: wrap;
   max-width: none;
-  width: 100%;
+  margin-left: -0.75em;
+  margin-right: -0.75em;
 }
-.coast-2019 .page.content-item > .navigation li {
-  margin: 0.375em;
+.coast-2019 .page.content-item .navigation li {
+  margin: 0.125em;
   flex-grow: 1;
 }
 
 .coast-2019 .page.content-item .action a,
-.coast-2019 .page.content-item > .navigation li a {
+.coast-2019 .page.content-item .navigation li a {
   background-color: hsla(175, 54%, 47%, 1);
   background-color: hsla(199, 84%, 70%, 1);
   background-color: hsla(207, 73%, 43%, 1);
@@ -117,7 +118,19 @@
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 0.1em;
-  font-size: 1.125em;
+}
+@media (min-width: 30em) {
+  .coast-2019 .page.content-item .navigation ul {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .coast-2019 .page.content-item .navigation li {
+    margin: 0.375em;
+  }
+  .coast-2019 .page.content-item .navigation li a {
+    font-size: 1.125em;
+  }
 }
 .coast-2019 .page.content-item .page.content-item .action {
   margin-top: 1.5em;
@@ -126,11 +139,12 @@
   display: inline-block;
   border-radius: 0.25em;
 }
-.coast-2019 .page.content-item .page.content-item > .navigation {
+.coast-2019 .page.content-item .page.content-item .navigation {
   padding-top: 1.5em;
 }
 .coast-2019 .page.content-item .page.content-item .action a,
-.coast-2019 .page.content-item .page.content-item > .navigation li a {
+.coast-2019 .page.content-item .navigation li a,
+.coast-2019 .page.content-item .page.content-item .navigation li a {
   background-color: white !important;
   color: hsla(199, 84%, 70%, 1) !important;
 }
@@ -140,9 +154,12 @@
 .coast-2019 .page.content-item .page.content-item .action a:hover,
 .coast-2019 .page.content-item .page.content-item .action a:active,
 .coast-2019 .page.content-item .page.content-item .action a:focus,
-.coast-2019 .page.content-item .page.content-item > .navigation li a:hover,
-.coast-2019 .page.content-item .page.content-item > .navigation li a:active,
-.coast-2019 .page.content-item .page.content-item > .navigation li a:focus {
+.coast-2019 .page.content-item .navigation li a:hover,
+.coast-2019 .page.content-item .navigation li a:active,
+.coast-2019 .page.content-item .navigation li a:focus,
+.coast-2019 .page.content-item .page.content-item .navigation li a:hover,
+.coast-2019 .page.content-item .page.content-item .navigation li a:active,
+.coast-2019 .page.content-item .page.content-item .navigation li a:focus {
   background-color: hsl(207, 73%, 43%) !important; /* dark blue */
   color: white !important;
 }
@@ -661,8 +678,46 @@
   top: 0;
   right: 0;
   z-index: 2;
+  max-width: none;
+  transform: translateY(calc(-100% + 4.875em));
+  transition: transform 0.2s;
 }
-.coast-2019 .navigation-link a {
+.coast-2019 .has-active-nav .navigation-link {
+  transform: unset;
+}
+.coast-2019 .navigation-link svg {
+  display: block;
+  width: 100%;
+}
+.coast-2019 .navigation-link ul,
+.coast-2019 .navigation-link li {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.coast-2019 .navigation-link nav {
+  margin: -1px 0 0 0 !important;
+}
+.coast-2019 .navigation-link ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: none;
+  background-color: hsla(199, 84%, 70%, 1);
+  color: white;
+  margin: 0;
+  padding: 0.25em 1em;
+}
+@media (min-width: 30em) {
+  .coast-2019 .navigation-link ul {
+    padding: 1.5em;
+  }
+}
+.coast-2019 .navigation-link p {
+  float: right;
+  margin: 0;
+}
+.coast-2019 .navigation-link p a {
   display: block;
   padding: 1.25em 1.25em;
   text-decoration: none;
@@ -672,26 +727,34 @@
   font-size: 1.125em;
   background-color: white !important;
   color: hsl(29, 93%, 58%) !important; /* orange */
+  background-color: hsla(199, 84%, 70%, 1) !important;
+  color: white !important;
 }
-.coast-2019 .navigation-link a:hover,
-.coast-2019 .navigation-link a:active,
-.coast-2019 .navigation-link a:focus {
-  background-color: hsl(207, 73%, 43%) !important; /* dark blue */
-  color: white !important; /* orange */
+.coast-2019 .navigation-link p a:hover,
+.coast-2019 .navigation-link p a:active,
+.coast-2019 .navigation-link p a:focus {
+  color: hsl(29, 93%, 58%) !important; /* orange */
 }
-.coast-2019 .navigation-link svg {
+.coast-2019 .navigation-link p a svg {
   width: 1.5em;
   height: 1.5em;
   display: block;
 }
-.coast-2019 .navigation-link svg path,
-.coast-2019 .navigation-link svg polygon {
+.coast-2019 .navigation-link p a svg path,
+.coast-2019 .navigation-link p a svg polygon {
   fill: currentColor;
 }
 .coast-2019 .page.content-item:first-child > figure.image:first-child,
 .coast-2019 .first-content-item {
   position: relative;
   z-index: 3;
+}
+
+.coast-2019 .has-active-nav .navigation-link__open {
+    display: none;
+}
+.coast-2019 .has-active-nav .navigation-link__close {
+    display: block !important;
 }
 
 
