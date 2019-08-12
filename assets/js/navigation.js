@@ -47,58 +47,46 @@
 
   let current;
 
-  function closest(element, tagName) {
+  function activate(target) {
+    const targetID = target.getAttribute("id");
+    console.log(`targetID: ${ targetID }`);
+    if (!targetID) return
 
-    // If the element is the target
-    if (element.nodeName.toLowerCase() === tagName) return element;
+    const link = navigation.querySelector(`a[href="#${ targetID }"]`);
+    console.log(`link: ${ link }`);
+    if (!link) return;
 
-    var ancestor = element;
-    while ((ancestor = ancestor.parentElement) && ancestor.nodeName && ancestor.nodeName.toLowerCase() !== tagName);
-    if (ancestor && ancestor.nodeName && ancestor.nodeName.toLowerCase() === tagName) {
-      return ancestor;
+    if (current) {
+      current.classList.remove("active");
     }
+    current = link
+    current.classList.add("active");
+    console.log(`current: ${ current }`);
   }
 
   function onIntersection(entries) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         console.log(`intersectionRatio: ${ entry.intersectionRatio }`)
-        if (entry.intersectionRatio >= 0.1) {
+        if (entry.intersectionRatio >= 0) {
           console.log(`onIntersection: ${ entry.target }`)
-          const closestDiv = closest(entry.target, "div");
-          console.log(`closestDiv: ${ closestDiv }`);
-          if (closestDiv) {
-            const targetID = closestDiv.getAttribute("id");
-            console.log(`targetID: ${ targetID }`);
-            if (targetID) {
-              const link = navigation.querySelector(`a[href="#${ targetID }"]`);
-              console.log(`link: ${ link }`);
-              if (link) {
-                if (current) {
-                  current.classList.remove("active");
-                }
-                current = link
-                current.classList.add("active");
-                console.log(`current: ${ current }`);
-              }
-            }
-          }
+          activate(entry.target);
         }
       }
     })
   }
 
   window.addEventListener('DOMContentLoaded', function() {
-    const headlines = document.querySelectorAll("h2");
+    const targets = document.querySelectorAll("[id]");
 
     // https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API
     const observer = new IntersectionObserver(onIntersection, {
       threshold: 0,
-      rootMargin: "0% 0% -90% 0%"
+      rootMargin: "0% 0% 0% 0%"
     })
 
-    headlines.forEach(headline => {
-      observer.observe(headline);
+    targets.forEach(target => {
+      observer.observe(target);
     })
   }, { passive: true });
 
