@@ -164,6 +164,11 @@
   color: white !important;
 }
 
+.coast-2019 .page.content-item .navigation li a.active {
+  background-color: hsl(29, 93%, 58%) !important; /* orange */
+  color: white !important;
+}
+
 .coast-2019 .page.content-item > figure.image:first-child {
   background-color: hsl(199, 84%, 70%);
   margin-top: 0 !important;

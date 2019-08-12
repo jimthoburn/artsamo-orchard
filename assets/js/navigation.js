@@ -1,6 +1,10 @@
 
+// Sticky navigation for COAST 2019
+
 
 (function() {
+
+  // Create the sticky navigation by making a copy of the main navigation
   var navigation = document.getElementById('navigation');
   var navigationPlaceholder = document.getElementById('navigation-placeholder');
   console.log(navigation);
@@ -8,19 +12,16 @@
   if (navigation && navigationPlaceholder) {
     navigationPlaceholder.innerHTML = navigation.innerHTML;
   }
+
 })();
 
 
 (function() {
+
+  // Toggle the visibility of the sticky navigation when the appropriate button is pressed
   var navLink = document.querySelector('#navigation-link');
   if (navLink) {
 
-    // https://stackoverflow.com/questions/1034621/get-the-current-url-with-javascript
-    // var currentPage = window.location.href.toString().split(window.location.host)[1];
-
-    // navLink.setAttribute('href', '/navigation?previous_page=' + currentPage);
-
-    // navLink.parentNode.style.display = 'none';
     navLink.addEventListener('click', function(e) {
       document.body.classList.toggle('has-active-nav');
 
@@ -31,69 +32,75 @@
     }, false);
   }
 
-  // var headerLinks = document.querySelectorAll('.navigation-link nav a');
-  // for (var index = 0; index < headerLinks.length; index++) {
-  //   headerLinks[index].addEventListener('focus', function(e) {
-  //     setTimeout(function() {
-  //       if (document.body.classList.contains('header-not-visible')) {
-  //         document.body.classList.add('has-active-nav');
-  //       }
-  //     }, 300);
-  //   }, false);
-  // }
+  // Hide the sticky navigation, when a user scrolls
+  window.addEventListener('scroll', function() {
+    document.body.classList.remove('has-active-nav');
+  }, { passive: true });
+
 })();
 
 
-
 (function() {
-  /* Do we have the features we need? */
-  if (!document.querySelector || !window.addEventListener || !document.body.classList) return;
 
-  var fadeInTimer;
-  function fadeIn() {
-    document.body.classList.add('transition-header-in');
-    clearTimeout(fadeInTimer);
-    fadeInTimer = setTimeout(function() {
-      document.body.classList.remove('transition-header-in');
-    }, 400);
-  }
+  // Highlight the current button
+  const navigation = document.getElementById('navigation-placeholder');
 
-  var animationTimer;
-  var assumedHeaderHeight = 500;
-  function updateHeaderHeight() {
-    var firstContentItem = document.querySelector('.first-content-item');
-    if (firstContentItem) {
-      assumedHeaderHeight = firstContentItem.offsetHeight;
+  let current;
+
+  function closest(element, tagName) {
+
+    // If the element is the target
+    if (element.nodeName.toLowerCase() === tagName) return element;
+
+    var ancestor = element;
+    while ((ancestor = ancestor.parentElement) && ancestor.nodeName && ancestor.nodeName.toLowerCase() !== tagName);
+    if (ancestor && ancestor.nodeName && ancestor.nodeName.toLowerCase() === tagName) {
+      return ancestor;
     }
   }
-  function updateScrollPosition() {
 
-    /* OPTIONAL: Add a class name of “header-not-visible” to the header,
-                 including the navigation, is not visible. */
-
-    if (window.scrollY >= assumedHeaderHeight && !document.body.classList.contains('header-not-visible')) {
-      document.body.classList.add('header-not-visible');
-
-      clearTimeout(animationTimer);
-      setTimeout(function() {
-        document.body.classList.add('animate-header');
-      }, 1);
-      // fadeIn();
-    } else if (window.scrollY < assumedHeaderHeight && document.body.classList.contains('header-not-visible')) {
-      document.body.classList.remove('header-not-visible');
-      document.body.classList.remove('animate-header');
-      clearTimeout(animationTimer);
-      // fadeIn();
-    }
-
-    document.body.classList.remove('has-active-nav');
+  function onIntersection(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        console.log(`intersectionRatio: ${ entry.intersectionRatio }`)
+        if (entry.intersectionRatio >= 0.1) {
+          console.log(`onIntersection: ${ entry.target }`)
+          const closestDiv = closest(entry.target, "div");
+          console.log(`closestDiv: ${ closestDiv }`);
+          if (closestDiv) {
+            const targetID = closestDiv.getAttribute("id");
+            console.log(`targetID: ${ targetID }`);
+            if (targetID) {
+              const link = navigation.querySelector(`a[href="#${ targetID }"]`);
+              console.log(`link: ${ link }`);
+              if (link) {
+                if (current) {
+                  current.classList.remove("active");
+                }
+                current = link
+                current.classList.add("active");
+                console.log(`current: ${ current }`);
+              }
+            }
+          }
+        }
+      }
+    })
   }
 
-  updateScrollPosition();
-  updateHeaderHeight();
+  window.addEventListener('DOMContentLoaded', function() {
+    const headlines = document.querySelectorAll("h2");
 
-  window.addEventListener('scroll', updateScrollPosition, { passive: true });
-  window.addEventListener('resize', updateHeaderHeight,   { passive: true });
+    // https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API
+    const observer = new IntersectionObserver(onIntersection, {
+      threshold: 0,
+      rootMargin: "0% 0% -90% 0%"
+    })
+
+    headlines.forEach(headline => {
+      observer.observe(headline);
+    })
+  }, { passive: true });
 
 })();
 
