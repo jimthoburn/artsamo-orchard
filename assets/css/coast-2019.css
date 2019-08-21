@@ -764,10 +764,23 @@
 
 
 /* Map */
-.coast-2019 #be-part-of-coast figure {
-  max-width: 57.25em !important;
+.coast-2019 .map,
+.coast-2019 .video {
+  width: 57.25em;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+  grid-column: 1/-1;
+  margin-top: 1.5em;
+}
+.coast-2019 .video iframe {
+  width: 100%;
+  height: calc(315/560 * 100vw);
+}
+@media (min-width: 57.25em) {
+  .coast-2019 .video iframe {
+    height: calc(315/560 * 57.25em);
+  }
 }
 
 
