@@ -19,13 +19,17 @@
 }
 .artists li .image {
   max-width: none;
+  margin-bottom: 1.5em;
 }
 .artists li .image img {
-  height: 200px;
-  width: 200px;
+  width: auto;
+  height: auto;
   object-fit: cover;
   float: none;
   margin-right: unset;
+  max-width: 290px;
+  max-height: 290px;
+  display: block;
 }
 
 /* SHIM: Avoid cropping the Art Division logo on the Beach House venue page */
@@ -36,7 +40,6 @@
 .artists li .image figcaption {
   font-size: 0.875em;
   padding-top: 0.375em;
-  text-align: right;
 }
 
 @media (min-width: 40em) {
@@ -57,7 +60,10 @@
     grid-column: 1/2;
     grid-row: 1/span 4;
     justify-self: end;
-    width: 200px;
+    width: 290px;
+  }
+  .artists li .image img {
+    margin-left: auto;
   }
   .artists li .image figcaption {
     text-align: left;
