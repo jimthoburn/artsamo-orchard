@@ -176,7 +176,7 @@ document.documentElement.classList.add("coast-2019");
 <div class="page content-item" id="be-part-of-coast">
 <h2>Be Part of COAST</h2>
 <figure class="video">
-<a href="https://www.youtube.com/watch?v=FoPVqwSl68c" target="_blank" class="has-icon">
+<a href="https://www.youtube.com/watch?v=FoPVqwSl68c" target="_blank" class="has-icon" id="video-button">
 
 <img data-src="https://i.ytimg.com/vi/FoPVqwSl68c/maxresdefault.jpg" width="1000" alt="" />
 <span class="icon play">
@@ -190,9 +190,24 @@ document.documentElement.classList.add("coast-2019");
 </span>
 </a>
 </figure>
-<!--
-<figure class="video" src="https://www.youtube-nocookie.com/embed/FoPVqwSl68c"><iframe width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></figure>
--->
+<script type="text/template" id="video-template">
+<iframe src="https://www.youtube-nocookie.com/embed/FoPVqwSl68c?autoplay=1" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+</script>
+<script type="text/javascript">
+// Replace the placeholder image with a video element, if the link to the video has been pressed
+(function() {
+
+	var button   = document.getElementById('video-button');
+	var template = document.getElementById('video-template');
+
+	if (button && template) {
+		button.addEventListener('click', function(e) {
+  		button.parentNode.innerHTML = template.innerHTML;
+			e.preventDefault();
+		}, false);
+	}
+})();
+</script>
 <p class="introduction">COAST invites everyone to be part of a <strong>carnival of wheels</strong>, rigs, wings, and feet! Ride your bike, skate around, take a stroll, roll through, and check things out - COAST will have live music, performances, lots of food to eat, and artsy activities.</p>
 <figure class="map"><img alt="event-map" data-src="https://www.santamonica.gov/Media/arts/CA/COAST/SM-Map_2019_postcard_map.png" height="400" /></figure>
 <p class="action rsvp" style=""><a href="https://www.facebook.com/events/415072282686356/">RSVP on Facebook</a> <a href="https://www.eventbrite.com/e/coast-santa-monicas-open-streets-celebration-tickets-68813000537">RSVP on Eventbrite</a></p>
