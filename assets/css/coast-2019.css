@@ -568,11 +568,34 @@
 }
 
 
+/* =RSVP
+----------------------------------------------- */
+.coast-2019 .rsvp {
+  grid-column: 1/-1;
 
+  justify-self: center;
+  text-align: center;
+
+  margin-bottom: 3em !important;
+  margin-top: 3em !important;
+
+  border-bottom: 0.125em solid;
+
+  padding-bottom: 2.5em;
+}
+.coast-2019 .rsvp a {
+  margin: 0.25em;
+}
 
 
 /* =Subscribe
 ----------------------------------------------- */
+
+.coast-2019 .subscribe {
+  grid-column: 1/-1;
+  text-align: center;
+  max-width: none;
+}
 
 .coast-2019 .subscribe label span {
   font-size: 0;
@@ -582,11 +605,13 @@
   overflow: hidden;
   position: absolute;
 }
+.coast-2019 .subscribe label {
+  margin-right: 0.5em;
+}
 .coast-2019 .subscribe label br {
   display: none;
 }
 .coast-2019 .subscribe input[type="email"] {
-  margin-right: 0.5em;
   margin-bottom: 1em;
   width: 100%;
   max-width: 20em;
@@ -636,6 +661,14 @@
   background-color: hsl(199, 84%, 70%) !important;
 }
 
+/* Avoid a hover state color that’s the same as the background, in the first section */
+.coast-2019 .page.content-item > figure.image:first-child + header + .page.content-item .action a:hover,
+.coast-2019 .page.content-item > figure.image:first-child + header + .page.content-item .action a:active,
+.coast-2019 .page.content-item > figure.image:first-child + header + .page.content-item .action a:focus,
+.coast-2019 .page.content-item > figure.image:first-child + header + .page.content-item .subscribe button:hover,
+.coast-2019 .page.content-item > figure.image:first-child + header + .page.content-item .subscribe button:focus {
+  background-color: hsl(207, 73%, 43%) !important;
+}
 
 .coast-2019 .contest-images,
 .coast-2019 .contest-images li {
