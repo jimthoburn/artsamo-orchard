@@ -52,21 +52,15 @@
     }
   }
 
-  var images = document.getElementsByTagName('img');
-  var iframes = document.getElementsByTagName('iframe');
-
   // https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API
   var observer = new IntersectionObserver(onIntersection, {
     threshold: 0,
     rootMargin: "100% 0% 100% 0%"
   })
-
+  
+  var images = document.getElementsByTagName('img');
   for (var index = 0; index < images.length; index++) {
     observer.observe(images[index])
-  }
-
-  for (var index = 0; index < iframes.length; index++) {
-    observer.observe(iframes[index])
   }
 
 })();

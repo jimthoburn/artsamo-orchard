@@ -175,7 +175,24 @@ document.documentElement.classList.add("coast-2019");
 <script type="text/javascript" src="https://jimthoburn.github.io/artsamo-orchard/assets/js/navigation.js"></script>
 <div class="page content-item" id="be-part-of-coast">
 <h2>Be Part of COAST</h2>
-<figure class="video"><iframe width="560" height="315" data-src="https://www.youtube-nocookie.com/embed/FoPVqwSl68c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></figure>
+<figure class="video">
+<a href="https://www.youtube.com/watch?v=FoPVqwSl68c" target="_blank" class="has-icon">
+
+<img data-src="https://i.ytimg.com/vi/FoPVqwSl68c/maxresdefault.jpg" width="1000" alt="" />
+<span class="icon play">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.2 33.7" width="29" height="34">
+<title>Video of COAST</title>
+<switch>
+<polygon fill="black" points="29.2,16.9 0,0 0,33.7 29.2,16.9 0,0 0,33.7 "></polygon>
+<foreignobject>Video of COAST</foreignobject>
+</switch>
+</svg>
+</span>
+</a>
+</figure>
+<!--
+<figure class="video" src="https://www.youtube-nocookie.com/embed/FoPVqwSl68c"><iframe width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe></figure>
+-->
 <p class="introduction">COAST invites everyone to be part of a <strong>carnival of wheels</strong>, rigs, wings, and feet! Ride your bike, skate around, take a stroll, roll through, and check things out - COAST will have live music, performances, lots of food to eat, and artsy activities.</p>
 <figure class="map"><img alt="event-map" data-src="https://www.santamonica.gov/Media/arts/CA/COAST/SM-Map_2019_postcard_map.png" height="400" /></figure>
 <p class="action rsvp" style=""><a href="https://www.facebook.com/events/415072282686356/">RSVP on Facebook</a> <a href="https://www.eventbrite.com/e/coast-santa-monicas-open-streets-celebration-tickets-68813000537">RSVP on Eventbrite</a></p>
@@ -625,13 +642,15 @@ document.documentElement.classList.add("coast-2019");
 <script>// <![CDATA[
 (function() {
       // Bust stylesheet cache
-      let link = document.querySelector("link[href*='site.css']");
+      let linkOriginal = document.querySelector("link[href*='site.css']");
+      let link = linkOriginal.cloneNode();
       if (link) {
         let href = link.getAttribute("href");
         if (!href.includes("?v=")) {
-          link.setAttribute("href", `${href}?v=111`);
+          link.setAttribute("href", `${href}?v=114`);
         }
       }
+      linkOriginal.parentNode.insertBefore(link, linkOriginal.nextSibling);
     })();
 // ]]></script>
 <script src="https://jimthoburn.github.io/artsamo-orchard/assets/js/shim.js?v=0.0.85"></script>

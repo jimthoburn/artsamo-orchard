@@ -806,6 +806,10 @@
   grid-column: 1/-1;
   margin-top: 1.5em;
 }
+.coast-2019 .video img {
+  width: 100%;
+  height: auto;
+}
 .coast-2019 .video iframe {
   width: 100%;
   height: calc(315/560 * 100vw);
@@ -822,3 +826,67 @@
   visibility: visible;
   opacity: 0;
 }
+
+
+
+/* =Icon Button
+----------------------------------------------- */
+.coast-2019 .has-icon {
+  display: block;
+  position: relative;
+  text-decoration: none
+  position: absolute;
+}
+
+.coast-2019 .has-icon .icon {
+  position: absolute;
+  top: 0.725em;
+  right: 0.725em;
+  background: white;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 0.35em 0.4em 0em 0.4em;
+  border-radius: 0.3125em;
+  color: black;
+  transition: background-color 0.2s;
+  font-size: 1.5em;
+}
+.coast-2019 .has-icon .icon.play {
+  top: 50%;
+  left: 50%;
+  right: auto;
+  padding: 0.725em 1.45em 0.3625em 1.45em;
+  margin-top: -1.0875em; /* (line height + vertical padding) / 2    (1.45em + 1.45em) / 2  */
+  margin-left: -1.95em; /* (icon width + horizontal padding) / 2    (1em + 2.9em) / 2  */
+}
+
+.coast-2019 .has-icon:hover .icon,
+.coast-2019 .has-icon:active .icon,
+.coast-2019 .has-icon:focus .icon {
+  background-color: white
+}
+
+.coast-2019 .has-icon .icon {
+  vertical-align: middle
+}
+
+.coast-2019 .has-icon svg {
+  width: 1em;
+  height: 1em
+}
+
+.coast-2019 .has-icon svg polygon {
+  fill: currentColor
+}
+
+
+.coast-2019 .has-icon .credit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  background: rgba(255, 255, 255, 0.75);
+  color: black;
+  font-size: 0.75em;
+  padding: 0.25em 0.5em;
+}
+
