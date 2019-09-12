@@ -1,4 +1,7 @@
+---
+---
 
+{% comment %}
 /* Load proxima-nova from Jim’s typekit account */
 @import url(https://use.typekit.net/bwp8iid.css);
 
@@ -28,3 +31,31 @@ just to get it working temporarily (feel free to remove this style sheet,
 if it isn’t needed any longer or is causing problems). 
 */
 @import url(collapse-override.css?v=115);
+{% endcomment %}
+
+{% include_relative base.css %}
+
+{% include_relative logotype.css %}
+{% include_relative elements.css %}
+{% include_relative navigation.css %}
+{% include_relative layout.css %}
+{% include_relative grid.css %}
+{% include_relative grid-simple.css %}
+{% include_relative artists.css %}
+{% include_relative events.css %}
+{% include_relative featured-event.css %}
+{% include_relative quote-image.css %}
+{% include_relative header.css %}
+{% include_relative footer.css %}
+{% include_relative home.css %}
+{% include_relative go-see-art.css %}
+{% include_relative opportunities.css %}
+{% include_relative venue-details.css %}
+{% include_relative coast-2019.css %}
+
+/*
+TEMPORARY: Override the “.collapse” class name and hide the mobile nav button…
+just to get it working temporarily (feel free to remove this style sheet,
+if it isn’t needed any longer or is causing problems). 
+*/
+{% include_relative collapse-override.css %}
