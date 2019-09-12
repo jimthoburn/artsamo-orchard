@@ -42,6 +42,7 @@
   padding-top: 0.375em;
 }
 
+@supports (display: grid) {
 @media (min-width: 40em) {
   .artists li {
     display: grid;
@@ -68,4 +69,5 @@
   .artists li .image figcaption {
     text-align: left;
   }
+}
 }

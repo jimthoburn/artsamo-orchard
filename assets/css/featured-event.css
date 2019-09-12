@@ -23,12 +23,14 @@
   margin-left: -15px;
   margin-right: -15px;
 }
+@supports (display: grid) {
 @media (min-width: 58.75em) {
   /* Compensate for left and right margin introduced by grid.css */
   .featured-event-image-only {
     margin-left: -35px;
     margin-right: -35px;
   }
+}
 }
 
 /* Image and text */
@@ -44,12 +46,14 @@
 .featured-event + .featured-event {
   margin-top: 0;
 }
+@supports (display: grid) {
 @media (min-width: 58.75em) {
   /* Compensate for left and right margin introduced by grid.css */
   .featured-event {
     margin-left: -35px;
     margin-right: -35px;
   }
+}
 }
 .featured-event__text {
   grid-column: 1/1;

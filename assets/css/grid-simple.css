@@ -2,7 +2,34 @@
 /* =Grid
 ----------------------------------------------- */
 
+/* A few styles for browsers that don’t understand grid */
+@media (min-width: 58.75em) {
+  .page.content-item {
+    margin-bottom: 6em;
+  }
+  .page.content-item > h2 {
+    margin-top: 9rem;
+  }
+  .page.content-item > h3 {
+    margin-top: 4.5rem;
+  }
+  .page.content-item > * {
+    max-width: 66rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .page.content-item > header:first-child,
+  .page.content-item > div:last-child,
+  .page.content-item > .image,
+  .page.content-item .col-md-12 > .image,
+  .page.content-item > .image:first-child + header,
+  .page.content-item .col-md-12 > .image:first-child + header {
+    max-width: none;
+  }
+}
+
 /* Center the content and limit its length to about 33 characters, for readability */
+@supports (display: grid) {
 @media (min-width: 58.75em) {
 
   /* Emphasize the main headline */
@@ -34,6 +61,8 @@
   .page.content-item > * {
     grid-column: 2/3;
     max-width: 33em;
+    margin-left: unset;
+    margin-right: unset;
   }
 
   .page.content-item > header:first-child,
@@ -119,4 +148,5 @@
   .page.content-item .col-md-12 > .artists li {
     grid-template-columns: 1fr 2fr;
   }
+}
 }

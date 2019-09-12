@@ -79,12 +79,14 @@
 .detail-venue .events-headline {
   margin-top: 6rem;
 }
+@supports (display: grid) {
 @media (min-width: 58.75em) {
   .detail-venue .events {
     margin-right: calc(-50vw + 200px);
     margin-left: 0;
     margin-top: 3em;
   }
+}
 }
 
 

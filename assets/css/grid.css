@@ -2,7 +2,32 @@
 /* =Grid
 ----------------------------------------------- */
 
+/* A few styles for browsers that don’t understand grid */
+@media (min-width: 58.75em) {
+  .col-md-12 {
+    margin-bottom: 6em;
+  }
+  .col-md-12 > h2 {
+    margin-top: 9rem;
+  }
+  .col-md-12 > h3 {
+    margin-top: 4.5rem;
+  }
+  .col-md-12 > * {
+    max-width: 66rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .col-md-12 > header:first-child,
+  .col-md-12 > div:last-child,
+  .col-md-12 > .image,
+  .col-md-12 > .image:first-child + header {
+    max-width: none;
+  }
+}
+
 /* Center the content and limit its length to about 33 characters, for readability */
+@supports (display: grid) {
 @media (min-width: 58.75em) {
 
   /* Emphasize the main headline */
@@ -34,6 +59,8 @@
   .col-md-12 > * {
     grid-column: 2/3;
     max-width: 33em;
+    margin-left: unset;
+    margin-right: unset;
   }
 
   /* Position headlines in the first column */
@@ -63,4 +90,5 @@
   }
 
 
+}
 }

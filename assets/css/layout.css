@@ -35,6 +35,7 @@ body {
 }
 
 /* Add some padding on the left and right of the main content */
+@supports (display: grid) {
 @media (min-width: 58.75em) {
   main {
     display: grid;
@@ -47,4 +48,5 @@ body {
     margin-left: unset;
     margin-right: -35px;
   }
+}
 }

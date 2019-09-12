@@ -44,6 +44,7 @@
   font-weight: bold;
   letter-spacing: 0.4em;
   margin-bottom: 2.25em;
+  max-width: none;
 }
 @media (max-width: 50em) {
   .coast-2019 .page.content-item h2 {
@@ -68,7 +69,7 @@
 }
 
 
-
+@supports (display: grid) {
 @media (min-width: 58.75em) {
   .coast-2019 .page.content-item h2 + p {
     margin-top: 0;
@@ -85,6 +86,7 @@
   .page.content-item > h3 + dl {
     margin-top: 2.175em;
   }
+}
 }
 
 .coast-2019 .page.content-item .navigation {
@@ -175,11 +177,14 @@
   margin-left: -15px;
   margin-right: -15px;
 }
+
+@supports (display: grid) {
 @media (min-width: 58.75em) {
   .coast-2019 .page.content-item > figure.image:first-child {
     margin-left: -35px;
     margin-right: -35px;
   }
+}
 }
 
 /* Override styles intended for the primary image on other pages */
@@ -227,6 +232,8 @@
   padding-bottom: 4.5em;
   padding-top: 1px;
 }
+
+@supports (display: grid) {
 @media (min-width: 58.75em) {
   .coast-2019 .page.content-item .page.content-item {
     margin-left: -35px;
@@ -241,6 +248,7 @@
   .coast-2019 .page.content-item > figure.image:first-child + header + .page.content-item {
     margin-top: 0;
   }
+}
 }
 
 .coast-2019 .page.content-item .page.content-item ~ .page.content-item {
@@ -409,7 +417,7 @@
   color: hsl(14, 88%, 55%); /* tangerine */
 }
 
-
+@supports (display: grid) {
 @media (min-width: 58.75em) {
   .page.content-item > svg:first-child,
   .page.content-item > svg:last-child {
@@ -417,7 +425,7 @@
     margin-right: -35px;
   }
 }
-
+}
 
 .coast-2019 .artists figure {
   margin-bottom: 0.75em;
@@ -476,6 +484,7 @@
   bottom: 0;
 }
 
+@supports (display: grid) {
 @media (min-width: 40em) {
   .coast-2019 .figure-group {
     display: grid;
@@ -487,17 +496,16 @@
     box-sizing: border-box;
   }
 }
+}
 
 
 .coast-2019 .experience-group,
 .coast-2019 .experience-group li {
   list-style: none;
-  margin-left: 0;
   padding-left: 0;
 }
 .coast-2019 .experience-group {
   margin-top: 3em;
-  max-width: none;
   grid-column: 1/-1;
 }
 .coast-2019 .experience-group h3 {
@@ -523,6 +531,7 @@
   display: inline-block;
 }
 
+@supports (display: grid) {
 @media (min-width: 40em) {
   .coast-2019 .experience-group {
     margin: 4.5em auto 0;
@@ -565,6 +574,7 @@
     max-width: 33em;
     margin: 0 !important;
   } */
+}
 }
 
 
@@ -690,6 +700,10 @@
 }
 
 @media (min-width: 40em) {
+  .coast-2019 .contest-images {
+    display: flex;
+    display: grid;
+  }
   .coast-2019 .contest-images {
     grid-template-columns: 1fr 1fr 1fr;
   }
