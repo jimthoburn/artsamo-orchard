@@ -335,7 +335,6 @@
   fill: currentColor;
 }
 
-
 .coast-2019 .page.content-item .page.content-item {
   padding-bottom: calc(18.6vw + 3em);
 }
@@ -425,6 +424,18 @@
     margin-right: -35px;
   }
 }
+}
+
+/* Hide SVGs on browsers that don’t understand transform (to avoid covering up text content) */
+.coast-2019 .page.content-item .page.content-item > svg:first-child,
+.coast-2019 .page.content-item .page.content-item > svg:last-child {
+  display: none !important;
+}
+@supports(transform: translateY(100%)) {
+  .coast-2019 .page.content-item .page.content-item > svg:first-child,
+  .coast-2019 .page.content-item .page.content-item > svg:last-child {
+    display: block !important;
+  }
 }
 
 .coast-2019 .artists figure {
@@ -808,6 +819,19 @@
 .coast-2019 .has-active-nav .navigation-link__close {
     display: block !important;
 }
+
+
+/* Hide navigation on browsers that don’t understand position fixed and transform (to avoid covering up content) */
+.coast-2019 .navigation-link {
+  display: none !important;
+}
+@supports (position: fixed) and (transform: translateY(100%)) {
+  .coast-2019 .navigation-link {
+    display: block !important;
+  }
+}
+
+
 
 
 /* Map */
