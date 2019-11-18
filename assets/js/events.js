@@ -1,3 +1,13 @@
+
+/*
+
+This repository has an example and notes for the API:
+
+https://github.com/jimthoburn/santa-monica-events
+
+*/
+
+
 /*
 Example Style
 
@@ -126,9 +136,9 @@ Example HTML
   let url
 
   if (whereClause) {
-    url = `https://data.smgov.net/resource/tu9m-76aw.json?$where=${encodeURIComponent(whereClause)}`
+    url = `https://data.smgov.net/resource/tu9m-76aw.json?$limit=10000&$where=${encodeURIComponent(whereClause)}`
   } else {
-    url = `https://data.smgov.net/resource/tu9m-76aw.json`
+    url = `https://data.smgov.net/resource/tu9m-76aw.json?$limit=10000`
   }
 
   // SHIM: Avoid showing unrelated events from Annenberg Community Beach House
@@ -154,7 +164,7 @@ Example HTML
 
   function addItems(data) {
     // let template = document.getElementById('event-template')
-    let itemLimit = 999
+    let itemLimit = 10000
     if ( list.getAttribute("data-events-limit") && 
          !isNaN(list.getAttribute("data-events-limit"))) {
       itemLimit = Number(list.getAttribute("data-events-limit"))
