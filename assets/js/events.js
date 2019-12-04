@@ -243,8 +243,12 @@ Example HTML
 
     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-    let startDate = new Date(`${itemData.start_date}-07:00`)
-    let endDate   = new Date(`${itemData.end_date}-07:00`)
+    let startDate = new Date(`${itemData.start_date}-08:00`)
+    let endDate   = new Date(`${itemData.end_date}-08:00`)
+
+    // Switch to these values if “Daylight saving time” is in effect 
+    // let startDate = new Date(`${itemData.start_date}-07:00`)
+    // let endDate   = new Date(`${itemData.end_date}-07:00`)
 
     let startTime = getFormattedTime(startDate)
     let endTime   = getFormattedTime(endDate)
