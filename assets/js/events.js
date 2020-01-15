@@ -31,7 +31,7 @@ Example HTML
 */
 
 (function() {
-  let list = document.querySelector('[data-events-locations]')
+  let list = document.querySelector('[data-events-locations],[data-events-keywords]')
   if (!list) return
 
   let template = `
@@ -99,7 +99,6 @@ Example HTML
   //   "Palisades Park",
   //   "Annenberg Community Beach House"
   // ]
-  const LOCATIONS = list.getAttribute("data-events-locations").split(",")
   // const CONTACT_NAMES = list.getAttribute("data-events-contact-name").split(",")
   
   const CONTACT_EMAILS = []
@@ -108,10 +107,12 @@ Example HTML
   //   "naomi.okuyama@smgov.net"
   // ]
 
-  const EVENT_TYPES = list.getAttribute("data-events-types") ? list.getAttribute("data-events-types").split(",") : []
+  const LOCATIONS      = list.getAttribute("data-events-locations") ? list.getAttribute("data-events-locations").split(",") : []
+  const EVENT_TYPES    = list.getAttribute("data-events-types")     ? list.getAttribute("data-events-types").split(",")     : []
+  const EVENT_KEYWORDS = list.getAttribute("data-events-keywords")  ? list.getAttribute("data-events-keywords").split(",")  : []
 
-  // https://data.smgov.net/resource/tu9m-76aw.json?$where=contact_name = 'culture@smgov.net' OR contact_name = 'naomi.okuyama@smgov.net'
-  //https://data.smgov.net/resource/tu9m-76aw.json?$where=contact_emails = 'culture@smgov.net' OR contact_emails = 'naomi.okuyama@smgov.net'
+  // https://data.smgov.net/resource/tu9m-76aw.json?$where=contact_name   = 'culture@smgov.net' OR contact_name   = 'naomi.okuyama@smgov.net'
+  // https://data.smgov.net/resource/tu9m-76aw.json?$where=contact_emails = 'culture@smgov.net' OR contact_emails = 'naomi.okuyama@smgov.net'
   function getWhereClause(columnName, items) {
     let asStrings = items.map(item => `'${item}'`)
     return `${columnName} = ${asStrings.join(` OR ${columnName} = `)}`
@@ -122,7 +123,7 @@ Example HTML
   let locationsClause       = getWhereClause(`location`,      LOCATIONS)
 
   let whereClause
-  
+
   if (LOCATIONS.length > 0 && EVENT_TYPES.length > 0) {
     whereClause = `${locationsClause} OR (${eventTypesWhereClause})`
   } else if (CONTACT_EMAILS.length > 0) {
@@ -135,7 +136,9 @@ Example HTML
 
   let url
 
-  if (whereClause) {
+  if (EVENT_KEYWORDS.length > 0) {
+    url = `https://data.smgov.net/resource/tu9m-76aw.json?$limit=10000&$q=${encodeURIComponent(`'${EVENT_KEYWORDS.join(" ")}'`)}`
+  } else if (whereClause) {
     url = `https://data.smgov.net/resource/tu9m-76aw.json?$limit=10000&$where=${encodeURIComponent(whereClause)}`
   } else {
     url = `https://data.smgov.net/resource/tu9m-76aw.json?$limit=10000`
