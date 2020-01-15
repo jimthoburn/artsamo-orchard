@@ -66,7 +66,7 @@
   }
   .home-page.content-item,
   .venue.content-item {
-    display: unset;
+    display: block;
     margin-bottom: unset;
   }
 
