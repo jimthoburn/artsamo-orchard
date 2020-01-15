@@ -7,7 +7,8 @@
   .content-item {
     margin-bottom: 6em;
   }
-  .home-page.content-item {
+  .home-page.content-item,
+  .venue.content-item {
     margin-bottom: unset;
   }
   .content-item > h2 {
@@ -20,6 +21,10 @@
     max-width: 66rem;
     margin-left: auto;
     margin-right: auto;
+  }
+  .home-page.content-item > *,
+  .venue.content-item > * {
+    max-width: unset;
   }
   .content-item > header:first-child,
   .content-item > div:last-child,
@@ -59,7 +64,8 @@
     grid-column-gap: 1.5em;
     margin-bottom: 6em;
   }
-  .home-page.content-item {
+  .home-page.content-item,
+  .venue.content-item {
     display: unset;
     margin-bottom: unset;
   }
@@ -71,7 +77,8 @@
     margin-left: unset;
     margin-right: unset;
   }
-  .home-page.content-item > * {
+  .home-page.content-item > *,
+  .venue.content-item > * {
     max-width: unset;
   }
 
