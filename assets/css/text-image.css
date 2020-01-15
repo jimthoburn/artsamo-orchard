@@ -1,7 +1,5 @@
 
-/* Deprecated (It’s best to use “.text-image” from “text-image.css”, which has the same style) */
-
-.quote-image {
+.text-image {
   display: grid;
   margin-top: 50px;
   text-decoration: none;
@@ -12,24 +10,24 @@
   margin-right: -15px;
 }
 @supports (display: grid) {
-@media (min-width: 58.75em) {
-  /* Compensate for left and right margin introduced by grid.css */
-  .quote-image {
-    margin-left: -35px;
-    margin-right: -35px;
+  @media (min-width: 58.75em) {
+    /* Compensate for left and right margin introduced by grid.css */
+    .text-image {
+      margin-left: -35px;
+      margin-right: -35px;
+    }
   }
-}
 }
 
 /* Reset the default styles */
-.quote-image blockquote {
+.text-image blockquote {
   padding: unset;
   margin: unset;
   font-size: unset;
   border-left: unset;
 }
 
-.quote-image__text {
+.text-image__text {
   grid-column: 1/1;
   grid-row: 1/1;
   align-self: center;
@@ -39,23 +37,23 @@
   margin: 35px calc(100%/6);
 }
 
-.quote-image__quote {
+.text-image__primary-text {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 800;
   font-size: 22px;
 }
 @media (min-width: 58.75em) {
-  .quote-image__quote {
+  .text-image__primary-text {
     font-size: 44px;
   }
 }
 
-.quote-image__byline {
+.text-image__secondary-text {
   font-size: 23px;
 }
 
-.quote-image__image {
+.text-image__image {
   grid-column: 1/1;
   grid-row: 1/1;
   height: 100%;
@@ -66,7 +64,7 @@
 }
 
 @media (min-width: 40em) {
-  .quote-image__image {
+  .text-image__image {
     height: 50vw;
   }
 }
