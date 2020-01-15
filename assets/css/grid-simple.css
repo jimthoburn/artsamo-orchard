@@ -7,6 +7,9 @@
   .content-item {
     margin-bottom: 6em;
   }
+  .home-page.content-item {
+    margin-bottom: unset;
+  }
   .content-item > h2 {
     margin-top: 9rem;
   }
@@ -56,6 +59,10 @@
     grid-column-gap: 1.5em;
     margin-bottom: 6em;
   }
+  .home-page.content-item {
+    display: unset;
+    margin-bottom: unset;
+  }
 
   /* Position most content in the second column */
   .content-item > * {
@@ -63,6 +70,9 @@
     max-width: 33em;
     margin-left: unset;
     margin-right: unset;
+  }
+  .home-page.content-item > * {
+    max-width: unset;
   }
 
   .content-item > header:first-child,
