@@ -1,34 +1,34 @@
 
-.coast-2019 .page.content-item a {
+.coast-2019 .content-item a {
   transition: all 0.2s;
 }
 
 .coast-2019 #layout-navigation-wrapper,
-.coast-2019 .page.content-item > header {
+.coast-2019 .content-item > header {
   display: none;
 }
 
-.coast-2019 .page.content-item {
+.coast-2019 .content-item {
   font-size: 1.75rem;
 }
 @media (min-width: 58.75em) {
-  .coast-2019 .page.content-item {
+  .coast-2019 .content-item {
     font-size: calc(0.75em + 0.4375vw);
   }
 }
-.coast-2019 .page.content-item h1,
-.coast-2019 .page.content-item h2,
-.coast-2019 .page.content-item h3,
-.coast-2019 .page.content-item h4,
-.coast-2019 .page.content-item h5,
-.coast-2019 .page.content-item h6 {
+.coast-2019 .content-item h1,
+.coast-2019 .content-item h2,
+.coast-2019 .content-item h3,
+.coast-2019 .content-item h4,
+.coast-2019 .content-item h5,
+.coast-2019 .content-item h6 {
   color: hsla(175, 54%, 47%, 1);
 }
-.coast-2019 .page.content-item h1,
-.coast-2019 .page.content-item h2 {
+.coast-2019 .content-item h1,
+.coast-2019 .content-item h2 {
   font-weight: bold;
 }
-.coast-2019 .page.content-item h2 {
+.coast-2019 .content-item h2 {
   font-size: 2em;
   
   grid-column: 1 / -1;
@@ -47,20 +47,20 @@
   max-width: none;
 }
 @media (max-width: 50em) {
-  .coast-2019 .page.content-item h2 {
+  .coast-2019 .content-item h2 {
     font-size: 1.875em;
     letter-spacing: 0.2em;
   }
 }
-.coast-2019 .page.content-item h3 {
+.coast-2019 .content-item h3 {
   font-size: 1.6em;
   font-size: calc(1.618 * 1em);
   line-height: 1.25;
   font-weight: 400;
 }
-.coast-2019 .page.content-item h4,
-.coast-2019 .page.content-item h5,
-.coast-2019 .page.content-item h6 {
+.coast-2019 .content-item h4,
+.coast-2019 .content-item h5,
+.coast-2019 .content-item h6 {
   font-size: 1em;
   font-style: italic;
   font-weight: normal;
@@ -71,45 +71,45 @@
 
 @supports (display: grid) {
 @media (min-width: 58.75em) {
-  .coast-2019 .page.content-item h2 + p {
+  .coast-2019 .content-item h2 + p {
     margin-top: 0;
   }
-  .page.content-item > h3,
-  .page.content-item > h3 + * {
+  .content-item > h3,
+  .content-item > h3 + * {
     margin-top: 1.5em;
   }
-  .page.content-item > h3 + h4,
-  .page.content-item > h3 + p,
-  .page.content-item > h3 + ul {
+  .content-item > h3 + h4,
+  .content-item > h3 + p,
+  .content-item > h3 + ul {
     margin-top: 2.925em;
   }
-  .page.content-item > h3 + dl {
+  .content-item > h3 + dl {
     margin-top: 2.175em;
   }
 }
 }
 
-.coast-2019 .page.content-item .navigation {
+.coast-2019 .content-item .navigation {
   grid-column: 1/-1;
   width: 100%;
   line-height: 1.5;
   margin-top: 1.5em;
   margin-botom: 4.5em;
 }
-.coast-2019 .page.content-item .navigation ul {
+.coast-2019 .content-item .navigation ul {
   display: flex;
   flex-wrap: wrap;
   max-width: none;
   margin-left: -0.75em;
   margin-right: -0.75em;
 }
-.coast-2019 .page.content-item .navigation li {
+.coast-2019 .content-item .navigation li {
   margin: 0.125em;
   flex-grow: 1;
 }
 
-.coast-2019 .page.content-item .action a,
-.coast-2019 .page.content-item .navigation li a {
+.coast-2019 .content-item .action a,
+.coast-2019 .content-item .navigation li a {
   background-color: hsla(175, 54%, 47%, 1);
   background-color: hsla(199, 84%, 70%, 1);
   background-color: hsla(207, 73%, 43%, 1);
@@ -122,56 +122,56 @@
   letter-spacing: 0.1em;
 }
 @media (min-width: 30em) {
-  .coast-2019 .page.content-item .navigation ul {
+  .coast-2019 .content-item .navigation ul {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
   }
-  .coast-2019 .page.content-item .navigation li {
+  .coast-2019 .content-item .navigation li {
     margin: 0.375em;
   }
-  .coast-2019 .page.content-item .navigation li a {
+  .coast-2019 .content-item .navigation li a {
     font-size: 1.125em;
   }
 }
-.coast-2019 .page.content-item .page.content-item .action {
+.coast-2019 .content-item .content-item .action {
   margin-top: 1.5em;
 }
-.coast-2019 .page.content-item .page.content-item .action a {
+.coast-2019 .content-item .content-item .action a {
   display: inline-block;
   border-radius: 0.25em;
 }
-.coast-2019 .page.content-item .page.content-item .navigation {
+.coast-2019 .content-item .content-item .navigation {
   padding-top: 1.5em;
 }
-.coast-2019 .page.content-item .page.content-item .action a,
-.coast-2019 .page.content-item .navigation li a,
-.coast-2019 .page.content-item .page.content-item .navigation li a {
+.coast-2019 .content-item .content-item .action a,
+.coast-2019 .content-item .navigation li a,
+.coast-2019 .content-item .content-item .navigation li a {
   background-color: white !important;
   color: hsla(199, 84%, 70%, 1) !important;
 }
-.coast-2019 .page.content-item .page.content-item .action a {
+.coast-2019 .content-item .content-item .action a {
   color: hsl(29, 93%, 58%) !important; /* orange */
 }
-.coast-2019 .page.content-item .page.content-item .action a:hover,
-.coast-2019 .page.content-item .page.content-item .action a:active,
-.coast-2019 .page.content-item .page.content-item .action a:focus,
-.coast-2019 .page.content-item .navigation li a:hover,
-.coast-2019 .page.content-item .navigation li a:active,
-.coast-2019 .page.content-item .navigation li a:focus,
-.coast-2019 .page.content-item .page.content-item .navigation li a:hover,
-.coast-2019 .page.content-item .page.content-item .navigation li a:active,
-.coast-2019 .page.content-item .page.content-item .navigation li a:focus {
+.coast-2019 .content-item .content-item .action a:hover,
+.coast-2019 .content-item .content-item .action a:active,
+.coast-2019 .content-item .content-item .action a:focus,
+.coast-2019 .content-item .navigation li a:hover,
+.coast-2019 .content-item .navigation li a:active,
+.coast-2019 .content-item .navigation li a:focus,
+.coast-2019 .content-item .content-item .navigation li a:hover,
+.coast-2019 .content-item .content-item .navigation li a:active,
+.coast-2019 .content-item .content-item .navigation li a:focus {
   background-color: hsl(207, 73%, 43%) !important; /* dark blue */
   color: white !important;
 }
 
-.coast-2019 .page.content-item .navigation li a.active {
+.coast-2019 .content-item .navigation li a.active {
   background-color: hsl(29, 93%, 58%) !important; /* orange */
   color: white !important;
 }
 
-.coast-2019 .page.content-item > figure.image:first-child {
+.coast-2019 .content-item > figure.image:first-child {
   background-color: hsl(199, 84%, 70%);
   margin-top: 0 !important;
   margin-left: -15px;
@@ -180,7 +180,7 @@
 
 @supports (display: grid) {
 @media (min-width: 58.75em) {
-  .coast-2019 .page.content-item > figure.image:first-child {
+  .coast-2019 .content-item > figure.image:first-child {
     margin-left: -35px;
     margin-right: -35px;
   }
@@ -188,18 +188,18 @@
 }
 
 /* Override styles intended for the primary image on other pages */
-.coast-2019 .page.content-item > .image:first-child img {
+.coast-2019 .content-item > .image:first-child img {
   height: auto;
   width: 100%;
 }
 
 /* @supports (object-fit: contain) {
   @media (min-aspect-ratio: 1/1) {
-    .coast-2019 .page.content-item > figure.image:first-child {
+    .coast-2019 .content-item > figure.image:first-child {
       background-image:
         linear-gradient(to bottom, hsla(29, 93%, 58%, 1), hsla(43, 87%, 58%, 1) 48.375vw, hsla(43, 87%, 58%, 0) 48.375vw, hsla(43, 87%, 58%, 0));
     }
-    .coast-2019 .page.content-item > figure.image:first-child img {
+    .coast-2019 .content-item > figure.image:first-child img {
       display: block;
       width: 100vw !important;
       height: 66vw !important;
@@ -208,7 +208,7 @@
   }
 } */
 
-.coast-2019 .page.content-item > .introduction {
+.coast-2019 .content-item > .introduction {
   font-size: 1.25em;
   /* font-weight: 300; */
   margin-top: 1.5em;
@@ -217,7 +217,7 @@
   justify-self: center;
 }
 
-.coast-2019 .page.content-item .page.content-item {
+.coast-2019 .content-item .content-item {
   background-color: hsla(199, 84%, 70%, 1);
   color: white;
   grid-column: 1/-1;
@@ -235,72 +235,72 @@
 
 @supports (display: grid) {
 @media (min-width: 58.75em) {
-  .coast-2019 .page.content-item .page.content-item {
+  .coast-2019 .content-item .content-item {
     margin-left: -35px;
     margin-right: -35px;  
     padding-left: 35px;
     padding-right: 35px;
   }
-  .coast-2019 .page.content-item > figure.image:first-child {
+  .coast-2019 .content-item > figure.image:first-child {
     margin-bottom: 0 !important;
   }
-  .coast-2019 .page.content-item > figure.image:first-child + .page.content-item,
-  .coast-2019 .page.content-item > figure.image:first-child + header + .page.content-item {
+  .coast-2019 .content-item > figure.image:first-child + .content-item,
+  .coast-2019 .content-item > figure.image:first-child + header + .content-item {
     margin-top: 0;
   }
 }
 }
 
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item {
+.coast-2019 .content-item .content-item ~ .content-item {
   background-color: hsl(29, 93%, 58%); /* orange */
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item {
   background-color: hsl(192, 100%, 44%); /* medium blue */
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item {
   background-color: hsl(279, 29%, 60%); /* purple */
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item {
   background-color: hsl(14, 88%, 55%); /* tangerine */
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item {
   background-color: hsl(207, 73%, 43%); /* dark blue */
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item {
   background-color: hsl(175, 53%, 48%); /* aqua */
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item {
   background-color: hsl(29, 93%, 58%); /* orange */
 }
 
 
 
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item {
   background-color: hsl(192, 100%, 44%); /* medium blue */
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item {
   background-color: hsl(279, 29%, 60%); /* purple */
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item {
   background-color: hsl(14, 88%, 55%); /* tangerine */
 }
 
 
 
 
-.coast-2019 .page.content-item .page.content-item h2,
-.coast-2019 .page.content-item .page.content-item h3,
-.coast-2019 .page.content-item .page.content-item a {
+.coast-2019 .content-item .content-item h2,
+.coast-2019 .content-item .content-item h3,
+.coast-2019 .content-item .content-item a {
   color: inherit !important;
 }
-.coast-2019 .page.content-item .page.content-item > *:not(nav):not(.action) a {
+.coast-2019 .content-item .content-item > *:not(nav):not(.action) a {
   text-decoration: underline;
 }
 
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item {
+.coast-2019 .content-item .content-item ~ .content-item {
   position: relative;
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item > svg:first-child {
+.coast-2019 .content-item .content-item ~ .content-item > svg:first-child {
   display: block;
   position: absolute;
   z-index: 1;
@@ -312,10 +312,10 @@
   height: 18.6vw;
   max-width: none;
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item > svg:first-child path {
+.coast-2019 .content-item .content-item ~ .content-item > svg:first-child path {
   fill: currentColor;
 }
-.coast-2019 .page.content-item > svg:last-child {
+.coast-2019 .content-item > svg:last-child {
   display: block;
   position: absolute;
   z-index: 1;
@@ -328,98 +328,98 @@
   color: hsl(29, 93%, 58%); /* orange */
   transform: scale(-1, 1);
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item > svg:last-child {
+.coast-2019 .content-item .content-item ~ .content-item > svg:last-child {
   transform: translateY(100%);
 }
-.coast-2019 .page.content-item > svg:last-child path {
+.coast-2019 .content-item > svg:last-child path {
   fill: currentColor;
 }
 
-.coast-2019 .page.content-item .page.content-item {
+.coast-2019 .content-item .content-item {
   padding-bottom: calc(18.6vw + 3em);
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item > svg:first-child {
+.coast-2019 .content-item .content-item ~ .content-item > svg:first-child {
   color: hsl(29, 93%, 58%); /* orange */
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item {
+.coast-2019 .content-item .content-item ~ .content-item {
   padding-bottom: calc(18.6vw + 6em);
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item > svg:first-child {
   color: hsl(192, 100%, 44%); /* medium blue */
   transform: scale(-1, 1) translateY(-100%);
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item {
   padding-bottom: 15em;
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item > svg:first-child {
   color: hsl(279, 29%, 60%); /* purple */
   transform: scale(1, 1) translateY(-100%);
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item {
   padding-bottom: 6em;
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item > svg:first-child {
   color: hsl(14, 88%, 55%); /* tangerine */
   transform: scale(-1, 1) translateY(-100%);
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item {
   padding-top: calc(18.6vw + 3em);
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item > svg:first-child {
   color: hsl(14, 88%, 55%); /* tangerine */
   transform: scale(-1, -1);
   top: -1px;
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item {
   padding-bottom: calc(18.6vw + 6em);
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item {
   padding-top: 3em;
   padding-bottom: 3em;
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item > svg:first-child {
   color: hsl(175, 53%, 48%); /* aqua */
   transform: scale(1, 1) translateY(-100%);
   top: 1px;
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item {
   padding-top: calc(18.6vw + 3em);
   padding-bottom: calc(18.6vw + 6em);
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item > svg:first-child {
   color: hsl(175, 53%, 48%); /* aqua */
   transform: scale(-1, -1);
   top: -1px;
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:last-child {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item > svg:last-child {
   color: white;
   transform: scale(-1, 1);
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item {
   padding-top: 3em;
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item > svg:first-child {
   color: hsl(175, 53%, 48%); /* aqua */
   transform: scale(-1, 1) translateY(-100%);
 }
 
 
 
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item > svg:first-child {
   color: hsl(192, 100%, 44%); /* medium blue */
   top: 1px;
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item > svg:first-child {
   color: hsl(279, 29%, 60%); /* purple */
 }
-.coast-2019 .page.content-item .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item ~ .page.content-item > svg:first-child {
+.coast-2019 .content-item .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item ~ .content-item > svg:first-child {
   color: hsl(14, 88%, 55%); /* tangerine */
 }
 
 @supports (display: grid) {
 @media (min-width: 58.75em) {
-  .page.content-item > svg:first-child,
-  .page.content-item > svg:last-child {
+  .content-item > svg:first-child,
+  .content-item > svg:last-child {
     margin-left: -35px;
     margin-right: -35px;
   }
@@ -427,13 +427,13 @@
 }
 
 /* Hide SVGs on browsers that don’t understand transform (to avoid covering up text content) */
-.coast-2019 .page.content-item .page.content-item > svg:first-child,
-.coast-2019 .page.content-item .page.content-item > svg:last-child {
+.coast-2019 .content-item .content-item > svg:first-child,
+.coast-2019 .content-item .content-item > svg:last-child {
   display: none !important;
 }
 @supports(transform: translateY(100%)) {
-  .coast-2019 .page.content-item .page.content-item > svg:first-child,
-  .coast-2019 .page.content-item .page.content-item > svg:last-child {
+  .coast-2019 .content-item .content-item > svg:first-child,
+  .coast-2019 .content-item .content-item > svg:last-child {
     display: block !important;
   }
 }
@@ -639,7 +639,7 @@
   box-sizing: border-box;
 }
 
-.coast-2019 .page.content-item .page.content-item .action a,
+.coast-2019 .content-item .content-item .action a,
 .coast-2019 .subscribe button,
 .coast-2019 .subscribe input[type="email"],
 .coast-2019 .subscribe input[type="text"] {
@@ -658,7 +658,7 @@
   color: black;
 }
 
-.coast-2019 .page.content-item .page.content-item .action a,
+.coast-2019 .content-item .content-item .action a,
 .coast-2019 .subscribe button {
   background-color: white;
   color: hsl(199, 84%, 70%);
@@ -674,20 +674,20 @@
   transition: all 0.2s;
 }
 
-.coast-2019 .page.content-item .page.content-item .action a:hover,
-.coast-2019 .page.content-item .page.content-item .action a:active,
-.coast-2019 .page.content-item .page.content-item .action a:focus,
+.coast-2019 .content-item .content-item .action a:hover,
+.coast-2019 .content-item .content-item .action a:active,
+.coast-2019 .content-item .content-item .action a:focus,
 .coast-2019 .subscribe button:hover,
 .coast-2019 .subscribe button:focus {
   background-color: hsl(199, 84%, 70%) !important;
 }
 
 /* Avoid a hover state color that’s the same as the background, in the first section */
-.coast-2019 .page.content-item > figure.image:first-child + header + .page.content-item .action a:hover,
-.coast-2019 .page.content-item > figure.image:first-child + header + .page.content-item .action a:active,
-.coast-2019 .page.content-item > figure.image:first-child + header + .page.content-item .action a:focus,
-.coast-2019 .page.content-item > figure.image:first-child + header + .page.content-item .subscribe button:hover,
-.coast-2019 .page.content-item > figure.image:first-child + header + .page.content-item .subscribe button:focus {
+.coast-2019 .content-item > figure.image:first-child + header + .content-item .action a:hover,
+.coast-2019 .content-item > figure.image:first-child + header + .content-item .action a:active,
+.coast-2019 .content-item > figure.image:first-child + header + .content-item .action a:focus,
+.coast-2019 .content-item > figure.image:first-child + header + .content-item .subscribe button:hover,
+.coast-2019 .content-item > figure.image:first-child + header + .content-item .subscribe button:focus {
   background-color: hsl(207, 73%, 43%) !important;
 }
 
@@ -807,7 +807,7 @@
 .coast-2019 .navigation-link p a svg polygon {
   fill: currentColor;
 }
-.coast-2019 .page.content-item:first-child > figure.image:first-child,
+.coast-2019 .content-item:first-child > figure.image:first-child,
 .coast-2019 .first-content-item {
   position: relative;
   z-index: 3;

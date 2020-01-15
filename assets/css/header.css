@@ -2,16 +2,16 @@
 /* =Header Image
 ----------------------------------------------- */
 .detail-venue .hero img,
-.page.content-item > .image:first-child img,
-.page.content-item .col-md-12 > .image:first-child img {
+.content-item > .image:first-child img,
+.content-item .col-md-12 > .image:first-child img {
   height: auto;
   width: 100%;
 }
 @supports (object-fit: cover) {
   @media (min-aspect-ratio: 1/1) {
     .detail-venue .hero img,
-    .page.content-item > .image:first-child img,
-    .page.content-item .col-md-12 > .image:first-child img {
+    .content-item > .image:first-child img,
+    .content-item .col-md-12 > .image:first-child img {
       height: 33vw;
       width: 100%;
       object-fit: cover;
@@ -20,16 +20,16 @@
 }
 
 /* Caption */
-.page.content-item > .image:first-child figcaption,
-.page.content-item .col-md-12 > .image:first-child figcaption {
+.content-item > .image:first-child figcaption,
+.content-item .col-md-12 > .image:first-child figcaption {
   font-size: 0.875em;
   padding-top: 0.375em;
   text-align: right;
 }
 
 /* Deprecated */
-.page.content-item > .image:first-child,
-.page.content-item .col-md-12 > .image:first-child {
+.content-item > .image:first-child,
+.content-item .col-md-12 > .image:first-child {
   text-align: right;
 }
 

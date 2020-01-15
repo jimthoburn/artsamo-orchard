@@ -18,8 +18,8 @@
   }
 
   // Move the main page heading after the image in the source order, for styling purposes
-  let pageTitle = document.querySelector(".page.content-item > header:first-child")
-  let primaryImage = document.querySelector(".page.content-item .image")
+  let pageTitle = document.querySelector(".content-item > header:first-child")
+  let primaryImage = document.querySelector(".content-item .image")
   if (pageTitle && primaryImage) {
     pageTitle.parentNode.removeChild(pageTitle)
     primaryImage.parentNode.insertBefore(pageTitle, primaryImage.nextSibling)

@@ -4,26 +4,26 @@
 
 /* A few styles for browsers that don’t understand grid */
 @media (min-width: 58.75em) {
-  .page.content-item {
+  .content-item {
     margin-bottom: 6em;
   }
-  .page.content-item > h2 {
+  .content-item > h2 {
     margin-top: 9rem;
   }
-  .page.content-item > h3 {
+  .content-item > h3 {
     margin-top: 4.5rem;
   }
-  .page.content-item > * {
+  .content-item > * {
     max-width: 66rem;
     margin-left: auto;
     margin-right: auto;
   }
-  .page.content-item > header:first-child,
-  .page.content-item > div:last-child,
-  .page.content-item > .image,
-  .page.content-item .col-md-12 > .image,
-  .page.content-item > .image:first-child + header,
-  .page.content-item .col-md-12 > .image:first-child + header {
+  .content-item > header:first-child,
+  .content-item > div:last-child,
+  .content-item > .image,
+  .content-item .col-md-12 > .image,
+  .content-item > .image:first-child + header,
+  .content-item .col-md-12 > .image:first-child + header {
     max-width: none;
   }
 }
@@ -33,7 +33,7 @@
 @media (min-width: 58.75em) {
 
   /* Emphasize the main headline */
-  /* .page.content-item > header:first-child h1 {		
+  /* .content-item > header:first-child h1 {		
    margin-top: 4.5rem;		
    font-size: 2.5em;
    font-weight: bold;
@@ -50,7 +50,7 @@
 
   /* Target the content that’s declared as a 12 column bootstrap grid
      and create a two column grid inside it. */
-  .page.content-item {
+  .content-item {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-column-gap: 1.5em;
@@ -58,42 +58,42 @@
   }
 
   /* Position most content in the second column */
-  .page.content-item > * {
+  .content-item > * {
     grid-column: 2/3;
     max-width: 33em;
     margin-left: unset;
     margin-right: unset;
   }
 
-  .page.content-item > header:first-child,
-  .page.content-item > div:last-child {
+  .content-item > header:first-child,
+  .content-item > div:last-child {
     grid-column: 1/-1;
     max-width: none;
   }
 
   /* Position headlines in the first column */
-  .page.content-item > h2,
-  .page.content-item > h3 {
+  .content-item > h2,
+  .content-item > h3 {
     grid-column: 1/2;
     justify-self: end;
     text-align: right;
     margin-bottom: 0;
   }
-  .page.content-item > h2 {
+  .content-item > h2 {
     font-size: 2em;
   }
-  .page.content-item > h2,
-  .page.content-item > h3,
-  .page.content-item > h2 + *,
-  .page.content-item > h3 + * {
+  .content-item > h2,
+  .content-item > h3,
+  .content-item > h2 + *,
+  .content-item > h3 + * {
     margin-top: 1.5rem;
   }
-  .page.content-item > h2,
-  .page.content-item > h2 + *:not(h3) {
+  .content-item > h2,
+  .content-item > h2 + *:not(h3) {
     margin-top: 9rem;
   }
   /* SHIM: Just in case a page has a first level headline mixed in with the content. */
-  .page.content-item > h1 {
+  .content-item > h1 {
     grid-column: 1/-1;
   }
 
@@ -101,51 +101,51 @@
     Emphasize the primary image by making it the full width of the grid
     and overlap it with the main headline
   */
-  .page.content-item > .image,
-  .page.content-item .col-md-12 > .image {
+  .content-item > .image,
+  .content-item .col-md-12 > .image {
     margin-bottom: 4.5em;
     grid-column: 1/-1;
     max-width: none;
   }
-  .page.content-item > .image img,
-  .page.content-item .col-md-12 > .image img {
+  .content-item > .image img,
+  .content-item .col-md-12 > .image img {
     width: 100%;
     height: auto;
   }
   /* If the image is the first element in the page content */
-  .page.content-item > .image:first-child,
-  .page.content-item .col-md-12 > .image:first-child {
+  .content-item > .image:first-child,
+  .content-item .col-md-12 > .image:first-child {
     margin-top: -4.5em;
   }
-  .page.content-item > .image:first-child + header,
-  .page.content-item .col-md-12 > .image:first-child + header {
+  .content-item > .image:first-child + header,
+  .content-item .col-md-12 > .image:first-child + header {
     max-width: none;
   }
-  .page.content-item > .image:first-child + header h1,
-  .page.content-item .col-md-12 > .image:first-child + header h1 {
+  .content-item > .image:first-child + header h1,
+  .content-item .col-md-12 > .image:first-child + header h1 {
     font-size: 55px;
     margin-top: 0;
   }
   
   /* Make maps take up the full width of the grid */
-  .page.content-item .map {
+  .content-item .map {
     margin-top: 4.5em;
     grid-column: 1/-1;
     max-width: none;
   }
-  .page.content-item .map + p {
+  .content-item .map + p {
     margin-bottom: 4.5em;
   }
 
   /* Align artists sub-grid with the main grid */
-  .page.content-item > .artists,
-  .page.content-item .col-md-12 > .artists {
+  .content-item > .artists,
+  .content-item .col-md-12 > .artists {
     grid-column: 1/-1;
     max-width: none;
     margin-top: 0;
   }
-  .page.content-item > .artists li,
-  .page.content-item .col-md-12 > .artists li {
+  .content-item > .artists li,
+  .content-item .col-md-12 > .artists li {
     grid-template-columns: 1fr 2fr;
   }
 }
