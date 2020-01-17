@@ -134,14 +134,20 @@ Example HTML
     whereClause = eventTypesWhereClause
   }
 
-  let url
+  let urls = []
 
   if (EVENT_KEYWORDS.length > 0) {
-    url = `https://data.smgov.net/resource/tu9m-76aw.json?$limit=10000&$q=${encodeURIComponent(`'${EVENT_KEYWORDS.join(" ")}'`)}`
-  } else if (whereClause) {
-    url = `https://data.smgov.net/resource/tu9m-76aw.json?$limit=10000&$where=${encodeURIComponent(whereClause)}`
-  } else {
-    url = `https://data.smgov.net/resource/tu9m-76aw.json?$limit=10000`
+    EVENT_KEYWORDS.forEach(keyword => {
+      urls.push(`https://data.smgov.net/resource/tu9m-76aw.json?$limit=10000&$q=${encodeURIComponent(`'${keyword}'`)}`)
+    })
+  }
+
+  if (whereClause) {
+    urls.push(`https://data.smgov.net/resource/tu9m-76aw.json?$limit=10000&$where=${encodeURIComponent(whereClause)}`)
+  }
+  
+  if (urls.length <= 0) {
+    urls.push(`https://data.smgov.net/resource/tu9m-76aw.json?$limit=10000`)
   }
 
   // SHIM: Avoid showing unrelated events from Annenberg Community Beach House
@@ -150,20 +156,32 @@ Example HTML
             event.contact_name === "Beach=Culture")
   }
 
-  console.log(url)
+  console.log(urls)
 
-  fetch(url)
-    .then(function(response) {
-      return response.json()
+  const urlPromises = urls.map(url => getData(url))
+
+  Promise.all(urlPromises).then(values => {
+    const data = values.reduce((accumulator, value) => accumulator.concat(value))
+    addItems(data)
+  })
+
+  function getData(url) {
+    return new Promise((resolve, reject) => {
+      fetch(url)
+        .then(function(response) {
+          return response.json()
+        })
+        .then(function(myJson) {
+          resolve(myJson)
+          // hideLoadingMessage()
+        })
+        .catch(function(error) {
+          console.error(error)
+          reject(error)
+          // showErrorMessage()
+        })
     })
-    .then(function(myJson) {
-      addItems(myJson)
-      // hideLoadingMessage()
-    })
-    .catch(function(error) {
-      console.error(error)
-      // showErrorMessage()
-    })
+  }
 
   function addItems(data) {
     // let template = document.getElementById('event-template')
