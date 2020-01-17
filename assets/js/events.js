@@ -259,17 +259,36 @@ Example HTML
     return `${hours}:${paddedZeros(minutes)} ${ampm}`
   }
 
+  // https://stackoverflow.com/questions/11887934/how-to-check-if-the-dst-daylight-saving-time-is-in-effect-and-if-it-is-whats
+  function stdTimezoneOffset(date) {
+    var jan = new Date(date.getFullYear(), 0, 1);
+    var jul = new Date(date.getFullYear(), 6, 1);
+    return Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
+  }
+  function isDstObserved(date) {
+    return date.getTimezoneOffset() < stdTimezoneOffset(date);
+  }
+
   function createItem(itemData, list, template) {
     const daysOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-    let startDate = new Date(`${itemData.start_date}-08:00`)
-    let endDate   = new Date(`${itemData.end_date}-08:00`)
+    let startDate, endDate;
 
-    // Switch to these values if “Daylight saving time” is in effect 
-    // let startDate = new Date(`${itemData.start_date}-07:00`)
-    // let endDate   = new Date(`${itemData.end_date}-07:00`)
+    var daylightSavingtimeTest = new Date(`${itemData.start_date}-08:00`);
+    if (isDstObserved(daylightSavingtimeTest)) { 
+      console.log ("Daylight saving time!");
+
+      // Switch to these values if “Daylight saving time” is in effect 
+      startDate = new Date(`${itemData.start_date}-07:00`)
+      endDate   = new Date(`${itemData.end_date}-07:00`)
+    } else {
+      console.log ("not Daylight saving time!");
+
+      startDate = new Date(`${itemData.start_date}-08:00`)
+      endDate   = new Date(`${itemData.end_date}-08:00`)
+    }
 
     let startTime = getFormattedTime(startDate)
     let endTime   = getFormattedTime(endDate)
