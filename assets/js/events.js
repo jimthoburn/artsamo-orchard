@@ -111,6 +111,9 @@ Example HTML
   const EVENT_TYPES    = list.getAttribute("data-events-types")     ? list.getAttribute("data-events-types").split(",")     : []
   const EVENT_KEYWORDS = list.getAttribute("data-events-keywords")  ? list.getAttribute("data-events-keywords").split(",")  : []
 
+  const PAST_EVENTS    = list.getAttribute("data-with-past-events") == "" ||
+                         list.getAttribute("data-with-past-events") == "true" ? true : false
+
   // https://data.smgov.net/resource/tu9m-76aw.json?$where=contact_name   = 'culture@smgov.net' OR contact_name   = 'naomi.okuyama@smgov.net'
   // https://data.smgov.net/resource/tu9m-76aw.json?$where=contact_emails = 'culture@smgov.net' OR contact_emails = 'naomi.okuyama@smgov.net'
   function getWhereClause(columnName, items) {
@@ -145,7 +148,7 @@ Example HTML
   if (whereClause) {
     urls.push(`https://data.smgov.net/resource/tu9m-76aw.json?$limit=10000&$where=${encodeURIComponent(whereClause)}`)
   }
-  
+
   if (urls.length <= 0) {
     urls.push(`https://data.smgov.net/resource/tu9m-76aw.json?$limit=10000`)
   }
@@ -156,7 +159,7 @@ Example HTML
             event.contact_name === "Beach=Culture")
   }
 
-  console.log(urls)
+  // console.log(urls)
 
   const urlPromises = urls.map(url => getData(url))
 
@@ -232,7 +235,7 @@ Example HTML
       }
     }
 
-    console.log({ itemLimitReached })
+    // console.log({ itemLimitReached })
 
     let more = document.querySelector("[data-events-more]")
     if (itemLimitReached && more) {
@@ -269,6 +272,12 @@ Example HTML
     return date.getTimezoneOffset() < stdTimezoneOffset(date);
   }
 
+  // https://stackoverflow.com/questions/6963311/add-days-to-a-date-object
+  const MILLISECONDS_PER_DAY = 24 * 60 * 60 * 1000;
+  const THREE_DAYS = 3 * MILLISECONDS_PER_DAY;
+  const today = new Date();
+  const threeDaysAgo = new Date(today.setTime( today.getTime() - THREE_DAYS ));
+
   function createItem(itemData, list, template) {
     const daysOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
@@ -276,15 +285,15 @@ Example HTML
 
     let startDate, endDate;
 
-    var daylightSavingtimeTest = new Date(`${itemData.start_date}-08:00`);
+    let daylightSavingtimeTest = new Date(`${itemData.start_date}-08:00`);
     if (isDstObserved(daylightSavingtimeTest)) { 
-      console.log ("Daylight saving time!");
+      // console.log ("Daylight saving time!");
 
       // Switch to these values if “Daylight saving time” is in effect 
       startDate = new Date(`${itemData.start_date}-07:00`)
       endDate   = new Date(`${itemData.end_date}-07:00`)
     } else {
-      console.log ("not Daylight saving time!");
+      // console.log ("not Daylight saving time!");
 
       startDate = new Date(`${itemData.start_date}-08:00`)
       endDate   = new Date(`${itemData.end_date}-08:00`)
@@ -318,7 +327,7 @@ Example HTML
       url = itemData.detail_url
     }
     let urlDomain   = url.split("/")[2]
-    let dataCategories = itemData.event_types ? itemData.event_types.toLowerCase() : null
+    let dataCategories  = itemData.event_types ? itemData.event_types.toLowerCase() : null
     let dataDescription = itemData.description ? itemData.description.toLowerCase() : null
 
     let className   = ""
@@ -365,14 +374,8 @@ Example HTML
       html = html.replace("<dd>{{ ages }}</dd>", "")
     }
 
-    // https://stackoverflow.com/questions/6963311/add-days-to-a-date-object
-    const MILLISECONDS_PER_DAY = 24 * 60 * 60 * 1000;
-    const THREE_DAYS = 3 * MILLISECONDS_PER_DAY;
-    let today = new Date();
-    let threeDaysAgo = new Date(today.setTime( today.getTime() - THREE_DAYS ));
-
     // If the event is happening in the future or if it happened recently
-    if (startDate > threeDaysAgo) {
+    if (startDate > threeDaysAgo || PAST_EVENTS === true) {
       list.insertAdjacentHTML('beforeend', html)
       return true
     }
