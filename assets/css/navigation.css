@@ -50,7 +50,8 @@
 }
 
 .navigation [style*="background-image"] a {
-  background-color: rgba(56, 186, 176, 0.5); /* @green */
+  background-color: rgba(36, 119, 113, 0.5); /* @green */
+  text-shadow: 0 0 0.25em rgba(36, 119, 113, 1);
 }
 
 @media (min-width: 60em) {
