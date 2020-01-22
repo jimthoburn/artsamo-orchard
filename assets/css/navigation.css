@@ -33,6 +33,9 @@
   letter-spacing: 0.1em;
   font-size: 1.125em;
   border-radius: 0.125em;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 .navigation a[href]:hover,
 .navigation a[href]:active,
@@ -40,6 +43,9 @@
   background-color: rgb(36, 119, 113); /* @dark-green */
   color: white;
   text-decoration: none;
+}
+.navigation li[style*="background-image"] a {
+  background-color: rgba(56, 186, 176, 0.5); /* @green */
 }
 
 @media (min-width: 60em) {
