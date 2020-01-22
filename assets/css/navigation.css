@@ -19,7 +19,13 @@
 .navigation li {
   margin: 0.375em;
   flex-grow: 1;
+  background-size: cover;
+  background-position: center;
 }
+.navigation [style*="background-image"] {
+  background-image: var(--background-image);
+}
+
 .navigation a {
   display: block;
   text-align: center;
@@ -33,10 +39,8 @@
   letter-spacing: 0.1em;
   font-size: 1.125em;
   border-radius: 0.125em;
-  background-size: cover;
-  background-position: center;
-  position: relative;
 }
+
 .navigation a[href]:hover,
 .navigation a[href]:active,
 .navigation a[href]:focus {
@@ -44,7 +48,8 @@
   color: white;
   text-decoration: none;
 }
-.navigation li[style*="background-image"] a {
+
+.navigation [style*="background-image"] a {
   background-color: rgba(56, 186, 176, 0.5); /* @green */
 }
 
