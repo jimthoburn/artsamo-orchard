@@ -24,16 +24,15 @@
 .navigation a {
   display: block;
   text-align: center;
-  padding: 0.875em 1.45em;
+  padding: 3.75em 2em;
   background-color: rgb(56, 186, 176); /* @green */
   color: white;
   text-decoration: none;
-  border-radius: 0.25em;
   transition: background-color 0.2s, color 0.2s;
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 0.1em;
-  font-size: 1.125em;
+  font-size: 1.5em;
 }
 .navigation a[href]:hover,
 .navigation a[href]:active,
