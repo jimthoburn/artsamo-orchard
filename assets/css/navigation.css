@@ -15,7 +15,6 @@
 .navigation ul {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 3em;
 }
 .navigation li {
   margin: 0.375em;
@@ -33,6 +32,7 @@
   font-weight: 400;
   letter-spacing: 0.1em;
   font-size: 1.125em;
+  border-radius: 0.125em;
 }
 .navigation a[href]:hover,
 .navigation a[href]:active,
@@ -44,8 +44,9 @@
 
 @media (min-width: 60em) {
   .navigation a {
-    padding: 3.75em 2em;
+    padding: 4em 2em;
     font-size: 1.5em;
+    line-height: 1;
   }
   .venue.content-item .navigation a {
     padding: 0.875em 1.5em;

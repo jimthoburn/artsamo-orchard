@@ -1,6 +1,11 @@
 
 /* =Action
 ----------------------------------------------- */
+.action {
+  grid-column: 1/-1 !important;
+  margin: 3em 0 !important;
+  max-width: none !important;
+}
 
 .action,
 .action li {
@@ -12,17 +17,20 @@
 .action {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
 }
 .action li {
-  margin-right: 0.375em;
-  margin-bottom: 0.375em;
+  margin: 0.375em;
   flex-grow: 1;
 }
 .action a {
   display: block;
-  padding: 0.75em 1.5em;
-  border: 2px solid;
+  padding: 0.875em 1.5em;
+  border: 0.125em solid;
+  border-radius: 0.125em;
   text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  font-size: 1.125em;
 }
+
