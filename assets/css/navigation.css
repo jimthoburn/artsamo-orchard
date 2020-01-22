@@ -1,34 +1,39 @@
 
 /* =Navigation
 ----------------------------------------------- */
+.navigation {
+  grid-column: 1/-1 !important;
+  margin: 3em 0 !important;
+  max-width: none !important;
+}
 .navigation ul,
 .navigation li {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
 }
-.navigation {
+.navigation ul {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 3em;
-  max-width: none !important;
 }
 .navigation li {
-  display: inline-block;
-  margin-right: 0.25em;
-  margin-bottom: 0.25em;
+  margin: 0.375em;
   flex-grow: 1;
 }
 .navigation a {
   display: block;
   text-align: center;
-  padding: 0.725em 1.45em;
+  padding: 0.875em 1.45em;
   background-color: rgb(56, 186, 176); /* @green */
   color: white;
   text-decoration: none;
   border-radius: 0.25em;
   transition: background-color 0.2s, color 0.2s;
-  font-weight: bold;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  font-size: 1.125em;
 }
 .navigation a[href]:hover,
 .navigation a[href]:active,
