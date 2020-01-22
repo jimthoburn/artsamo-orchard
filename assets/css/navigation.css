@@ -24,7 +24,7 @@
 .navigation a {
   display: block;
   text-align: center;
-  padding: 3.75em 2em;
+  padding: 0.875em 1.5em;
   background-color: rgb(56, 186, 176); /* @green */
   color: white;
   text-decoration: none;
@@ -32,7 +32,7 @@
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 0.1em;
-  font-size: 1.5em;
+  font-size: 1.125em;
 }
 .navigation a[href]:hover,
 .navigation a[href]:active,
@@ -41,3 +41,17 @@
   color: white;
   text-decoration: none;
 }
+
+@media (min-width: 60em) {
+  .navigation a {
+    padding: 3.75em 2em;
+    font-size: 1.5em;
+  }
+  .venue.content-item .navigation a {
+    padding: 0.875em 1.5em;
+    font-size: 1.125em;
+  }
+}
+
+
+
