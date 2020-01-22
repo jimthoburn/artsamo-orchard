@@ -109,6 +109,9 @@
   .content-item > h2 + *:not(h3) {
     margin-top: 9rem;
   }
+  .content-item > h2 + p {
+    margin-top: 10.25rem;
+  }
   /* SHIM: Just in case a page has a first level headline mixed in with the content. */
   .content-item > h1 {
     grid-column: 1/-1;

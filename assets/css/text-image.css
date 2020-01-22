@@ -2,6 +2,7 @@
 .text-image {
   display: grid;
   margin-top: 50px;
+  margin-bottom: 50px;
   text-decoration: none;
   background: black;
   grid-column: 1/-1;

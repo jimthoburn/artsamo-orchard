@@ -74,16 +74,16 @@
   .coast-2019 .content-item h2 + p {
     margin-top: 0;
   }
-  .content-item > h3,
-  .content-item > h3 + * {
+  .coast-2019 .content-item > h3,
+  .coast-2019 .content-item > h3 + * {
     margin-top: 1.5em;
   }
-  .content-item > h3 + h4,
-  .content-item > h3 + p,
-  .content-item > h3 + ul {
+  .coast-2019 .content-item > h3 + h4,
+  .coast-2019 .content-item > h3 + p,
+  .coast-2019 .content-item > h3 + ul {
     margin-top: 2.925em;
   }
-  .content-item > h3 + dl {
+  .coast-2019 .content-item > h3 + dl {
     margin-top: 2.175em;
   }
 }
