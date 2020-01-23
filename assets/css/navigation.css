@@ -29,7 +29,7 @@
 .navigation a {
   display: block;
   text-align: center;
-  padding: 0.875em 1.5em;
+  padding: 4em 2em;
   background-color: rgb(56, 186, 176); /* @green */
   color: white;
   text-decoration: none;
@@ -37,6 +37,7 @@
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 0.1em;
+  line-height: 1;
   font-size: 1.125em;
   border-radius: 0.125em;
 }
@@ -62,12 +63,9 @@
 
 @media (min-width: 60em) {
   .navigation a {
-    padding: 4em 2em;
     font-size: 1.5em;
-    line-height: 1;
   }
   .venue.content-item .navigation a {
-    padding: 0.875em 1.5em;
     font-size: 1.125em;
   }
 }
