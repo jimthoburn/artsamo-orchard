@@ -30,8 +30,8 @@
 }
 
 .quote-image__text {
-  grid-column: 1/1;
-  grid-row: 1/1;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
   align-self: center;
   position: relative;
   z-index: 1; 
@@ -56,8 +56,8 @@
 }
 
 .quote-image__image {
-  grid-column: 1/1;
-  grid-row: 1/1;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
   height: 100%;
   height: 100vw;
   width: 100%;
