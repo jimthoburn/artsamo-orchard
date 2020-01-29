@@ -71,7 +71,8 @@
     text-align: right;
     margin-bottom: 0;
   }
-  .col-md-12 > h2 {
+  .col-md-12 > h2,
+  .col-md-12 > .text-image ~ h3 { /* SHIM: Make headlines a consistent size on Belmar page */
     font-size: 2em;
   }
   .col-md-12 > h2,
