@@ -2,7 +2,7 @@
 .text-image {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vw auto;
+  grid-template-rows: 66vw auto;
   margin-top: 50px;
   margin-bottom: 50px;
   text-decoration: none;
@@ -60,7 +60,7 @@
   grid-column: 1/-1;
   grid-row: 1/2;
   height: 100%;
-  height: 100vw;
+  height: 66vw;
   width: 100%;
   object-fit: cover;
   /* opacity: 0.75; */
@@ -74,7 +74,7 @@
   grid-column: 1/-1;
   grid-row: 1/2;
   height: 100%;
-  height: 100vw;
+  height: 66vw;
   width: 100%;
   z-index: 1;
   mix-blend-mode: multiply;
@@ -86,7 +86,7 @@
   margin: 0;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vw auto;
+  grid-template-rows: 66vw auto;
 }
 .text-image__caption {
   grid-column: 1/-1;
