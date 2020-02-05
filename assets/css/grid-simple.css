@@ -140,15 +140,43 @@
   .content-item > .image:first-child,
   .content-item .col-md-12 > .image:first-child {
     margin-top: -4.5em;
+
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    background: hsl(0, 0%, 0%);
+    display: grid;
   }
   .content-item > .image:first-child + header,
   .content-item .col-md-12 > .image:first-child + header {
     max-width: none;
+
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    position: relative;
+    z-index: 1;
+    align-self: center;
+    color: white;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    margin: 0;
+    box-sizing: border-box;
   }
   .content-item > .image:first-child + header h1,
   .content-item .col-md-12 > .image:first-child + header h1 {
     font-size: 55px;
     margin-top: 0;
+
+    font-family: canada-type-gibson, sans-serif;
+    font-weight: 700;
+    font-size: calc(0.75em + 4vw);
+    font-style: normal;
+    line-height: 1.125;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    transform: skewY(-8deg);
+    text-align: center;
+    margin: 0;
+    margin-top: calc(1.5em * -1);
   }
   
   /* Make maps take up the full width of the grid */

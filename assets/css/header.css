@@ -28,9 +28,15 @@
     .detail-venue .hero img,
     .content-item > .image:first-child img,
     .content-item .col-md-12 > .image:first-child img {
-      height: 33vw;
-      width: 100%;
+      height: calc(100vh - 10.5em);
       object-fit: cover;
+      object-position: center;
+      min-height: 33.333vw;
+      width: 100%;
+      
+      opacity: 0.75;
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
     }
   }
 }
@@ -41,6 +47,16 @@
   font-size: 0.875em;
   padding-top: 0.375em;
   text-align: right;
+
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  font-size: 0.75em;
+  position: relative;
+  z-index: 1;
+  background: white;
+  padding: calc(1.5em * 1/4) calc(1.5em * 1/2);
+  justify-self: end;
+  align-self: end;
 }
 
 /* Deprecated */
