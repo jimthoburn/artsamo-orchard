@@ -1,29 +1,36 @@
 
 /* =Action
 ----------------------------------------------- */
-.action {
-  grid-column: 1/-1 !important;
+
+p.action,
+ul.action {
   margin: 3em 0 !important;
+}
+
+ul.action {
+  grid-column: 1/-1 !important;
   max-width: none !important;
 }
 
-.action,
+ul.action,
 .action li {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
 }
 
-.action {
+ul.action {
   display: flex;
   flex-wrap: wrap;
 }
-.action li {
+ul.action li {
   margin: 0.375em;
   flex-grow: 1;
 }
-.action a {
+.action a,
+.action button {
   display: block;
+  width: 100%;
   padding: 0.875em 1.5em;
   border: 0.125em solid;
   border-radius: 0.125em;
@@ -32,5 +39,17 @@
   font-weight: 400;
   letter-spacing: 0.1em;
   font-size: 1.125em;
+  color: #38bab0;
+  background-color: transparent;
+}
+.action a:hover,
+.action a:active,
+.action a:focus,
+.action button:hover,
+.action button:active,
+.action button:focus {
+  background-color: rgb(36, 119, 113);
+  color: white;
+  text-decoration: none;
 }
 
