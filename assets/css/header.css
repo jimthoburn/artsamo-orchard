@@ -10,6 +10,8 @@
 
 .content-item > .image--with-tint:first-child > div {
   position: relative;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
 }
 .content-item > .image--with-tint:first-child > div::after {
   content: "";
@@ -28,7 +30,7 @@
     .detail-venue .hero img,
     .content-item > .image:first-child img,
     .content-item .col-md-12 > .image:first-child img {
-      height: calc(100vh - 10.5em);
+      height: calc(100vh - 4.5em);
       object-fit: cover;
       object-position: center;
       min-height: 33.333vw;
