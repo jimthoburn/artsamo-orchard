@@ -7,10 +7,10 @@ ul.action {
   margin: 3em 0 !important;
 }
 
-ul.action {
+/* ul.action {
   grid-column: 1/-1 !important;
   max-width: none !important;
-}
+} */
 
 ul.action,
 .action li {
@@ -19,10 +19,10 @@ ul.action,
   padding-left: 0;
 }
 
-ul.action {
+/* ul.action {
   display: flex;
   flex-wrap: wrap;
-}
+} */
 ul.action li {
   margin: 0.375em;
   flex-grow: 1;
