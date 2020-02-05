@@ -1,6 +1,13 @@
 
 /* =Header Image
 ----------------------------------------------- */
+
+/* SHIM: Override style in _base/site.css */
+.detail-venue .hero {
+  padding: 0;
+}
+
+
 .detail-venue .hero img,
 .content-item > .image:first-child img,
 .content-item .col-md-12 > .image:first-child img {
@@ -26,7 +33,7 @@
 }
 
 @supports (object-fit: cover) {
-  @media (min-aspect-ratio: 1/1) {
+  @media (min-aspect-ratio: 1/1) and (min-width: 58.75em) {
     .detail-venue .hero img,
     .content-item > .image:first-child img,
     .content-item .col-md-12 > .image:first-child img {
@@ -35,10 +42,17 @@
       object-position: center;
       min-height: 33.333vw;
       width: 100%;
-      
-      opacity: 0.75;
+
       grid-column: 1 / -1;
       grid-row: 1 / -1;
+    }
+    .content-item > .image:first-child,
+    .content-item .col-md-12 > .image:first-child {
+      background: hsl(0, 0%, 0%);
+    }
+    .content-item > .image:first-child img,
+    .content-item .col-md-12 > .image:first-child img {
+      opacity: 0.75;
     }
   }
 }
