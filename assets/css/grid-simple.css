@@ -177,6 +177,16 @@
     margin: 0;
     margin-top: calc(1.5em * -1);
   }
+
+  .belmar-headline {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    position: relative;
+    z-index: 1;
+    color: white;
+    margin-left: 7.5em;
+    margin-top: 4.5em;
+  }
   
   /* Make maps take up the full width of the grid */
   .content-item .map {
