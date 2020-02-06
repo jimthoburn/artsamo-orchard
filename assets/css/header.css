@@ -7,6 +7,23 @@
   padding: 0;
 }
 
+#layout-navigation .menu {
+    padding-top: 20px;
+}
+@media (min-width: 58.75em) {
+  #layout-navigation .menu {
+    padding: 0 50px;
+    max-width: 35em;
+    margin-left: auto;
+  }
+}
+@media (min-width: 75em) {
+  #layout-navigation .menu {
+    padding: 20px 50px;
+    max-width: none;
+  }
+}
+
 
 .detail-venue .hero img,
 .content-item > .image:first-child img,
