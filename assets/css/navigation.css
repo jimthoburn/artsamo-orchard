@@ -19,11 +19,11 @@
 .navigation li {
   margin: 0.375em;
   flex-grow: 1;
+}
+.navigation [style*="background-image"] a {
+  background-image: var(--background-image);
   background-size: cover;
   background-position: center;
-}
-.navigation [style*="background-image"] {
-  background-image: var(--background-image);
 }
 
 .navigation a {
@@ -50,15 +50,12 @@
   text-decoration: none;
 }
 
-.navigation [style*="background-image"] {
+.navigation [style*="background-image"] a {
   background-blend-mode: multiply;
   background-color: rgba(36, 119, 113, 0.5); /* @green */
   text-shadow: 0 0 0.25em rgba(36, 119, 113, 1); /* @dark-green */
   background-color: rgba(124, 162, 141, 0.5); /* @gray-green */
   text-shadow: 0 0 0.25em rgba(24, 62, 41, 1); /* @gray-green */
-}
-.navigation [style*="background-image"] a {
-  background-color: transparent;
 }
 
 @media (min-width: 60em) {
