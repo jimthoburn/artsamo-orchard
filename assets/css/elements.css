@@ -54,6 +54,7 @@ figcaption {
   letter-spacing: 0.1em;
 }
 
+.content-item > header:first-child > h1,
 .content-item > h2,
 .content-item > h3,
 .content-item > h4,
@@ -65,25 +66,42 @@ figcaption {
 .content-item > hr {
   opacity: 0;
 }
+.content-item > header:first-child > h1,
 .content-item > hr + h2 {
-  font-size: calc(0.375em + 3vw);
+  font-size: calc(0.75em + 4vw);
   font-family: canada-type-gibson, sans-serif;
-  font-weight: 300;
+  font-weight: 700;
   font-style: normal;
   line-height: 1.125;
   text-transform: uppercase;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.2em;
   transform: skewY(-8deg);
   text-align: center;
+}
+.content-item > hr + h2 {
+  font-size: calc(0.375em + 3vw);
+  font-weight: 300;
+  letter-spacing: 0.4em;
+}
+h1 small {
+  font-size: 0.5em;
+  display: block;
+  font-weight: 300;
+  color: inherit;
 }
 
 @supports (display: grid) {
   @media (min-width: 58.75em) {
+    .content-item > header:first-child > h1,
     .content-item > hr + h2 {
       grid-column: 1/-1;
       justify-self: center;
       text-align: center;
-      margin-bottom: 15rem;
+      margin-top: 0.75em;
+      margin-bottom: 1.5em;
+    }
+    .content-item > hr + h2 {
+      margin-top: 15rem;
       margin-bottom: 9rem;
     }
   }
