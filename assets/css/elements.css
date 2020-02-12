@@ -49,6 +49,11 @@ figcaption {
   margin-top: 0.75em;
 }
 
+#layout-navigation .navbar .navbar-header .media .navbar-link.media-body.media-center,
+#layout-navigation .menu li a {
+  letter-spacing: 0.1em;
+}
+
 /*
 
 TBD: Are these in use?

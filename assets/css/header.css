@@ -17,7 +17,7 @@
     margin-left: auto;
   }
 }
-@media (min-width: 75em) {
+@media (min-width: 85em) {
   #layout-navigation .menu {
     padding: 20px 50px;
     max-width: none;
