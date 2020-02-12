@@ -54,6 +54,41 @@ figcaption {
   letter-spacing: 0.1em;
 }
 
+.content-item > h2,
+.content-item > h3,
+.content-item > h4,
+.content-item > h5,
+.content-item > h6 {
+  color: rgb(55, 185, 174);
+}
+
+.content-item > hr {
+  opacity: 0;
+}
+.content-item > hr + h2 {
+  font-size: calc(0.375em + 3vw);
+  font-family: canada-type-gibson, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.125;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  transform: skewY(-8deg);
+  text-align: center;
+}
+
+@supports (display: grid) {
+  @media (min-width: 58.75em) {
+    .content-item > hr + h2 {
+      grid-column: 1/-1;
+      justify-self: center;
+      text-align: center;
+      margin-bottom: 15rem;
+      margin-bottom: 9rem;
+    }
+  }
+}
+
 /*
 
 TBD: Are these in use?

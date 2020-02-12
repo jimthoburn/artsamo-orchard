@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en-US" class="static detail-page content contents">
 <head>
@@ -72,12 +75,6 @@
 
 <li class="first">
 
-    <a href="/arts/">Home</a> 
-</li>
-
-
-<li>
-
     <a href="/arts/go-see-art">Go See Art</a> 
 </li>
 
@@ -86,7 +83,7 @@
 
 
 
-<a href="/arts/go-see-art#calendar">
+<a href="/arts/calendar">
 Calendar
 </a>
 </li>
@@ -96,8 +93,18 @@ Calendar
 
 
 
-<a href="/arts/go-see-art#venues">
+<a href="/arts/venues">
 Venues
+</a>
+</li>
+
+
+<li>
+
+
+
+<a href="/public-art">
+Public Art
 </a>
 </li>
 
@@ -140,22 +147,24 @@ Contact
 
 <h1>About</h1>
     </header>
-
-
-<div>
-
-<div class="row">
-<div class=" col-md-12">
-
 <figure class="image"><img alt="" src="https://www.santamonica.gov/Media/arts/CA/wall.jpg" width="500" /><figcaption>Choreographer-in-Residence Ana Maria Alvarez rehearses &ldquo;Agua Furiosa&rdquo; with dancers Jeremiah Buren, Isis Avalos and Sarah Culberson, Annenberg Community Beach House, 2014</figcaption></figure>
+<script>// <![CDATA[
+(function() {
+  // SHIM: (Optional)
+  // Help the headline fit into the available space
+  const headline = document.querySelector("h1");
+  if (headline && headline.textContent === "About") {
+    headline.innerHTML = "About <small>Santa Monica Cultural Affairs</small>";
+  }
+})();
+// ]]></script>
 <p>Santa Monica Cultural Affairs (SMCA) connects people to art. We do that by distributing grants that support local arts organizations, schools and artists. We create and promote art experiences. We steward and grow the City&rsquo;s notable public art collection. And we work with and for the communities of Santa Monica to leverage the power of art for change.</p>
 <nav class="navigation">
 <ul>
 <li><a href="#leadership">Leadership</a></li>
-<li><a href="#foundation">Foundation</a></li>
+<li><a href="/arts/foundation">Foundation</a></li>
 <li><a href="#culture">Policy &amp; Planning</a></li>
-<li><a href="#public-art-program">Public Art Program</a></li>
-<li><a href="#faq">FAQ</a></li>
+<li><a href="#faq">FAQs</a></li>
 </ul>
 </nav>
 <h2 id="leadership">Leadership</h2>
@@ -164,7 +173,7 @@ Contact
 <li><a href="mailto:shannon.daut@smgov.net">Shannon Daut</a>, Cultural Affairs Manager</li>
 <li><a href="mailto:nathan.birnbaum@smgov.net">Nathan Birnbaum</a>, Cultural Affairs Administrator, Grants &amp; Special Projects</li>
 <li><a href="mailto:nan.friedman@smgov.net">Nan Friedman</a>, Beach House Venue Manager</li>
-<li><a href="mailto:naomi.okuyama@smgov.net">Naomi Okuyama</a>, Cultural Affairs Supervisor, Beach=Culture&nbsp;&amp; Camera Obscura Art Lab</li>
+<li><a href="mailto:naomi.okuyama@smgov.net">Naomi Okuyama</a>, Cultural Affairs Supervisor,&nbsp;Public Art</li>
 <li><a href="mailto:allison.ostrovsky@smgov.net">Allison Ostrovsky</a>, Cultural Affairs Supervisor, Events &amp; Marketing</li>
 <li><a href="mailto:justin.yoffe@smgov.net">Justin Yoffe</a>, Cultural Affairs Venue Manager, Miles Memorial Playhouse</li>
 <li><a href="mailto:elizabeth.dugan@smgov.net">Elizabeth Dugan</a>, Sales &amp; Marketing Coordinator, Beach House</li>
@@ -180,7 +189,7 @@ Contact
 <li><a href="https://www.smgov.net/departments/clerk/boards.aspx?id=53687092546">Arts Commission Board Details</a></li>
 <li><a href="/arts/arts-commission-agendas">Arts Commission Agendas &amp; Minutes</a></li>
 </ul>
-<h3 id="public-art-committee">Public Art Committee</h3>
+<h3 id="committee">Public Art Committee</h3>
 <p>The Public Art Committee is a standing committee of the Arts Commission, made up of three Arts Commissioners and six community members that possess a variety of expertise related to public art. The Public Art Committee provides recommendations to the Arts Commission on artist selection for Percent for Art Commissions and the Percent for Art Budget.</p>
 <p><span>We meet the third Monday of each month, Ken Edwards Center, 5:00 p.m.</span></p>
 <div class="quote-image"><img class="quote-image__image" alt="" src="https://www.santamonica.gov/Media/arts/CA/The%20Wonder%20Room%202015%20-%202%20William%20Short.jpg" height="300" />
@@ -191,9 +200,6 @@ Contact
 <p class="quote-image__byline">-&nbsp;Anni Albers</p>
 </div>
 </div>
-<h2 id="foundation">Santa Monica Arts Foundation</h2>
-<p>The&nbsp;<a href="https://www.facebook.com/SantaMonicaArtsFoundation/" target="_blank">Santa Monica Arts Foundation</a> is a nonprofit agency dedicated to promoting and supporting the arts in Santa Monica. The Foundation is staffed by Santa Monica Cultural Affairs.</p>
-<p>Recognizing Great Arts Leaders in Santa Monica<br />The Santa Monica Arts Foundation sponsors the Arts Leadership Awards, which recognizes exemplary leaders who support Santa Monica&rsquo;s creative community. The 2019 awards&nbsp;were presented at the Annenberg Community Beach House in Santa Monica on <a href="https://www.eventbrite.com/e/2019-santa-monica-arts-foundation-arts-leadership-awards-ceremony-tickets-59739799348" target="_blank">Wednesday, April 24, 2019</a>.</p>
 <h2 id="culture">Policy &amp; Planning</h2>
 <h3>Cultural Policy</h3>
 <p>The City's Cultural Policies exist to support our artistic legacy, while creating space for new artistic voices to flourish. Santa Monica Cultural Affairs&nbsp;helps shape those policies through listening to our community. We learn what&rsquo;s important, then work hard to bring it to fruition. There&rsquo;s nothing like seeing something beautiful that you helped create come to life.</p>
@@ -202,37 +208,12 @@ Contact
 <div class="quote-image"><img class="quote-image__image" alt="" src="https://www.santamonica.gov/Media/arts/CA/IMG_7837.JPG" height="300" />
 <div class="quote-image__text">
 <blockquote>
-<p class="quote-image__quote">&ldquo;Art and love are the same thing: it's the process of seeing yourself in things that are not you.&rdquo;</p>
+<p class="quote-image__quote">&ldquo;Art and love are the same thing: it&rsquo;s the process of seeing yourself in things that are not you.&rdquo;</p>
 </blockquote>
 <p class="quote-image__byline">- Chuck Klosterman</p>
 </div>
 </div>
-<h2 id="public-art-program">Public Art Program</h2>
-<h3 id="masterplan">Public Art Map</h3>
-<p><a href="/arts/go-see-art#public-art">Public Art Archive/Map</a></p>
-<h3 id="masterplan">Leadership</h3>
-<p><a href="#public-art-committee">Public Art Committee</a></p>
-<h3 id="maintenance">Maintenance of Collection</h3>
-<p>Maintaining the original, inspirational appearance of our vast art collection requires constant care. In 2015, the Santa Monica Cultural Affairs Public Art team commissioned Rosa Lowinger and Associates to conduct a comprehensive needs assessment. Now regular maintenance on our most important pieces ensures they&rsquo;ll be around for years to come.</p>
-<p><a href="https://www.santamonica.gov/Media/arts/CA/RLA_City%20of%20Santa%20Monica_Public%20Art%20Survey_Summary.Revised%207.13.2015.pdf">Read the report</a></p>
-<h3 id="percent-for-art">Percent for Art</h3>
-<p><span class="TextRun  BCX0 SCXW114742842" xml:lang="EN-US" data-contrast="auto" lang="EN-US"><span class="NormalTextRun  BCX0 SCXW114742842">The Percent for Art Program</span></span><span class="TextRun  BCX0 SCXW114742842" xml:lang="EN-US" data-contrast="auto" lang="EN-US"><span class="NormalTextRun  BCX0 SCXW114742842">&nbsp;embodies&nbsp;the City&rsquo;s commitment to sustainable funding for the arts by setting aside<span>&nbsp;</span></span></span><span class="TextRun  BCX0 SCXW114742842" xml:lang="EN-US" data-contrast="auto" lang="EN-US"><span class="NormalTextRun  BCX0 SCXW114742842">1%<span>&nbsp;</span></span></span><span class="TextRun  BCX0 SCXW114742842" xml:lang="EN-US" data-contrast="auto" lang="EN-US"><span class="NormalTextRun  BCX0 SCXW114742842">percent of the total budget of all eligible capital projects for art projects. Santa Monica Cultural Affairs manages&nbsp;the City&rsquo;s public art program&nbsp;and its Percent for Art requirement in both public and private development.&nbsp;</span></span></p>
-<h3 id="art-ordinances">Ordinances</h3>
-<p>In art, there&nbsp;may be&nbsp;no rules,&nbsp;but in civic art there are definitely ordinances. These ordinances outline the ways public art is created and maintained. Santa Monica Cultural Affairs&rsquo; Public Art Program operates under these ordinances and policies,&nbsp;under the direction of City staff, the Arts Commission, the Public Art Committee and City Council.</p>
-<p><span class="TextRun SCXW86132903 BCX0" xml:lang="EN-US" data-contrast="auto" lang="EN-US"><span class="NormalTextRun SCXW86132903 BCX0">Legislation</span></span><span class="EOP SCXW86132903 BCX0" data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></p>
-<ul>
-<li id="percent-for-art"><a href="https://www.smgov.net/uploadedFiles/Portals/Culture/Public_Art_Program/SM%20Percent%20for%20Art%20Resolution.PDF" target="_blank">Percent for Art Resolution</a></li>
-<li><a href="http://www.qcode.us/codes/santamonica/view.php?topic=9-3-9_30&amp;showAll=1&amp;frames=on" target="_blank">Private Developer Cultural Arts Requirement Ordinance</a></li>
-</ul>
-<p><span class="TextRun  BCX0 SCXW180086914" xml:lang="EN-US" data-contrast="none" lang="EN-US"><span class="NormalTextRun  BCX0 SCXW180086914">Administrative policies and procedures</span></span></p>
-<ul>
-<li><a href="https://www.santamonica.gov/Media/arts/CA/POL/Public_Art_Policies_Guidelines_2015.pdf" target="_blank">Public Art Program Administration Guidelines</a></li>
-<li><a href="https://www.santamonica.gov/Media/arts/CA/POL/Artist_Selection_Procedures_9-04.pdf" target="_blank">Artist Selection Procedures</a></li>
-<li><a href="https://www.santamonica.gov/Media/arts/CA/POL/Private_Developer_Flow_Chart.pdf" target="_blank">Private Developer Fee Flowchart</a></li>
-<li><a href="https://www.santamonica.gov/Media/arts/CA/POL/Collections_Management_Process_9-04.pdf" target="_blank">Collection Management Procedures</a></li>
-<li id="art-on-utility-boxes"><a href="https://www.santamonica.gov/Media/arts/CA/POL/Mural_Conservation_Policy.pdf" target="_blank">Mural Conservation Policy</a></li>
-</ul>
-<h2 id="faq">FAQ</h2>
+<h2 id="faq">FAQs</h2>
 <p><strong>Q: </strong>Where can I rent space in Santa Monica for my rehearsal/performance/concert/exhibit/fundraiser?</p>
 <p style="padding-left: 30px;">City-managed resources: <a href="http://www.smgov.net/departments/ccs/content.aspx?id=32846">Park building rentals</a>, <a href="https://www.smgov.net/Departments/CCS/content.aspx?id=46279">City Outdoor Event Permits</a>,&nbsp;<a href="https://www.santamonica.gov/arts/miles-memorial-playhouse-theater-rental">Miles Playhouse</a>,&nbsp;<a href="https://www.smgov.net/departments/ccs/civicauditorium/content.aspx?id=46323">Civic Auditorium</a>,&nbsp;<a href="https://www.annenbergbeachhouse.com/events-overview.aspx">Annenberg Community Beach House</a>,&nbsp;<a href="https://smpl.org/Meeting_Rooms.aspx">Library</a></p>
 <p style="padding-left: 30px;">Non-City resources: <a href="https://www.mosstheater.com/">Moss Theater</a>,&nbsp;<a href="http://thebroadstage.org/venue-info">Broad Stage</a>,&nbsp;<a href="https://www.santamonicaplayhouse.com/rentals.html">Santa Monica Playhouse</a>,&nbsp;<a href="http://smbwc.org/">Santa Monica Bay Womens Club</a>,&nbsp;<a href="https://www.macerich.com/Leasing/Specialty">SM Place/Macerich</a>,&nbsp;<a href="https://santamonicapier.org/rentals/">Santa Monica Pier</a>,&nbsp;<a href="https://la.spacefinder.org/">Spacefinder LA</a></p>
@@ -253,8 +234,6 @@ Contact
 <p><strong>Q:&nbsp;</strong>Are there places to take classes in printmaking/pottery/metalwork/painting/etc in the area?&nbsp;</p>
 <p style="padding-left: 30px;"><a href="http://www.brentwoodart.com/">Brentwood Art Center</a>,&nbsp;<a href="https://www.santamonica.gov/arts/camera-obscura-art-lab">Camera Obscura Art Lab</a>,&nbsp;<a href="http://paintlab.net/">Paint:Lab</a>,&nbsp;<a href="http://www.theclayhousesantamonica.com/">The&nbsp;Clayhouse</a>,&nbsp;<a href="http://commed.smc.edu/">SMC Community Education</a>,<a href="http://www.smc.edu/AcademicAffairs/Emeritus/Pages/default.aspx">&nbsp;SMC Emeritus</a>,&nbsp;<a href="http://www.smc.edu/AcademicPrograms/Art/Pages/default.aspx">SMC Art</a>,&nbsp;<a href="http://www.pmajewelry.com/">Precious Metal Arts</a>,&nbsp;<a href="http://www.johnmooneyglass.com/">Moonlight Glass</a>,&nbsp;<a href="http://josephinepress.org/">Josephine Press</a>&nbsp;</p>
 
-</div></div>
-</div>
 
 
 </article></div>
@@ -350,11 +329,12 @@ Contact
 -->
 <p>
 <script>// <![CDATA[
-// Load proxima-nova from Jim’s typekit account
+// Load fonts from Jim’s typekit account
   // https://helpx.adobe.com/fonts/using/embed-codes.html
   (function(d) {
     var config = {
-      kitId: 'wkj5ffv',
+      // kitId: 'wkj5ffv', // only proxima-nova
+      kitId: 'bwp8iid', // proxima-nova and canada-type-gibson
       scriptTimeout: 3000,
       async: true
     },
@@ -369,14 +349,14 @@ Contact
       if (link) {
         let href = link.getAttribute("href");
         if (!href.includes("?v=")) {
-          link.setAttribute("href", `${href}?v=0.0.94`);
+          link.setAttribute("href", `${href}?v=0.0.117`);
         }
       }
 */
     })();
 // ]]></script>
-<script src="https://jimthoburn.github.io/artsamo-orchard/assets/js/shim.js?v=0.0.94"></script>
-<script src="https://jimthoburn.github.io/artsamo-orchard/assets/js/events.js?v=0.0.94"></script>
+<script src="/assets/js/shim.js?v=0.0.117"></script>
+<script src="/assets/js/events.js?v=0.0.117"></script>
 </p>
 </article></div>
         </footer>
