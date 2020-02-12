@@ -10,11 +10,12 @@
     }
   }
 
-  // Change the name of the site and remove the redundant home page link
+  // Change the name of the site
   let logoLink = document.querySelector("#layout-navigation .navbar .navbar-header .media .navbar-link.media-body.media-center")
   if (logoLink) {
     logoLink.textContent = "Santa Monica Cultural Affairs"
-    logoLink.removeAttribute("href")
+    // Remove the redundant home page link
+    // logoLink.removeAttribute("href")
   }
 
   // Move the main page heading after the image in the source order, for styling purposes

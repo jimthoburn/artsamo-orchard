@@ -2,9 +2,14 @@
 /* Make more space avaiable for the words "Santa Monica Cultural Affairs" in the logotype */
 @media (min-width: 58.75em) {
   #layout-navigation .navbar .navbar-header {
-    width: 360px;
+    width: 370px;
   }
   #layout-navigation .navbar .navbar-header .media .navbar-link.media-body.media-center {
     width: 11em;
   }
+}
+
+/* Add more space between logotype and city logo */
+.media-left, .media>.pull-left {
+  padding-right: 20px;
 }
