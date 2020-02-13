@@ -2,6 +2,24 @@
 /* =Type
 ----------------------------------------------- */
 
+:root {
+  --major-third: 1.250;
+  --golden-section: 1.618;
+  --minor-seventh: 1.778;
+  --type-scale: calc(var(--major-third) * 1em);
+  --vertical-rhythm: calc(var(--golden-section) * 1em);
+  --line-length: calc(var(--golden-section) * 20em);
+  --unitless-vertical-rhythm: var(--golden-section);
+  --thin: 100;
+  --light: 300;
+  --normal: 400;
+  --medium: 500;
+  --semibold: 600;
+  --bold: 700;
+  --extra-bold: 800;
+  --heavy: 900;
+}
+
 /* Use Proxima Nova by default */
 body {
   font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -106,6 +124,105 @@ h1 small {
     }
   }
 }
+
+.content-item > .go-see-art {
+  width: 9em;
+  grid-column: 1/-1;
+  /*! align-self: center; */
+  /*! justify-self: center; */
+  margin-top: calc(var(--vertical-rhythm) * 3);
+  max-width: none;
+  margin-bottom: calc(var(--vertical-rhythm) * 3);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-item > .go-see-art a {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: calc(var(--vertical-rhythm) * 1);
+  grid-row-gap: calc(var(--vertical-rhythm) * 1);
+  text-decoration: none;
+}
+
+.content-item > .go-see-art a,
+.content-item > .go-see-art a:hover,
+.content-item > .go-see-art a:active,
+.content-item > .go-see-art a:focus {
+  color: white;
+  /*! display: block; */
+}
+
+.content-item > .go-see-art a > span {
+  display: grid;
+  width: 100%;
+}
+.content-item > .go-see-art a > span > * {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  /*! align-self: stretch; */
+  /*! justify-self: stretch; */
+}
+.content-item > .go-see-art a > span > .text {
+  
+  align-self: center;
+  justify-self: center;
+  /*! color: white; */
+  font-family: canada-type-gibson, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.125;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  transform: skewY(-8deg);
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.content-item > .go-see-art a > span > .image {
+  position: relative;
+  padding-bottom: 100%;
+  display: block;
+  border-radius: 50%;
+  background: black;
+}
+.content-item > .go-see-art img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: unset;
+  object-fit: cover;
+  border-radius: 50%;
+  opacity: 0.75;
+}
+
+
+@media (min-width: 25em) {
+  .content-item > .go-see-art a {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .content-item > .go-see-art {
+    margin-top: calc(var(--vertical-rhythm) * 2);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .content-item > .go-see-art a > span > .text {
+    font-size: 5vw;
+  }
+}
+
+@media (min-width: 75em) {
+  .content-item > .go-see-art {
+    width: 60em;
+  }
+  .content-item > .go-see-art a > span > .text {
+    font-size: 3em;
+  }
+}
+
 
 /*
 

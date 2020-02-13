@@ -31,6 +31,21 @@
   width: 100%;
 }
 
+.content-item > .image:first-child {
+  display: grid;
+}
+.content-item > .image:first-child > * {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+}
+.content-item > .image:first-child img[src*="svg"] {
+  object-fit: contain;
+  transform: scale(1.05);
+  opacity: 1;
+  position: relative;
+  z-index: 2;
+}
+
 .content-item > .image--with-tint:first-child > div {
   position: relative;
   grid-column: 1 / -1;
