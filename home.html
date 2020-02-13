@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="en-US" class="static detail-home-page content contents">
 <head>
@@ -72,13 +73,7 @@
 
 
 
-<li class="active first">
-
-    <a href="/arts/">Home</a> 
-</li>
-
-
-<li>
+<li class="first">
 
     <a href="/arts/go-see-art">Go See Art</a> 
 </li>
@@ -86,21 +81,19 @@
 
 <li>
 
-
-
-<a href="/arts/go-see-art#calendar">
-Calendar
-</a>
+    <a href="/arts/calendar">Calendar</a> 
 </li>
 
 
 <li>
 
+    <a href="/arts/venues">Venues</a> 
+</li>
 
 
-<a href="/arts/go-see-art#venues">
-Venues
-</a>
+<li>
+
+    <a href="/arts/public-art">Public Art</a> 
 </li>
 
 
@@ -199,7 +192,7 @@ Contact
 
 
 
-<a href="/arts/go-see-art#map ">
+<a href="/arts/public-art#percent-for-art ">
 Percent for Art Commissions
 </a>
 </li>
@@ -209,7 +202,7 @@ Percent for Art Commissions
 
 
 
-<a href="/arts/about#maintenance">
+<a href="/arts/public-art#maintenance">
 Public Art Collection Care and Maintenance
 </a>
 </li>
@@ -219,7 +212,7 @@ Public Art Collection Care and Maintenance
 
 
 
-<a href="/arts/go-see-art#map">
+<a href="/arts/public-art#map">
 Public Art Archive/Map
 </a>
 </li>
@@ -229,7 +222,7 @@ Public Art Archive/Map
 
 
 
-<a href="/arts/about#ordinances">
+<a href="/arts/public-art#ordinances">
 Art Ordinances for Art
 </a>
 </li>
@@ -487,11 +480,12 @@ Civic Development
 -->
 <p>
 <script>// <![CDATA[
-// Load proxima-nova from Jim’s typekit account
+// Load fonts from Jim’s typekit account
   // https://helpx.adobe.com/fonts/using/embed-codes.html
   (function(d) {
     var config = {
-      kitId: 'wkj5ffv',
+      // kitId: 'wkj5ffv', // only proxima-nova
+      kitId: 'bwp8iid', // proxima-nova and canada-type-gibson
       scriptTimeout: 3000,
       async: true
     },
@@ -506,14 +500,14 @@ Civic Development
       if (link) {
         let href = link.getAttribute("href");
         if (!href.includes("?v=")) {
-          link.setAttribute("href", `${href}?v=0.0.88`);
+          link.setAttribute("href", `${href}?v=0.0.121`);
         }
       }
 */
     })();
 // ]]></script>
-<script src="https://jimthoburn.github.io/artsamo-orchard/assets/js/shim.js?v=0.0.88"></script>
-<script src="https://jimthoburn.github.io/artsamo-orchard/assets/js/events.js?v=0.0.88"></script>
+<script src="/assets/js/shim.js?v=0.0.121"></script>
+<script src="/assets/js/events.js?v=0.0.121"></script>
 </p>
 </article></div>
         </footer>
