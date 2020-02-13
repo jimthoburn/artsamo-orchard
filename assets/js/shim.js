@@ -29,7 +29,7 @@
   // Redirect to the new home page
   if (document.documentElement.classList.contains("detail-home-page") &&
       window.location.href.indexOf("/go-see-art") < 0) {
-    window.location = window.location.origin + '/go-see-art'
+    window.location = window.location.origin + '/arts/go-see-art'
   }
 
   // Adjust the venue links on the home page
