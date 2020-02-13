@@ -133,7 +133,7 @@
       })
       .then(function(responseText) {
         let start   = responseText.indexOf('<ol id="featured-events" class="featured-event-list">');
-        let end     = responseText.indexOf('</ol>');
+        let end     = responseText.indexOf('</ol>', start);
         if (start >= 0 && end >= 0) {
           featuredEventsHTML = responseText.substring(start, end);
           vision.insertAdjacentHTML("afterend", featuredEventsHTML)
