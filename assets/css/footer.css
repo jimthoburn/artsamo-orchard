@@ -56,8 +56,21 @@
 
 .widget-footer h2 {
   margin-top: 3em;
-  margin-bottom: 1.5em;
+  
+  --font-size: inherit;
+  font-family: canada-type-gibson, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.125;
   text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: var(--semibold);
+  border-bottom: 2px solid hsla(0, 0%, 100%, 0.2);
+  margin-bottom: calc(var(--vertical-rhythm) * 2/4);
+  padding-bottom: calc(var(--vertical-rhythm) * 2/4);
+}
+.widget-footer dt {
+  font-weight: inherit;
 }
 
 /* SHIM */
@@ -74,6 +87,7 @@
 .widget-social dt {
   margin-top: 0.75em;
   margin-bottom: 0.75em;
+  font-weight: inherit;
 }
 .widget-social dd {
   display: inline-block;
@@ -89,8 +103,9 @@
 }
 .widget-social svg {
   display: block;
-  width: 1.5em;
-  height: 1.5em;
+  font-size: 1.25em;
+  width: calc(var(--vertical-rhythm) * 1/2);
+  height: calc(var(--vertical-rhythm) * 1/2);
 }
 
 /* Prevent the footer image from appearing too large */

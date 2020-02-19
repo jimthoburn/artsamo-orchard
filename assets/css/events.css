@@ -30,23 +30,37 @@
 .events li {
   margin-bottom: 1.5em;
 }
+
 .events .summary {
   display: grid;
-  grid-template-columns: 7.5em 1fr;
-  grid-column-gap: 0.75em;
+  grid-template-columns: calc(var(--vertical-rhythm) * 7) 1fr;
+  grid-column-gap: calc(var(--vertical-rhythm) * 1);
 }
 .events .summary > h3 {
   grid-column: 1/2;
-  grid-row: span 3; 
-  align-self: stretch;
+  grid-row: span 3;
+  align-self: start;
   justify-self: stretch;
-  background-color: #3f3f3f;
+  background-color: var(--mango);
   color: #fff;
   text-align: center;
   text-transform: uppercase;
-  font-weight: bold;
-  padding: 1.5em 0.75em;
+  font-weight: var(--light);
+  padding: calc(var(--vertical-rhythm) * 0.75) calc(var(--vertical-rhythm) * 0.25);
   margin: 0;
+  line-height: 1.25;
+  position: relative;
+  letter-spacing: 0.2em;
+}
+
+.events .palisades .summary > h3 {
+  background-color: var(--olive);
+}
+.events .miles .summary > h3 {
+  background-color: var(--orange);
+}
+.events .beach .summary > h3 {
+  background-color: var(--ocean);
 }
 
 .events summary {

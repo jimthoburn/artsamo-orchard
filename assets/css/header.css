@@ -14,13 +14,15 @@
   #layout-navigation .menu {
     padding: 0 50px;
     max-width: 40em;
+    margin: 0 0 4.5em;
     margin-left: auto;
   }
 }
-@media (min-width: 85em) {
+@media (min-width: 90em) {
   #layout-navigation .menu {
     padding: 20px 50px;
     max-width: none;
+    margin: 0 0 5em;
   }
 }
 
