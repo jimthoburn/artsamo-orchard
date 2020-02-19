@@ -26,6 +26,16 @@
   background-position: center;
 }
 
+/* The fourth item, out of five items total */
+@media (min-width: 70em) and (max-width: 100em) {
+  .navigation__belmar li:nth-child(4):nth-last-child(2) {
+    min-width: 40vw;
+  }
+  .navigation__belmar li:nth-child(5):nth-last-child(1) {
+    min-width: 40vw;
+  }
+}
+
 .navigation a {
   display: block;
   text-align: center;
