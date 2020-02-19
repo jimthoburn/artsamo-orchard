@@ -180,12 +180,24 @@
 
   .belmar-headline {
     grid-row: 1/2;
-    grid-column: 1/2;
+    grid-column: 1/-1;
     position: relative;
     z-index: 1;
     color: white;
     margin-left: 10.5vw;
     margin-top: 9vw;
+  }
+
+  /* Make the headline smaller and position it out of the way of the picture */
+  .belmar-headline__subtle {
+    align-self: end;
+    justify-self: end;
+    margin-bottom: 9em;
+    margin-left: unset;
+    margin-right: 10.5vw;
+  }
+  .belmar-headline__subtle svg {
+    transform: scale(0.75);
   }
   
   /* Make maps take up the full width of the grid */

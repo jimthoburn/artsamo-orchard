@@ -13,7 +13,11 @@
   // Change the name of the site
   let logoLink = document.querySelector("#layout-navigation .navbar .navbar-header .media .navbar-link.media-body.media-center")
   if (logoLink) {
-    logoLink.textContent = "Santa Monica Cultural Affairs"
+    logoLink.textContent = "Santa Monica Cultural Affairs";
+
+    // TEMPORARY: Link the logo to “Go See Art”
+    logoLink.setAttribute("href", "/arts/go-see-art");
+
     // Remove the redundant home page link
     // logoLink.removeAttribute("href")
   }
@@ -26,7 +30,9 @@
     primaryImage.parentNode.insertBefore(pageTitle, primaryImage.nextSibling)
   }
 
-  // Redirect to the new home page
+  // Redirect the home page to “go see art”
+  // 
+  // TBD: Is there a way to set “go see art” as the home page instead?
   if (document.documentElement.classList.contains("detail-home-page") &&
       window.location.href.indexOf("/go-see-art") < 0) {
     window.location = window.location.origin + '/arts/go-see-art'
