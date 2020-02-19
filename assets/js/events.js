@@ -290,47 +290,55 @@ Example HTML
       // console.log ("Daylight saving time!");
 
       // Switch to these values if “Daylight saving time” is in effect 
-      startDate = new Date(`${itemData.start_date}-07:00`)
-      endDate   = new Date(`${itemData.end_date}-07:00`)
+      startDate = new Date(`${itemData.start_date}-07:00`);
+      endDate   = new Date(`${itemData.end_date}-07:00`);
     } else {
       // console.log ("not Daylight saving time!");
 
-      startDate = new Date(`${itemData.start_date}-08:00`)
-      endDate   = new Date(`${itemData.end_date}-08:00`)
+      startDate = new Date(`${itemData.start_date}-08:00`);
+      endDate   = new Date(`${itemData.end_date}-08:00`);
     }
 
-    let startTime = getFormattedTime(startDate)
-    let endTime   = getFormattedTime(endDate)
+    // If this is not a recent event, and if we’re not showing past events
+    if (startDate < threeDaysAgo && PAST_EVENTS !== true) {
+      return false;
+    }
 
-    let weekday     = daysOfTheWeek[startDate.getDay()]
-    let month       = monthNames[startDate.getMonth()]
+    let startTime = getFormattedTime(startDate);
+    let endTime   = getFormattedTime(endDate);
 
-    let weekdayAbbreviation = weekday.substring(0, 3)
-    let monthAbbreviation   = month.substring(0, 3)
+    let weekday   = daysOfTheWeek[startDate.getDay()];
+    let month     = monthNames[startDate.getMonth()];
+
+    let weekdayAbbreviation = weekday.substring(0, 3);
+    let monthAbbreviation   = month.substring(0, 3);
 
     let year        = startDate.getFullYear();
     let day         = startDate.getDate();
-    let title       = itemData.title
-    let time        = (startDate.getHours() == 0) ? `All day` : (endTime) ? `${startTime} to ${endTime}` : startTime
-    let location    = itemData.location
-    let address     = itemData.address_address
+    let title       = itemData.title;
+    let time        = (startDate.getHours() == 0) ? `All day` : (endTime) ? `${startTime} to ${endTime}` : startTime;
+    let location    = itemData.location;
+    let address     = itemData.address_address;
     // let city        = itemData.address_city
     // let state       = itemData.address_state
     // let zip         = itemData.address_zip
-    let description = itemData.description
-    let categories  = itemData.event_types
-    let ages        = itemData.age_groups
-    let url
+    let description = itemData.description;
+    let categories  = itemData.event_types;
+    let ages        = itemData.age_groups;
+    let url;
     if (typeof(itemData.detail_url) == "object") {
-      url = itemData.detail_url.url
-    } else {
-      url = itemData.detail_url
+      url = itemData.detail_url.url;
+    } else if (itemData.detail_url) {
+      url = itemData.detail_url;
+    } else if (typeof(itemData.signup_url) == "object") {
+      url = itemData.signup_url.url;
+    } else if (itemData.signup_url) {
+      url = itemData.signup_url;
     }
-    let urlDomain   = url.split("/")[2]
-    let dataCategories  = itemData.event_types ? itemData.event_types.toLowerCase() : null
-    let dataDescription = itemData.description ? itemData.description.toLowerCase() : null
+    let dataCategories  = itemData.event_types ? itemData.event_types.toLowerCase() : null;
+    let dataDescription = itemData.description ? itemData.description.toLowerCase() : null;
 
-    let className   = ""
+    let className   = "";
     if (location.toLowerCase().includes("palisades")) {
       className = "palisades";
     }
@@ -353,13 +361,10 @@ Example HTML
       .replace(/\{\{ description \}\}/g, description)
       .replace(/\{\{ location \}\}/g,    location)
       .replace(/\{\{ address \}\}/g,    address)
-      .replace(/\{\{ url \}\}/g,         url)
-      .replace(/\{\{ urlDomain \}\}/g,  urlDomain)
       .replace(/\{\{ className \}\}/g,  className)
       .replace(/\{\{ dataCategories \}\}/g,  dataCategories)
       .replace(/\{\{ dataDescription \}\}/g,  dataDescription)
-      
-  
+
     if (categories) {
       html = html.replace(/\{\{ categories \}\}/g, categories)
     } else {
@@ -374,13 +379,17 @@ Example HTML
       html = html.replace("<dd>{{ ages }}</dd>", "")
     }
 
-    // If the event is happening in the future or if it happened recently
-    if (startDate > threeDaysAgo || PAST_EVENTS === true) {
-      list.insertAdjacentHTML('beforeend', html)
-      return true
+    if (url) {
+      let urlDomain = url.split("/")[2];
+
+      html = html.replace(/\{\{ url \}\}/g,        url)
+                 .replace(/\{\{ urlDomain \}\}/g,  urlDomain)
+    } else {
+      html = html.replace(`<p><a href="{{ url }}" target="_blank">Get more details about this event at {{ urlDomain }}</a></p>`, "")
     }
 
-    return false
+    list.insertAdjacentHTML('beforeend', html);
+    return true;
   }
   function showLoadingMessage() {
     document.body.classList.add('loading');
