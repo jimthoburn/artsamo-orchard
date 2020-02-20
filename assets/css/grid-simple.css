@@ -104,8 +104,7 @@
     padding-left: calc(var(--unitless-vertical-rhythm) * 2rem);
     max-width: 17.5em;
   }
-  .content-item > h2,
-  .content-item > .text-image ~ h3 { /* SHIM: Make headlines a consistent size on Belmar page */
+  .content-item > h2 {
     font-size: 2em;
   }
   .content-item > h2,
@@ -121,9 +120,6 @@
   /* .content-item > h2 + p {
     margin-top: 10.25rem;
   } */
-  .content-item > .text-image ~ h3 + p { /* SHIM: Make headlines a consistent size on Belmar page */
-    margin-top: 2.65rem;
-  }
   /* SHIM: Just in case a page has a first level headline mixed in with the content. */
   .content-item > h1 {
     grid-column: 1/-1;
@@ -220,7 +216,7 @@
     margin-top: calc(1.5em * -1);
   }
 
-  .belmar-headline {
+  .content-item > .belmar-headline {
     grid-row: 1/2;
     grid-column: 1/-1;
     position: relative;
@@ -232,14 +228,14 @@
   }
 
   /* Make the headline smaller and position it out of the way of the picture */
-  .belmar-headline__subtle {
+  .content-item > .belmar-headline__subtle {
     align-self: end;
     justify-self: end;
     margin-bottom: 9em;
     margin-left: unset;
     margin-right: 10.5vw;
   }
-  .belmar-headline__subtle svg {
+  .content-item > .belmar-headline__subtle svg {
     transform: scale(0.75);
   }
   

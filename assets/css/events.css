@@ -15,7 +15,7 @@
 }
 @media (min-width: 40em) {
   .events {
-    grid-column: 1/-1;
+    grid-column: 1/-1 !important;
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(25em, 1fr) );
     max-width: none;
@@ -23,8 +23,8 @@
     grid-row-gap: 0.75em;
   }
   .events {
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: 3rem !important;
+    margin-right: 3rem !important;
   }
 }
 .events li {
