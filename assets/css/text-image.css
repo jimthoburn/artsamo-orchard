@@ -45,6 +45,7 @@
   letter-spacing: 3px;
   font-weight: 800;
   font-size: 22px;
+  margin: 0;
 }
 @media (min-width: 58.75em) {
   .text-image__primary-text {
