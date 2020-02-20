@@ -4,12 +4,12 @@
 /* =Featured Event
 ----------------------------------------------- */
 
-.featured-event-list {
+.content-item > .featured-event-list {
   grid-column: 1/-1;
   max-width: none;
 }
-.featured-event-list,
-.featured-event-list > li {
+.content-item > .featured-event-list,
+.content-item > .featured-event-list > li {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
