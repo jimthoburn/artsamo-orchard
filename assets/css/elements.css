@@ -629,7 +629,7 @@ button {
 .widget-artsamo p {
   max-width: none;
 }
-.widget-artsamo p:last-child {
+.widget-artsamo p:last-of-type {
   margin-bottom: 9em;
 }
 
