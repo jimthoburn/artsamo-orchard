@@ -234,6 +234,14 @@ figcaption {
   color: rgb(55, 185, 174);
 }
 
+.content-item > h2:first-of-type + p,
+.content-item > h2:first-of-type + h3 + p,
+.content-item > h3:first-of-type + p,
+.content-item > p:first-of-type {
+  font-size: 1.25em;
+  font-weight: 300;
+}
+
 .content-item > hr {
   opacity: 0;
 }
