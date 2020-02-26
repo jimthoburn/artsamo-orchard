@@ -6,6 +6,11 @@
 #layout-footer a {
   text-decoration: underline;
 }
+#layout-footer a:hover,
+#layout-footer a:active,
+#layout-footer a:focus {
+  color: black;
+}
 
 /* Make venue icons look a little nicer */
 #layout-footer .widget-contact dl {
@@ -41,8 +46,18 @@
   .widget-social,
   .widget-contact {
     grid-column: auto;
+    padding-left: 0;
+    padding-right: 0;
   }
-  .widget-social {
+  .widget-social:nth-child(2),
+  .widget-contact:nth-child(2) {
+    padding-left: 3em;
+  }
+  .widget-social:nth-child(4),
+  .widget-contact:nth-child(4) {
+    padding-right: 3em;
+  }
+  /* .widget-social {
     padding-right: 0;
     padding-left: 100px;
   }
@@ -51,7 +66,7 @@
   }
   .widget-social + .widget-contact {
     padding-right: 0;
-  }
+  } */
 }
 
 .widget-footer h2 {
