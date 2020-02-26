@@ -22,6 +22,12 @@
   margin-left: -0.5em;
 }
 
+.widget-footer ul,
+.widget-footer li {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
 
 .widget-social,
 .widget-contact {
@@ -35,7 +41,8 @@
   float: none !important;
 }
 @media screen and (min-width: 70em) {
-  .zone-footer {
+  .zone-footer,
+  .widget-footer.widget-navigation {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 3em;
@@ -50,11 +57,13 @@
     padding-right: 0;
   }
   .widget-social:nth-child(2),
-  .widget-contact:nth-child(2) {
+  .widget-contact:nth-child(2),
+  .widget-footer.widget-navigation > :nth-child(3n+1) {
     padding-left: 3em;
   }
   .widget-social:nth-child(4),
-  .widget-contact:nth-child(4) {
+  .widget-contact:nth-child(4),
+  .widget-footer.widget-navigation > :nth-child(3n+3) {
     padding-right: 3em;
   }
   /* .widget-social {
@@ -83,6 +92,9 @@
   border-bottom: 2px solid hsla(0, 0%, 100%, 0.2);
   margin-bottom: calc(var(--vertical-rhythm) * 2/4);
   padding-bottom: calc(var(--vertical-rhythm) * 2/4);
+}
+#layout-footer .widget-footer h2 a {
+  text-decoration: none;
 }
 .widget-footer dt {
   font-weight: inherit;
@@ -115,6 +127,11 @@
   color: #38bab0 !important;
   display: inline-block;
   padding: 0.375em;
+}
+.widget-social dd a:hover,
+.widget-social dd a:active,
+.widget-social dd a:focus {
+  color: black !important;
 }
 .widget-social svg {
   display: block;
