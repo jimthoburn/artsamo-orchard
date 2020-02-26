@@ -260,6 +260,14 @@ h1 small {
   font-weight: 300;
   color: inherit;
 }
+main > hr + h2 img,
+h1 img {
+  height: 0.75em;
+  width: auto;
+  vertical-align: -4%;
+  display: inline-block;
+  transform: skewY(8deg);
+}
 
 @supports (display: grid) {
   @media (min-width: 58.75em) {
