@@ -619,4 +619,69 @@ button {
 }
 
 
+/* =ArtSaMo
+----------------------------------------------- */
+
+.widget-artsamo h2 {
+  max-width: none;
+  border-bottom: none !important;
+}
+.widget-artsamo p {
+  max-width: none;
+}
+.widget-artsamo p:last-child {
+  margin-bottom: 9em;
+}
+
+
+.widget-artsamo img[src*="city"] {
+  /*! display: block; */
+  /*! margin-left: auto; */
+  /*! margin-right: auto; */
+  margin-top: calc(var(--vertical-rhythm) * 4);
+  /*! width: calc(9.375em / 1.5); */
+  height: auto;
+  width: 100px;
+}
+
+
+@supports (clip-path: url(#svgPath)) {
+  /* .widget-artsamo .artsamo-image-fallback {
+    display: none;
+  } */
+  
+  .widget-artsamo .artsamo-image {
+    display: block;
+    width: 15.3125em;
+    height: 9.375em;
+    font-size: calc(0.75em + 2vw);
+    overflow: hidden;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.375em;
+  }
+  @media (min-width: 30em) {
+    .widget-artsamo .artsamo-image {
+      font-size: calc(0.5em + 1vw);
+    }
+  }
+  .widget-artsamo .artsamo-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    clip-path: url(#svgPathEmpty);
+  }
+  .widget-artsamo .artsamo-image .artsamo-image-for-clipping {
+    width: 15.3125em;
+    height: 15.3125em;
+    /* -webkit-clip-path: url(#svgPath); */
+    clip-path: url(#svgPath);
+    object-fit: cover;
+  }
+}
+
 
