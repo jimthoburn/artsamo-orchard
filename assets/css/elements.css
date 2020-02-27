@@ -234,10 +234,22 @@ figcaption {
   color: rgb(55, 185, 174);
 }
 
-.content-item > h2:first-of-type + p,
-.content-item > h2:first-of-type + h3 + p,
-.content-item > h3:first-of-type + p,
-.content-item > p:first-of-type {
+.content-item > figure:first-child + header + h2 + p,
+.content-item > figure:first-child + header + h3 + p,
+.content-item > figure:first-child + header + h2 + h3 + p,
+.content-item > figure:first-child + header + p,
+.content-item > header + h2 + p,
+.content-item > header + h3 + p,
+.content-item > header + h2 + h3 + p,
+.content-item > header + p,
+.content-item > figure:first-child + header + script + h2 + p,
+.content-item > figure:first-child + header + script + h3 + p,
+.content-item > figure:first-child + header + script + h2 + h3 + p,
+.content-item > figure:first-child + header + script + p,
+.content-item > header + script + h2 + p,
+.content-item > header + script + h3 + p,
+.content-item > header + script + h2 + h3 + p,
+.content-item > header + script + p {
   font-size: 1.25em;
   font-weight: 300;
 }
