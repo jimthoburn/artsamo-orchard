@@ -59,9 +59,10 @@
   }
   .artists li .image {
     grid-column: 1/2;
-    grid-row: 1/span 4;
+    grid-row: 1/span 99;
     justify-self: end;
     width: 290px;
+    margin: 0;
   }
   .artists li .image img {
     margin-left: auto;
