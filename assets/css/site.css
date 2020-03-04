@@ -1,9 +1,11 @@
 ---
 ---
 
+/* Jim’s Adobe TypeKit account */
+@import url(https://use.typekit.net/bwp8iid.css);
+
 {% include_relative base.css %}
 
-{% include_relative typekit.css %}
 {% include_relative logotype.css %}
 {% include_relative elements.css %}
 {% include_relative navigation.css %}
