@@ -22,6 +22,16 @@
     // logoLink.removeAttribute("href")
   }
 
+  // Remove extra HTML around the search button, since it interfers with styling
+  let navigationSVG = document.querySelector("#layout-navigation .menu li > .raw > p > a > svg");
+  if (navigationSVG) {
+    let listItem = navigationSVG.parentNode.parentNode.parentNode.parentNode;
+    let link = navigationSVG.parentNode;
+    if (listItem && link && link.outerHTML) {
+      listItem.innerHTML = link.outerHTML;
+    }
+  }
+
   // Move the main page heading after the image in the source order, for styling purposes
   let pageTitle = document.querySelector(".content-item > header:first-child")
   let primaryImage = document.querySelector(".content-item > header + figure.image")
