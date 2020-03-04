@@ -188,7 +188,7 @@ img {
   Add a little margin above description titles,
   since we’re removing left margin on the descriptions
 */
-dt {
+dd + dt {
   margin-top: 0.75em;
 }
 

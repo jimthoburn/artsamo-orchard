@@ -160,6 +160,14 @@
 /* END TEMPORARY */
 
 
+  .content-item > h2 + *:not(h3) {
+    padding-top: 0.75em;
+  }
+  .content-item > h3 + * {
+    padding-top: 0.5em;
+  }
+
+
   /*
     Emphasize the primary image by making it the full width of the grid
     and overlap it with the main headline
