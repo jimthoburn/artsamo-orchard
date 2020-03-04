@@ -20,6 +20,7 @@
 {% include_relative text-image.css %}
 {% include_relative header.css %}
 {% include_relative footer.css %}
+{% include_relative search.css %}
 {% include_relative home.css %}
 {% include_relative go-see-art.css %}
 {% include_relative opportunities.css %}
