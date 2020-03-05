@@ -1,5 +1,5 @@
 
-/* Deprecated (It’s best to use “.text-image” from “text-image.css”, which has the same style) */
+/* Deprecated (Use .image-quote instead) */
 
 .quote-image {
   display: grid;
@@ -72,5 +72,4 @@
     height: 50vw;
   }
 }
-
 

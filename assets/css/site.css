@@ -16,6 +16,7 @@
 {% include_relative artists.css %}
 {% include_relative events.css %}
 {% include_relative featured-event.css %}
+{% include_relative image-quote.css %}
 {% include_relative quote-image.css %}
 {% include_relative text-image.css %}
 {% include_relative header.css %}
