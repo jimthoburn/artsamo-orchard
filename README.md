@@ -9,7 +9,7 @@ The stylesheet link looks like this:
 <link href="https://jimthoburn.github.io/artsamo-orchard/assets/css/site.css" rel="stylesheet" type="text/css" />
 ```
 
-The [JavaScript](https://github.com/jimthoburn/artsamo-orchard/tree/master/assets/js) is inlined on the site, since it makes updates to content and layout–and load time is extra important.
+The JavaScript is inlined on the site using the “widget” feature in Orchard, since it [makes updates to content and layout](https://github.com/jimthoburn/artsamo-orchard/blob/master/assets/js/shim.js) and load time is extra important.
 
 ## Events
 
