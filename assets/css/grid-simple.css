@@ -270,18 +270,5 @@
     grid-template-columns: 1fr 2fr;
   }
 
-  /* Make headlines followed by artist lists look nicer */
-  .content-item > .artists-headline {
-    grid-column: 1/-1;
-    justify-self: center;
-    padding-left: 0;
-  }
-
-  /* Add space between artist lists and the headlines that follow them */
-  .content-item > .artists + h2,
-  .content-item > .artists + h3 {
-    margin-top: 3em;
-  }
-
 }
 }

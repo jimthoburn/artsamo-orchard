@@ -2,6 +2,12 @@
 /* =Artists
 ----------------------------------------------- */
 
+
+/* Add space between artist lists and the headlines that follow them */
+.content-item .artists {
+  margin-bottom: 4.5em;
+}
+
 .artists,
 .artists li {
   list-style: none;
