@@ -1,0 +1,65 @@
+
+/*
+  Copied from https://www.santamonica.gov/Themes/santamonica.gov.Theme/Styles/site.min.css
+*/
+
+.zone-alert {
+ min-height:54px
+}
+.zone-alert a {
+ color:#f4db19
+}
+.zone-alert>* {
+ padding:15px;
+ border:1px solid transparent;
+ background-color:#d12229;
+ color:#fff;
+ border-radius:unset
+}
+.zone-alert>* h4 {
+ margin-top:0;
+ color:inherit
+}
+.zone-alert>* .alert-link {
+ font-weight:700;
+ color:#e6e6e6
+}
+.zone-alert>*>p+p {
+ margin-top:5px
+}
+.zone-alert>* hr {
+ border-top-color:transparent
+}
+@media (min-width:58.75em) {
+ .zone-alert>*>* {
+  margin-right:auto;
+  margin-left:auto;
+  padding-left:15px;
+  padding-right:15px
+ }
+ .zone-alert>*>*>.navbar-collapse,
+ .zone-alert>*>*>.navbar-header {
+  margin-right:-15px;
+  margin-left:-15px
+ }
+}
+@media (min-width:58.75em) and (min-width:48em) {
+ .zone-alert>*>* {
+  width:750px
+ }
+}
+@media (min-width:58.75em) and (min-width:58.75em) {
+ .zone-alert>*>* {
+  width:970px
+ }
+ .zone-alert>*>*>.navbar-collapse,
+ .zone-alert>*>*>.navbar-header {
+  margin-right:0;
+  margin-left:0
+ }
+}
+@media (min-width:58.75em) and (min-width:68.75em) {
+ .zone-alert>*>* {
+  width:1170px
+ }
+}
