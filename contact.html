@@ -33,6 +33,15 @@
 <a id="skip" href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
 <a id="top" class="invisible"></a>
 
+<!--
+<div class="zone zone-alert">
+<article class="widget-alert widget-html-widget widget">
+    <p>The City of Santa Monica places the highest value on your health and safety. We are taking aggressive measures to prevent the spread of COVID-19 in cooperation with the <a href="http://publichealth.lacounty.gov/">LA County Department of Public Health</a> and the <a href="https://www.cdph.ca.gov/">California Department of Public Health</a>.</p>
+    <p>At this time, all gatherings are cancelled, including events, programs, and activities, both hosted by the City of Santa Monica and other groups. A full list of closures is available at <a href="https://www.santamonica.gov/coronavirus-cancellations">santamonica.gov/coronavirus-cancellations</a>.</p>
+</article>
+</div>
+-->
+
 <div id="layout-wrapper">
 <div id="layout-navigation-wrapper">
     <div id="layout-navigation">
@@ -544,6 +553,15 @@
 
 </div>
 
+
+<script>
+(function() {
+  var alert = document.createElement("div");
+  alert.className = "zone zone-alert";
+  alert.innerHTML = '<article class="widget-alert widget-html-widget widget"><p>The City of Santa Monica places the highest value on your health and safety. We are taking aggressive measures to prevent the spread of COVID-19 in cooperation with the <a href="http://publichealth.lacounty.gov/">LA County Department of Public Health</a> and the <a href="https://www.cdph.ca.gov/">California Department of Public Health</a>.</p><p>At this time, all gatherings are cancelled, including events, programs, and activities, both hosted by the City of Santa Monica and other groups. A full list of closures is available at <a href="https://www.santamonica.gov/coronavirus-cancellations">santamonica.gov/coronavirus-cancellations</a>.</p></article>';
+  document.getElementById("layout-wrapper").parentNode.insertBefore(alert, document.getElementById("layout-wrapper"));
+})();
+</script>
     
 </body>
 </html>
