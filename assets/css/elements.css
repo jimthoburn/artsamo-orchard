@@ -172,7 +172,7 @@ h3 {
 h4, h5, h6 {
   --font-size: 1em;
   font-style: italic;
-  font-weight: normal;
+  font-weight: 600;
 }
 h5, h6 {
   color: inherit;
